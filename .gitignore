@@ -1,3 +1,6 @@
 ./.idea
 node_modules
 package-lock.json
+android/gradle.properties
+android/.gradle
+android/code_secret_client_14867528384-0g6orf4tf1uuudrlmd8bldivk21lui76.apps.googleusercontent.com.json
