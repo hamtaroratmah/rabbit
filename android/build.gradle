@@ -35,7 +35,7 @@ buildscript {
 def REACT_NATIVE_VERSION = new File(['node', '--print', "JSON.parse(require('fs').readFileSync(require.resolve('react-native/package.json'), 'utf-8')).version"].execute(null, rootDir).text.trim())
 
 allprojects {
-    configurations.all {
+    configurations.configureEach {
         resolutionStrategy {
             force "com.facebook.react:react-native:" + REACT_NATIVE_VERSION
         }
@@ -61,6 +61,6 @@ allprojects {
             }
         }
         maven { url 'https://maven.google.com' }
-        jcenter()
+        mavenCentral()
     }
 }

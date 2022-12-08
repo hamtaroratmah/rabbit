@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-let test = require('express')
 export default function App() {
   return (
     <View style={styles.container}>
