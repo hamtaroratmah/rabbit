@@ -1,15 +1,14 @@
 
 import React from 'react';
-import { Button, Image, StyleSheet, Text, View } from 'react-native';
-
+import { Image, StyleSheet, Text, View } from 'react-native';
+import CostumedButton from '../components/CostumedButton';
 
 const WelcomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
-      
       <View>
         <Image source = {
-          require('./img/logo.png')
+          require('./../../assets/img/logo.png')
         }
         style = {styles.logo}
         />
@@ -19,19 +18,11 @@ const WelcomeScreen = ({navigation}) => {
         We are what we repeatedly do. Excellence, then, is not an act, but a habbit. 
       </Text>
       </View>
-      <View style={styles.buttons}>
-        <Button
-          title="Log in "
-          color="white" 
-          onPress={()=> navigation.navigate('LogIn')}
-        />
+      <View>
+      <CostumedButton text='Log in' action={()=> navigation.navigate('LogIn')}/>
       </View>
-      <View style={styles.buttons}>
-        <Button
-          title="Sign in"
-          color="white"
-          onPress={()=> navigation.navigate('SignIn')}
-        />
+      <View>
+      <CostumedButton text='Sign in' action={()=> navigation.navigate('SignIn')}/>
       </View>
     </View>
   );
@@ -56,17 +47,6 @@ const styles = StyleSheet.create({
     width : 200,
     height : 200,
     overflow: 'visible'
-  },
-  buttons : {
-    fontSize:18,
-    margin:15,
-    padding: 10,
-    width: 150,
-    alignItems : 'center',
-    justifyContent : 'center',
-    borderRadius : 25,
-    //backgroundColor : '#FFD601'
-    backgroundColor : '#F59801'
   }
 });
 export default WelcomeScreen;

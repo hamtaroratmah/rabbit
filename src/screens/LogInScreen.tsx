@@ -1,13 +1,17 @@
 import React from 'react';
-import { TextInput, Image, StyleSheet, Text, View, Button,ScrollView } from 'react-native';
+import { TextInput, Image, StyleSheet, Text, View, Button } from 'react-native';
+import CostumedButton from '../components/CostumedButton';
+import CostumedTextInput from '../components/CostumedTextInput';
 
 
 const LogInScreen = ({navigation}) => {
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
   return (
       <View style={styles.container}>
         <View >
           <Image source = {
-            require('./img/logo.png')
+            require('./../../assets/img/logo.png')
           }
           style = {styles.logo}
           />
@@ -16,19 +20,12 @@ const LogInScreen = ({navigation}) => {
           <Text style={styles.caption}>Log in to your account</Text>
         </View>
         <View>
-          <TextInput style={styles.inputs}
-            placeholder='Email'
-          />
-          <TextInput style={styles.inputs}
-            placeholder='Password' 
-          /> 
+          
+          <CostumedTextInput placeHolderText='Email' value={email} setValue={setEmail} secureTextEntry={false}/>
+          <CostumedTextInput placeHolderText='Password' value={password} setValue={setPassword} secureTextEntry={true} />
         </View>
-        <View style={styles.buttons}>
-          <Button
-              title="Log in "
-              color="white" 
-              onPress={()=> navigation.navigate('Home')}
-            />
+        <View>
+          <CostumedButton text='Log in' action={()=> navigation.navigate('Welcome')}/>
         </View>
         <View>
           <Text 
@@ -62,32 +59,13 @@ const styles = StyleSheet.create({
     height : 100,
     overflow: 'visible', 
   },
-  buttons : {
-    fontSize:18,
-    width: 150,
-    height:50,
-    alignItems : 'center',
-    justifyContent : 'center',
-    borderRadius : 25,
-    //backgroundColor : '#FFD601'
-    backgroundColor : '#F59801'
-  },
-  inputs:{
-    height:50,
-    width:300,
-    backgroundColor: 'white',
-    margin:20,
-    padding:30,
-    borderRadius:25,
-    borderColor:'#142b6f',
-    borderWidth:1
-  },
   href: {
     fontSize: 15,
     margin:10,
     justifyContent: 'center',
     textAlign: 'center',
-    color : '#142b6f'
+    color : '#142b6f',
+    
   }
 });
 export default LogInScreen;
