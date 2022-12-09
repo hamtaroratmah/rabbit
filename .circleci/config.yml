@@ -20,7 +20,7 @@ jobs:
                 command: 'sudo npm install typescript -g'
             - run:
                 name: installing eslint
-                command: 'npm install -D eslint'
+                command: 'sudo npm install -g eslint'
             -   run:
                     name: checking stylecode with eslint
                     command: 'tsc --noEmit && eslint --ext .tsx ./'
