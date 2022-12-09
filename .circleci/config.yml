@@ -23,7 +23,7 @@ jobs:
                 command: 'npm install -D eslint'
             -   run:
                     name: checking stylecode with eslint
-                    command: 'npm tsc --noEmit && eslint --ext .tsx ./'
+                    command: 'tsc --noEmit && eslint --ext .tsx ./'
     eas_build:
         executor: default
         steps:
