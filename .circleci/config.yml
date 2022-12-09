@@ -16,8 +16,11 @@ jobs:
         steps :
             - checkout
             - run:
+                name: installing typescript
+                command: 'npm install typescript --save-dev'
+            - run:
                 name: installing eslint
-                command: 'npm install eslint'
+                command: 'npm install -D eslint'
             -   run:
                     name: checking stylecode with eslint
                     command: 'npm tsc --noEmit && eslint --ext .tsx ./'
