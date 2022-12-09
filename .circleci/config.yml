@@ -17,7 +17,7 @@ jobs:
             - checkout
             - run:
                 name: installing typescript
-                command: 'npm install typescript -g'
+                command: 'sudo npm install typescript -g'
             - run:
                 name: installing eslint
                 command: 'npm install -D eslint'
