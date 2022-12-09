@@ -17,7 +17,7 @@ jobs:
             - checkout
             -   run:
                     name: checking stylecode with eslint
-                    command: 'npm run lint'
+                    command: 'npm tsc --noEmit && eslint --ext .tsx ./'
     eas_build:
         executor: default
         steps:
