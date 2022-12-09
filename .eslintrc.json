@@ -3,11 +3,11 @@
         "react-native/react-native": true
     },
     "extends": [
-        "airbnb",
-        "airbnb/hooks",
-        "plugin:@typescript-eslint/recommended",
-        "prettier",
-        "plugin:prettier/recommended"
+//        "airbnb",
+//        "airbnb/hooks",
+//        "plugin:@typescript-eslint/recommended",
+//        "prettier",
+//        "plugin:prettier/recommended"
     ],
     "plugins": ["@typescript-eslint", "react", "prettier", "react-native"],
     "parser": "@typescript-eslint/parser",
