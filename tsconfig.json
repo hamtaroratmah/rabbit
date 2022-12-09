@@ -18,8 +18,8 @@
     "src/**/*.ts",
     "tests/**/*.ts"
   ],
-//  "exclude": [
-//    "node_modules",
-//    ".vscode"
-//  ]
+  "exclude": [
+    "__tests__/**/*-test.ts"
+  ],
+  "extends": "expo/tsconfig.base"
 }
