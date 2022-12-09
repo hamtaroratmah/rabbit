@@ -15,6 +15,9 @@ jobs:
             - image: cimg/node:lts
         steps :
             - checkout
+            - run:
+                name: installing eslint
+                command: 'npm install eslint'
             -   run:
                     name: checking stylecode with eslint
                     command: 'npm tsc --noEmit && eslint --ext .tsx ./'
