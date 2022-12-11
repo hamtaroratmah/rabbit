@@ -11,6 +11,9 @@ jobs:
         executor: default
         steps:
             - checkout
+            - run:
+                  name: Install nodejs
+                  command: nvm install 16.17.0 && nvm use 16.17.0
             -   run:
                     name: Install node_modules
                     command: npm i && npm install --global expo-cli eas-cli
