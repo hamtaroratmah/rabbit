@@ -11,16 +11,16 @@ jobs:
         executor: default
         steps:
             - checkout
-            - run:
-                name: Install node_modules
-                command: rm package-lock.json && npm i
+            -   run:
+                    name: Install node_modules
+                    command: rm package-lock.json && npm i
     eas_build:
         executor: default
         steps:
             - checkout
             -   run:
                     name: Install dependencies
-                    command: npm ci
+                    command: elif [ -e package-lock.json ]; then npm ci else npm i fi
             -   run:
                     name: Trigger build
                     command: npx eas-cli build --platform android
