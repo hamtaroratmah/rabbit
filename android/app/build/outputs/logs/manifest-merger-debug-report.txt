@@ -1,0 +1,529 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:1-34:12
+MERGED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:1-34:12
+MERGED from [com.facebook.flipper:flipper:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/0feceb9ac9f220ee3d1590ec64124812/transformed/flipper-0.174.0/AndroidManifest.xml:8:1-18:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/27c92b15457dfd57a411a427b0be1310/transformed/flipper-network-plugin-0.174.0/AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/bdb4d9b0559c5f8d10c0c4b53e3765c1/transformed/flipper-fresco-plugin-0.174.0/AndroidManifest.xml:8:1-15:12
+MERGED from [:expo] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-application] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-application/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-constants] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-constants/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-error-recovery] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-error-recovery/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-35:12
+MERGED from [:expo-font] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-font/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-keep-awake] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-keep-awake/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-splash-screen] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:expo-modules-core] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [com.facebook.react:react-native:0.70.5] /home/soulaymane/.gradle/caches/transforms-3/6f5c7a9bde5fef88845506bb1a738293/transformed/react-native-0.70.5-debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:flipper:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/5f78089691a238c793e66c7a894800a9/transformed/flipper-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:stetho:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/50280133b21c3521bb2ec1cfc14ebec3/transformed/stetho-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/11cae25e8f1ce9d9d10fa8b58074fc2b/transformed/fresco-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/01432f935c43fb6d23b5d5093515ea55/transformed/imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/a1b0a26c927fa8687d06e0b91042a117/transformed/animated-gif-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/5b27aad3460a8e87ee2e28a1af44d99c/transformed/webpsupport-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/90fe221fff303c7634ee990ad1a64744/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/5e3ff983925d838b41c9677e4021edde/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/2ebea6689ae37e55ceb982b4e5f438c1/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [org.webkit:android-jsc:r250230] /home/soulaymane/.gradle/caches/transforms-3/ca81b10c06251ae5e3710a82c1034cc8/transformed/android-jsc-r250230/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.fragment:fragment-ktx:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/211c11791c62f385f13608b2bebab140/transformed/fragment-ktx-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.4.0] /home/soulaymane/.gradle/caches/transforms-3/71d9c009c8e345b0e0a2ac8dfcad8d4d/transformed/activity-ktx-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/a74e736df88e536148d23aab20c405c5/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/b5c86852314efdc54507c3aad72c894d/transformed/fragment-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.6.0] /home/soulaymane/.gradle/caches/transforms-3/4a86ff6dba806623dc6ad78c5a431bd1/transformed/core-ktx-1.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/ddb112d301c86d0607196943102d4d52/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/b825ef18b82f0afaa929680f435b4646/transformed/lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.4.0] /home/soulaymane/.gradle/caches/transforms-3/37a82ad6989a1d34a99374157156ffe4/transformed/activity-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/81ff3d2c54a31febe14c1b7c16414ded/transformed/savedstate-ktx-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/45a9c9ae1d0b49c2245b74a7f9c21478/transformed/lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /home/soulaymane/.gradle/caches/transforms-3/ce42e7c03a2eecd8cc677b40c66ce371/transformed/openssl-1.1.1l-beta-1/AndroidManifest.xml:1:1-3:12
+MERGED from [com.facebook.fresco:animated-base:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/4c70c0f10c9a60df948ad2752ec29eef/transformed/animated-base-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/ae9f14edac9b9b5db6eebcb03b5918da/transformed/animated-drawable-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/edf45e9352f696416c46ab9f1a01c901/transformed/drawee-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/604b8aada2f72e29b0f219965ce91728/transformed/nativeimagefilters-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-native:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/9ece8d534beaaaae22ee6a008c845b83/transformed/memory-type-native-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-java:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/be90373a6d4f7211d2c1fd72f3cf6f83/transformed/memory-type-java-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-native:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/d39966fcd080de7b1401add4664889a7/transformed/imagepipeline-native-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:soloader:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/f972e1d5945721cb75a7980cbe021152/transformed/soloader-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.10.4] /home/soulaymane/.gradle/caches/transforms-3/4bf6ff3a70fadd4b9aa6768683e93347/transformed/soloader-0.10.4/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/4cf07ca3c45599e7c116ed205b91617b/transformed/memory-type-ashmem-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/67486c3d3d631f01024b014ae93b6e3e/transformed/imagepipeline-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/00c1ae54ba3c05cc71cd334831b9e2b0/transformed/nativeimagetranscoder-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/c66746f02c7ca5aaef6435181b898a2f/transformed/imagepipeline-base-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /home/soulaymane/.gradle/caches/transforms-3/f95629174ce4b5e0f70760f97505fa24/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/be5f512d9be80917b60e97230e8088e5/transformed/appcompat-resources-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/b1a6bf6e8f077138ad6d75c01e69411f/transformed/autofill-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:middleware:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/09be29f8b5378440caee5d389235d150/transformed/middleware-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:ui-common:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/dc97d72d44e2e4b315bf477c3b5b0c0a/transformed/ui-common-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/e25d63a689de076ab75a1abf80ab72a5/transformed/fbcore-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/a90dc247c6a3904f1a44f110cc10d8e9/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f1fe343437da2eb4842d9df7942a1925/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.2.0] /home/soulaymane/.gradle/caches/transforms-3/f54a84fd5fee652d2df0fd0f2d6460bd/transformed/sqlite-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0dde183ff42af716c991b414a4453f54/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/ca07ef3aff419a8aba4ae20b4ae15a59/transformed/emoji2-views-helper-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/fad05beb4ac3d396d71167b880cf561c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/21ba88969c70e585e2c4b8375df3987e/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0d4ea7fcd4c869334658b5e44b474338/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/c6a6eb2b60c86bf4008a121da0a40965/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/1bf831e735683518291b749c302946de/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f6d23b9932ab51ae7d09ade1d69933cd/transformed/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7865755dece26ab9be1ffd55b8312a64/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/4d17facde52132273014d2ffff89841e/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0eb09ea75b476ca362b2ca72947944cc/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.7.0] /home/soulaymane/.gradle/caches/transforms-3/8ff4b59a56823e70f52ba4afafb8c10f/transformed/core-1.7.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7a3d0dc79b001aae56e32da219614c83/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/f4a466fa0aa37b3a6bc048ebee2a530e/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/14d276382be3835e715f18a10f0e7a0e/transformed/savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/9676b99ab3a6b6e72aeb2d7ba649d994/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/soulaymane/.gradle/caches/transforms-3/7a5b90e54fbbb31d633f5d1b9100ef3d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/b071d61f6b28ea6e5c768163571dc066/transformed/startup-runtime-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/895177d06d13953eb4211b32bad623b5/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/e0905a5bb8a07b256fb70c0daacd673e/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/9b333a77b7f08f4471b7f5c11b054013/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f0d7e40b5194eded7f66211b1520a61c/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7b2be01bc253ebd69b97d1a96b39f922/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/soulaymane/.gradle/caches/transforms-3/914b3b0f7d070f721e730b33e717b592/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/f3453844964e52b3e2fc23beb8f63f3f/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/soulaymane/.gradle/caches/transforms-3/122905ccc82e8d2591c94e63d923b7e7/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/soulaymane/.gradle/caches/transforms-3/cae8c86ab082ebd0231dc8b1befa1e0c/transformed/installreferrer-1.0/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/5b82882e2bdc933a10b1dc947c7a90ea/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:70-99
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:70-99
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:2:3-64
+MERGED from [com.facebook.flipper:flipper:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/0feceb9ac9f220ee3d1590ec64124812/transformed/flipper-0.174.0/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/0feceb9ac9f220ee3d1590ec64124812/transformed/flipper-0.174.0/AndroidManifest.xml:15:5-67
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:2:20-62
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:3:3-77
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-80
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:3:20-75
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:4:3-75
+MERGED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:4:3-75
+MERGED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:4:3-75
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:4:20-73
+uses-permission#android.permission.VIBRATE
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:5:3-63
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:5:20-61
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:6:3-78
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:6:20-76
+queries
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:7:3-13:13
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:5-20:15
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:5-20:15
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:8:5-12:14
+action#android.intent.action.VIEW
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:9:7-58
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:9:15-56
+category#android.intent.category.BROWSABLE
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:10:7-67
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:10:17-65
+data
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:11:7-37
+	android:scheme
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:11:13-35
+application
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:3-33:17
+MERGED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:3-33:17
+MERGED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:3-33:17
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:5-33:19
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:5-33:19
+MERGED from [:expo-modules-core] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-13:19
+MERGED from [:expo-modules-core] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-13:19
+MERGED from [com.facebook.react:react-native:0.70.5] /home/soulaymane/.gradle/caches/transforms-3/6f5c7a9bde5fef88845506bb1a738293/transformed/react-native-0.70.5-debug/AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.react:react-native:0.70.5] /home/soulaymane/.gradle/caches/transforms-3/6f5c7a9bde5fef88845506bb1a738293/transformed/react-native-0.70.5-debug/AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.4] /home/soulaymane/.gradle/caches/transforms-3/4bf6ff3a70fadd4b9aa6768683e93347/transformed/soloader-0.10.4/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.4] /home/soulaymane/.gradle/caches/transforms-3/4bf6ff3a70fadd4b9aa6768683e93347/transformed/soloader-0.10.4/AndroidManifest.xml:11:5-20
+MERGED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.core:core:1.7.0] /home/soulaymane/.gradle/caches/transforms-3/8ff4b59a56823e70f52ba4afafb8c10f/transformed/core-1.7.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.7.0] /home/soulaymane/.gradle/caches/transforms-3/8ff4b59a56823e70f52ba4afafb8c10f/transformed/core-1.7.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/soulaymane/.gradle/caches/transforms-3/7a5b90e54fbbb31d633f5d1b9100ef3d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/soulaymane/.gradle/caches/transforms-3/7a5b90e54fbbb31d633f5d1b9100ef3d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/b071d61f6b28ea6e5c768163571dc066/transformed/startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/b071d61f6b28ea6e5c768163571dc066/transformed/startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/soulaymane/.gradle/caches/transforms-3/cae8c86ab082ebd0231dc8b1befa1e0c/transformed/installreferrer-1.0/AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/soulaymane/.gradle/caches/transforms-3/cae8c86ab082ebd0231dc8b1befa1e0c/transformed/installreferrer-1.0/AndroidManifest.xml:11:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.7.0] /home/soulaymane/.gradle/caches/transforms-3/8ff4b59a56823e70f52ba4afafb8c10f/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:48-80
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:48-80
+	tools:ignore
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml:6:75-114
+	android:roundIcon
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:116-161
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:116-161
+	tools:targetApi
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml:6:54-74
+	android:icon
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:81-115
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:81-115
+	android:allowBackup
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:162-188
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:162-188
+	android:theme
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:189-220
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:189-220
+	android:usesCleartextTraffic
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:221-256
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:16-47
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:14:16-47
+meta-data#expo.modules.updates.ENABLED
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:15:5-82
+	android:value
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:15:60-80
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:15:16-59
+meta-data#expo.modules.updates.EXPO_SDK_VERSION
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:16:5-93
+	android:value
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:16:69-91
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:16:16-68
+meta-data#expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:17:5-105
+	android:value
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:17:81-103
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:17:16-80
+meta-data#expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:18:5-99
+	android:value
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:18:80-97
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:18:16-79
+meta-data#expo.modules.updates.EXPO_UPDATE_URL
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:19:5-124
+	android:value
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:19:68-122
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:19:16-67
+activity#ipl.vinci.be.rabbit.MainActivity
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:5-31:16
+	android:screenOrientation
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:300-336
+	android:label
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:44-76
+	android:launchMode
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:155-186
+	android:windowSoftInputMode
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:187-229
+	android:exported
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:276-299
+	android:configChanges
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:77-154
+	android:theme
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:230-275
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:20:15-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:21:7-24:23
+action#android.intent.action.MAIN
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:22:9-60
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:22:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:23:9-68
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:23:19-66
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:ipl.vinci.be.rabbit
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:25:7-30:23
+category#android.intent.category.DEFAULT
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:27:9-67
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:27:19-65
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:32:5-106
+	android:exported
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:32:80-104
+	android:name
+		ADDED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml:32:15-79
+uses-sdk
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml
+MERGED from [com.facebook.flipper:flipper:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/0feceb9ac9f220ee3d1590ec64124812/transformed/flipper-0.174.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/0feceb9ac9f220ee3d1590ec64124812/transformed/flipper-0.174.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/27c92b15457dfd57a411a427b0be1310/transformed/flipper-network-plugin-0.174.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/27c92b15457dfd57a411a427b0be1310/transformed/flipper-network-plugin-0.174.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/bdb4d9b0559c5f8d10c0c4b53e3765c1/transformed/flipper-fresco-plugin-0.174.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/bdb4d9b0559c5f8d10c0c4b53e3765c1/transformed/flipper-fresco-plugin-0.174.0/AndroidManifest.xml:11:5-13:41
+MERGED from [:expo] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-application] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-application/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-application] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-application/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-constants] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-constants/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-constants] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-constants/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-error-recovery] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-error-recovery/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-error-recovery] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-error-recovery/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:expo-font] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-font/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-font] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-font/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-keep-awake] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-keep-awake/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-keep-awake] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-keep-awake/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-splash-screen] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-splash-screen] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-modules-core] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:expo-modules-core] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:react-native:0.70.5] /home/soulaymane/.gradle/caches/transforms-3/6f5c7a9bde5fef88845506bb1a738293/transformed/react-native-0.70.5-debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:react-native:0.70.5] /home/soulaymane/.gradle/caches/transforms-3/6f5c7a9bde5fef88845506bb1a738293/transformed/react-native-0.70.5-debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/5f78089691a238c793e66c7a894800a9/transformed/flipper-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/5f78089691a238c793e66c7a894800a9/transformed/flipper-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/50280133b21c3521bb2ec1cfc14ebec3/transformed/stetho-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/50280133b21c3521bb2ec1cfc14ebec3/transformed/stetho-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/11cae25e8f1ce9d9d10fa8b58074fc2b/transformed/fresco-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/11cae25e8f1ce9d9d10fa8b58074fc2b/transformed/fresco-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/01432f935c43fb6d23b5d5093515ea55/transformed/imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/01432f935c43fb6d23b5d5093515ea55/transformed/imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/a1b0a26c927fa8687d06e0b91042a117/transformed/animated-gif-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/a1b0a26c927fa8687d06e0b91042a117/transformed/animated-gif-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/5b27aad3460a8e87ee2e28a1af44d99c/transformed/webpsupport-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/5b27aad3460a8e87ee2e28a1af44d99c/transformed/webpsupport-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/90fe221fff303c7634ee990ad1a64744/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/90fe221fff303c7634ee990ad1a64744/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/5e3ff983925d838b41c9677e4021edde/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/5e3ff983925d838b41c9677e4021edde/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/2ebea6689ae37e55ceb982b4e5f438c1/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/2ebea6689ae37e55ceb982b4e5f438c1/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [org.webkit:android-jsc:r250230] /home/soulaymane/.gradle/caches/transforms-3/ca81b10c06251ae5e3710a82c1034cc8/transformed/android-jsc-r250230/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r250230] /home/soulaymane/.gradle/caches/transforms-3/ca81b10c06251ae5e3710a82c1034cc8/transformed/android-jsc-r250230/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.fragment:fragment-ktx:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/211c11791c62f385f13608b2bebab140/transformed/fragment-ktx-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/211c11791c62f385f13608b2bebab140/transformed/fragment-ktx-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.4.0] /home/soulaymane/.gradle/caches/transforms-3/71d9c009c8e345b0e0a2ac8dfcad8d4d/transformed/activity-ktx-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.4.0] /home/soulaymane/.gradle/caches/transforms-3/71d9c009c8e345b0e0a2ac8dfcad8d4d/transformed/activity-ktx-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/a74e736df88e536148d23aab20c405c5/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/a74e736df88e536148d23aab20c405c5/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/b5c86852314efdc54507c3aad72c894d/transformed/fragment-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/b5c86852314efdc54507c3aad72c894d/transformed/fragment-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.6.0] /home/soulaymane/.gradle/caches/transforms-3/4a86ff6dba806623dc6ad78c5a431bd1/transformed/core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.6.0] /home/soulaymane/.gradle/caches/transforms-3/4a86ff6dba806623dc6ad78c5a431bd1/transformed/core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/ddb112d301c86d0607196943102d4d52/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/ddb112d301c86d0607196943102d4d52/transformed/lifecycle-runtime-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/b825ef18b82f0afaa929680f435b4646/transformed/lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/b825ef18b82f0afaa929680f435b4646/transformed/lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.4.0] /home/soulaymane/.gradle/caches/transforms-3/37a82ad6989a1d34a99374157156ffe4/transformed/activity-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.4.0] /home/soulaymane/.gradle/caches/transforms-3/37a82ad6989a1d34a99374157156ffe4/transformed/activity-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/81ff3d2c54a31febe14c1b7c16414ded/transformed/savedstate-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/81ff3d2c54a31febe14c1b7c16414ded/transformed/savedstate-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/45a9c9ae1d0b49c2245b74a7f9c21478/transformed/lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/45a9c9ae1d0b49c2245b74a7f9c21478/transformed/lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /home/soulaymane/.gradle/caches/transforms-3/ce42e7c03a2eecd8cc677b40c66ce371/transformed/openssl-1.1.1l-beta-1/AndroidManifest.xml:2:2-70
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /home/soulaymane/.gradle/caches/transforms-3/ce42e7c03a2eecd8cc677b40c66ce371/transformed/openssl-1.1.1l-beta-1/AndroidManifest.xml:2:2-70
+MERGED from [com.facebook.fresco:animated-base:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/4c70c0f10c9a60df948ad2752ec29eef/transformed/animated-base-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/4c70c0f10c9a60df948ad2752ec29eef/transformed/animated-base-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/ae9f14edac9b9b5db6eebcb03b5918da/transformed/animated-drawable-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] /home/soulaymane/.gradle/caches/transforms-3/ae9f14edac9b9b5db6eebcb03b5918da/transformed/animated-drawable-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/edf45e9352f696416c46ab9f1a01c901/transformed/drawee-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/edf45e9352f696416c46ab9f1a01c901/transformed/drawee-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/604b8aada2f72e29b0f219965ce91728/transformed/nativeimagefilters-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/604b8aada2f72e29b0f219965ce91728/transformed/nativeimagefilters-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/9ece8d534beaaaae22ee6a008c845b83/transformed/memory-type-native-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/9ece8d534beaaaae22ee6a008c845b83/transformed/memory-type-native-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/be90373a6d4f7211d2c1fd72f3cf6f83/transformed/memory-type-java-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/be90373a6d4f7211d2c1fd72f3cf6f83/transformed/memory-type-java-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/d39966fcd080de7b1401add4664889a7/transformed/imagepipeline-native-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/d39966fcd080de7b1401add4664889a7/transformed/imagepipeline-native-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/f972e1d5945721cb75a7980cbe021152/transformed/soloader-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/f972e1d5945721cb75a7980cbe021152/transformed/soloader-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.10.4] /home/soulaymane/.gradle/caches/transforms-3/4bf6ff3a70fadd4b9aa6768683e93347/transformed/soloader-0.10.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.10.4] /home/soulaymane/.gradle/caches/transforms-3/4bf6ff3a70fadd4b9aa6768683e93347/transformed/soloader-0.10.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/4cf07ca3c45599e7c116ed205b91617b/transformed/memory-type-ashmem-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/4cf07ca3c45599e7c116ed205b91617b/transformed/memory-type-ashmem-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/67486c3d3d631f01024b014ae93b6e3e/transformed/imagepipeline-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/67486c3d3d631f01024b014ae93b6e3e/transformed/imagepipeline-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/00c1ae54ba3c05cc71cd334831b9e2b0/transformed/nativeimagetranscoder-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/00c1ae54ba3c05cc71cd334831b9e2b0/transformed/nativeimagetranscoder-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/c66746f02c7ca5aaef6435181b898a2f/transformed/imagepipeline-base-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/c66746f02c7ca5aaef6435181b898a2f/transformed/imagepipeline-base-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /home/soulaymane/.gradle/caches/transforms-3/f95629174ce4b5e0f70760f97505fa24/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /home/soulaymane/.gradle/caches/transforms-3/f95629174ce4b5e0f70760f97505fa24/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/be5f512d9be80917b60e97230e8088e5/transformed/appcompat-resources-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /home/soulaymane/.gradle/caches/transforms-3/be5f512d9be80917b60e97230e8088e5/transformed/appcompat-resources-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/b1a6bf6e8f077138ad6d75c01e69411f/transformed/autofill-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/b1a6bf6e8f077138ad6d75c01e69411f/transformed/autofill-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:middleware:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/09be29f8b5378440caee5d389235d150/transformed/middleware-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:middleware:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/09be29f8b5378440caee5d389235d150/transformed/middleware-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/dc97d72d44e2e4b315bf477c3b5b0c0a/transformed/ui-common-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/dc97d72d44e2e4b315bf477c3b5b0c0a/transformed/ui-common-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/e25d63a689de076ab75a1abf80ab72a5/transformed/fbcore-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.6.0] /home/soulaymane/.gradle/caches/transforms-3/e25d63a689de076ab75a1abf80ab72a5/transformed/fbcore-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/a90dc247c6a3904f1a44f110cc10d8e9/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/a90dc247c6a3904f1a44f110cc10d8e9/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f1fe343437da2eb4842d9df7942a1925/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f1fe343437da2eb4842d9df7942a1925/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.2.0] /home/soulaymane/.gradle/caches/transforms-3/f54a84fd5fee652d2df0fd0f2d6460bd/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] /home/soulaymane/.gradle/caches/transforms-3/f54a84fd5fee652d2df0fd0f2d6460bd/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0dde183ff42af716c991b414a4453f54/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0dde183ff42af716c991b414a4453f54/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/ca07ef3aff419a8aba4ae20b4ae15a59/transformed/emoji2-views-helper-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/ca07ef3aff419a8aba4ae20b4ae15a59/transformed/emoji2-views-helper-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/fad05beb4ac3d396d71167b880cf561c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/fad05beb4ac3d396d71167b880cf561c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/21ba88969c70e585e2c4b8375df3987e/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/21ba88969c70e585e2c4b8375df3987e/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0d4ea7fcd4c869334658b5e44b474338/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0d4ea7fcd4c869334658b5e44b474338/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/c6a6eb2b60c86bf4008a121da0a40965/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/c6a6eb2b60c86bf4008a121da0a40965/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/1bf831e735683518291b749c302946de/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/1bf831e735683518291b749c302946de/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f6d23b9932ab51ae7d09ade1d69933cd/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f6d23b9932ab51ae7d09ade1d69933cd/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7865755dece26ab9be1ffd55b8312a64/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7865755dece26ab9be1ffd55b8312a64/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/4d17facde52132273014d2ffff89841e/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/4d17facde52132273014d2ffff89841e/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0eb09ea75b476ca362b2ca72947944cc/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/0eb09ea75b476ca362b2ca72947944cc/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.7.0] /home/soulaymane/.gradle/caches/transforms-3/8ff4b59a56823e70f52ba4afafb8c10f/transformed/core-1.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] /home/soulaymane/.gradle/caches/transforms-3/8ff4b59a56823e70f52ba4afafb8c10f/transformed/core-1.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7a3d0dc79b001aae56e32da219614c83/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7a3d0dc79b001aae56e32da219614c83/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/f4a466fa0aa37b3a6bc048ebee2a530e/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/f4a466fa0aa37b3a6bc048ebee2a530e/transformed/lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/14d276382be3835e715f18a10f0e7a0e/transformed/savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/14d276382be3835e715f18a10f0e7a0e/transformed/savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/9676b99ab3a6b6e72aeb2d7ba649d994/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/9676b99ab3a6b6e72aeb2d7ba649d994/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/soulaymane/.gradle/caches/transforms-3/7a5b90e54fbbb31d633f5d1b9100ef3d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/soulaymane/.gradle/caches/transforms-3/7a5b90e54fbbb31d633f5d1b9100ef3d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/b071d61f6b28ea6e5c768163571dc066/transformed/startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/b071d61f6b28ea6e5c768163571dc066/transformed/startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/895177d06d13953eb4211b32bad623b5/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/895177d06d13953eb4211b32bad623b5/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/e0905a5bb8a07b256fb70c0daacd673e/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/e0905a5bb8a07b256fb70c0daacd673e/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/9b333a77b7f08f4471b7f5c11b054013/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/9b333a77b7f08f4471b7f5c11b054013/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f0d7e40b5194eded7f66211b1520a61c/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/f0d7e40b5194eded7f66211b1520a61c/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7b2be01bc253ebd69b97d1a96b39f922/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/7b2be01bc253ebd69b97d1a96b39f922/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/soulaymane/.gradle/caches/transforms-3/914b3b0f7d070f721e730b33e717b592/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/soulaymane/.gradle/caches/transforms-3/914b3b0f7d070f721e730b33e717b592/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/f3453844964e52b3e2fc23beb8f63f3f/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /home/soulaymane/.gradle/caches/transforms-3/f3453844964e52b3e2fc23beb8f63f3f/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/soulaymane/.gradle/caches/transforms-3/122905ccc82e8d2591c94e63d923b7e7/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/soulaymane/.gradle/caches/transforms-3/122905ccc82e8d2591c94e63d923b7e7/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/soulaymane/.gradle/caches/transforms-3/cae8c86ab082ebd0231dc8b1befa1e0c/transformed/installreferrer-1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/soulaymane/.gradle/caches/transforms-3/cae8c86ab082ebd0231dc8b1befa1e0c/transformed/installreferrer-1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/5b82882e2bdc933a10b1dc947c7a90ea/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/soulaymane/.gradle/caches/transforms-3/5b82882e2bdc933a10b1dc947c7a90ea/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/soulaymane/Documents/BIN3/pfe/rabbit/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.facebook.flipper:flipper:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/0feceb9ac9f220ee3d1590ec64124812/transformed/flipper-0.174.0/AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from [com.facebook.flipper:flipper:0.174.0] /home/soulaymane/.gradle/caches/transforms-3/0feceb9ac9f220ee3d1590ec64124812/transformed/flipper-0.174.0/AndroidManifest.xml:16:22-73
+intent#action:name:android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:9-19:18
+action#android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-79
+	android:name
+		ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:21-76
+provider#expo.modules.filesystem.FileSystemFileProvider
+ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-32:20
+	android:grantUriPermissions
+		ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-47
+	android:authorities
+		ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-74
+	android:exported
+		ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-37
+	tools:replace
+		ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-48
+	android:name
+		ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-74
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-31:70
+	android:resource
+		ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:17-67
+	android:name
+		ADDED from [:expo-file-system] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:17-67
+meta-data#org.unimodules.core.AppLoader#react-native-headless
+ADDED from [:expo-modules-core] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:89
+	android:value
+		ADDED from [:expo-modules-core] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-86
+	android:name
+		ADDED from [:expo-modules-core] /home/soulaymane/Documents/BIN3/pfe/rabbit/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-79
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/b071d61f6b28ea6e5c768163571dc066/transformed/startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/b071d61f6b28ea6e5c768163571dc066/transformed/startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:30:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /home/soulaymane/.gradle/caches/transforms-3/07cc2203c2d5be613ace5a0dd5066e4f/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /home/soulaymane/.gradle/caches/transforms-3/512392ca63647b1f3633bdc12c87b9e6/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.android.installreferrer:installreferrer:1.0] /home/soulaymane/.gradle/caches/transforms-3/cae8c86ab082ebd0231dc8b1befa1e0c/transformed/installreferrer-1.0/AndroidManifest.xml:9:5-110
+	android:name
+		ADDED from [com.android.installreferrer:installreferrer:1.0] /home/soulaymane/.gradle/caches/transforms-3/cae8c86ab082ebd0231dc8b1befa1e0c/transformed/installreferrer-1.0/AndroidManifest.xml:9:22-107

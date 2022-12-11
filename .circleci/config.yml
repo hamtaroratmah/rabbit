@@ -1,0 +1,53 @@
+version: 2.1
+
+executors:
+    default:
+        docker:
+            -   image: cimg/node:16.17.0
+        working_directory: ~/my-app
+
+jobs:
+    install_dependencies:
+        executor: default
+        steps:
+            - checkout
+            -   run:
+                    name: Install node_modules
+                    command: npm i && sudo npm install -g expo-cli eas-cli
+    eas_build:
+        executor: default
+        steps:
+            - checkout
+            -   run:
+                    name: Install dependencies
+                    command: if [ -e package-lock.json ]; then npm ci; else npm i; fi
+            -   run:
+                    name: Trigger build
+                    command: npx eas-cli build --platform android --non-interactive
+    eas_submit:
+        executor: default
+        steps:
+            - checkout
+            -   run:
+                    name: Trigger deploy on play store
+                    command: npx eas-cli submit -p android --latest
+
+workflows:
+    build_app:
+        jobs:
+            - install_dependencies:
+                filters:
+                    branches:
+                        only: master
+            -   eas_build:
+                    requires:
+                        - install_dependencies
+                    filters:
+                        branches:
+                            only: master
+            -   eas_submit:
+                    requires:
+                        - eas_build
+                    filters:
+                        branches:
+                            only: master
