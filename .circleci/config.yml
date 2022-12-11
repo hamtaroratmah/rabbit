@@ -29,8 +29,6 @@ workflows:
     build_app:
         jobs:
             -   eas_build:
-                    requires:
-                        - linter
                     filters:
                         branches:
                             only: testPipeline
