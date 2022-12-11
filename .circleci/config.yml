@@ -13,7 +13,7 @@ jobs:
             - checkout
             -   run:
                     name: Install node_modules
-                    command: npm i
+                    command: npm i && npm install --global expo-cli eas-cli
     eas_build:
         executor: default
         steps:
@@ -30,7 +30,7 @@ jobs:
             - checkout
             -   run:
                     name: Trigger deploy on play store
-                    command: npx eas submit -p android
+                    command: eas submit -p android
 
 workflows:
     build_app:
