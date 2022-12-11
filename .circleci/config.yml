@@ -1,0 +1,60 @@
+version: 2.1
+
+executors:
+    default:
+        docker:
+            -   image: cimg/node:lts
+        working_directory: ~/my-app
+
+stage:
+    - lint
+
+jobs:
+    linter:
+        docker:
+            -   image: cimg/node:lts
+        steps:
+            - checkout
+            -   run:
+                    name: installing typescript
+                    command: 'sudo npm install typescript -g'
+            -   run:
+                    name: installing eslint
+                    command: 'sudo npm install -g eslint'
+            -   run:
+                    name: checking stylecode with eslint
+                    command: 'tsc --noEmit && eslint --ext .tsx ./'
+    eas_build:
+        executor: default
+        steps:
+            - checkout
+            -   run:
+                    name: Install dependencies
+                    command: npm ci
+            -   run:
+                    name: Trigger build
+                    command: npx eas-cli build --platform android
+    eas_submit:
+        executor: default
+        steps:
+            - checkout
+            -   run:
+                    name: Trigger deploy on play store
+                    command: eas submit -p android
+
+workflows:
+    build_app:
+        jobs:
+            - linter
+            -   eas_build:
+                    requires:
+                        - linter
+                    filters:
+                        branches:
+                            only: testPipeline
+            -   eas_submit:
+                    requires:
+                        - eas_build
+                    filters:
+                        branches:
+                            only: testPipeline
