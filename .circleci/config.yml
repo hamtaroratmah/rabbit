@@ -30,7 +30,7 @@ jobs:
             - checkout
             -   run:
                     name: Trigger deploy on play store
-                    command: eas submit -p android
+                    command: npx eas-cli submit -p android
 
 workflows:
     build_app:
