@@ -13,7 +13,7 @@ jobs:
             - checkout
             -   run:
                     name: Install node_modules
-                    command: npm i && npm install expo-cli eas-cli
+                    command: npm i && sudo npm install -g expo-cli eas-cli
     eas_build:
         executor: default
         steps:
