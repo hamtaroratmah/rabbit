@@ -3,7 +3,7 @@ version: 2.1
 executors:
     default:
         docker:
-            -   image: cimg/node:lts
+            -   image: cimg/node:16.17.0
         working_directory: ~/my-app
 
 jobs:
@@ -11,9 +11,6 @@ jobs:
         executor: default
         steps:
             - checkout
-            - run:
-                  name: Install nodejs
-                  command: nvm install 16.17.0 && nvm use 16.17.0
             -   run:
                     name: Install node_modules
                     command: npm i && npm install --global expo-cli eas-cli
