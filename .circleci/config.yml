@@ -23,7 +23,7 @@ jobs:
                     command: if [ -e package-lock.json ]; then npm ci; else npm i; fi
             -   run:
                     name: Trigger build
-                    command: npx eas-cli build --platform android
+                    command: npx eas-cli build --platform android --non-interactive
     eas_submit:
         executor: default
         steps:
