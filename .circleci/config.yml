@@ -41,10 +41,10 @@ workflows:
                         - install_dependencies
                     filters:
                         branches:
-                            only: testPipeline
+                            only: master
             -   eas_submit:
                     requires:
                         - eas_build
                     filters:
                         branches:
-                            only: testPipeline
+                            only: master
