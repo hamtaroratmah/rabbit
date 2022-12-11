@@ -7,6 +7,13 @@ executors:
         working_directory: ~/my-app
 
 jobs:
+    install_dependencies:
+        executor: default
+        steps:
+            - checkout
+            - run:
+                name: Install node_modules
+                command: npm i
     eas_build:
         executor: default
         steps:
@@ -28,7 +35,10 @@ jobs:
 workflows:
     build_app:
         jobs:
+            - install_dependencies
             -   eas_build:
+                    requires:
+                        - install_dependencies
                     filters:
                         branches:
                             only: testPipeline
