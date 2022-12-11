@@ -13,7 +13,7 @@ jobs:
             - checkout
             -   run:
                     name: Install node_modules
-                    command: rm package-lock.json && npm i
+                    command: npm i
     eas_build:
         executor: default
         steps:
