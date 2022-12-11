@@ -6,24 +6,7 @@ executors:
             -   image: cimg/node:lts
         working_directory: ~/my-app
 
-stage:
-    - lint
-
 jobs:
-    linter:
-        docker:
-            -   image: cimg/node:lts
-        steps:
-            - checkout
-            -   run:
-                    name: installing typescript
-                    command: 'sudo npm install typescript -g'
-            -   run:
-                    name: installing eslint
-                    command: 'sudo npm install -g eslint'
-            -   run:
-                    name: checking stylecode with eslint
-                    command: 'tsc --noEmit && eslint --ext .tsx ./'
     eas_build:
         executor: default
         steps:
@@ -45,7 +28,6 @@ jobs:
 workflows:
     build_app:
         jobs:
-            - linter
             -   eas_build:
                     requires:
                         - linter
