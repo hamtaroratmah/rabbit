@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import {
-  Alert,
   Modal,
   Image,
   StyleSheet,
@@ -22,7 +21,7 @@ const PopUpInfo = (props) => {
           <View style={styles.modalView}>
             <Text style={styles.modalText}>{props.textModal}</Text>
             <Pressable style={styles.btn} onPress={props.action}>
-              <Text> {props.textBtn} </Text>
+              <Text style={styles.textBtn}> {props.textBtn} </Text>
             </Pressable>
           </View>
         </View>
@@ -70,11 +69,16 @@ const styles = StyleSheet.create({
   btn: {
     alignSelf: "flex-end",
     borderRadius: 10,
-    backgroundColor: "#F59801",
-    width: 100,
+    backgroundColor: "#207B9F",
+    width: 125,
     alignItems: "center",
     justifyContent: "center",
-    height: 30,
+    height: 35,
+    marginTop: 10,
+  },
+  textBtn: {
+    color: "#FEFEFE",
+    fontWeight: "bold",
   },
 });
 

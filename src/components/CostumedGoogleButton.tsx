@@ -14,7 +14,6 @@ const ButtonLoginGoogle = (props) => {
         name="google"
         color="#FFFBFB"
         backgroundColor="#207B9F"
-        style={{ fontFamily: "Roboto" }}
         onPress={loginWithGoogle}
       >
         <Text style={styles.text}> Connect with Google</Text>
@@ -32,6 +31,7 @@ const styles = StyleSheet.create({
     height: 60,
     alignContent: "center",
   },
+
   text: {
     fontSize: 16,
     color: "#FFFBFB",

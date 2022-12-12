@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     justifyContent: "center",
     textAlign: "center",
-    color: "#0E0D0D",
+    color: "black",
     fontStyle: "oblique",
   },
   href: {
