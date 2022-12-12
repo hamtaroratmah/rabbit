@@ -1,28 +1,36 @@
+import React, { version } from "react";
+import { Image, StyleSheet, Text, View } from "react-native";
+import CostumedButton from "../components/CostumedButton";
 
-import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
-import CostumedButton from '../components/CostumedButton';
-
-const WelcomeScreen = ({navigation}) => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <View>
-        <Image source = {
-          require('./../../assets/img/logo.png')
-        }
-        style = {styles.logo}
+      <View style={styles.containerLogo}>
+        <Image
+          source={require("./../../assets/img/logo.png")}
+          style={styles.logo}
         />
       </View>
-      <View>
-      <Text style={styles.caption}>
-        We are what we repeatedly do. Excellence, then, is not an act, but a habbit. 
-      </Text>
-      </View>
-      <View>
-      <CostumedButton text='Sign in' action={()=> navigation.navigate('SignIn')}/>
-      </View>
-      <View>
-      <CostumedButton text='Sign up' action={()=> navigation.navigate('SignUp')}/>
+      <View style={styles.contenairText}>
+        <View>
+          <Text style={styles.caption}>
+            We are what we repeatedly do. Excellence, then, is not an act, but a
+            habbit.
+          </Text>
+        </View>
+
+        <View>
+          <CostumedButton
+            text="Sign in"
+            action={() => navigation.navigate("SignIn")}
+          />
+        </View>
+        <View>
+          <CostumedButton
+            text="Sign up"
+            action={() => navigation.navigate("SignUp")}
+          />
+        </View>
       </View>
     </View>
   );
@@ -31,22 +39,32 @@ const WelcomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#9da5c0',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#FFFBFB",
+    alignItems: "center",
+    //justifyContent: "center",
+  },
+
+  containerLogo: {
+    flex: 1.5,
+    justifyContent: "center",
+  },
+
+  logo: {
+    margin: 0,
+    width: 250,
+    height: 250,
+    overflow: "visible",
+  },
+  contenairText: {
+    flex: 1.5,
   },
   caption: {
-    fontSize: 18,
+    fontSize: 20,
     marginBottom: 15,
-    justifyContent: 'center',
-    textAlign: 'center',
-    color : '#142b6f'
+    justifyContent: "center",
+    textAlign: "center",
+    color: "#142b6f",
+    margin: 20,
   },
-  logo : {
-    margin:0,
-    width : 200,
-    height : 200,
-    overflow: 'visible'
-  }
 });
 export default WelcomeScreen;
