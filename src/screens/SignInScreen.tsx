@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, KeyboardAvoidingView, Platform } from "react-native";
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
@@ -9,7 +9,9 @@ const SignInScreen = ({ navigation }) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView 
+    behavior={Platform.OS === "ios" ? "position" : "height" }
+    style={styles.container}>
       <View style={styles.contenairLogo}>
         <Image
           source={require("./../../assets/img/logo.png")}
@@ -55,33 +57,35 @@ const SignInScreen = ({ navigation }) => {
         </View>
         <ButtonLoginGoogle text="Connect with Google" />
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //alignItems: 'center',
+    alignItems: 'center',
     justifyContent: "center",
-    padding: 15,
     backgroundColor: "#FFFBFB",
   },
   contenairLogo: {
-    flex: 0.5,
+   flex: 1/2,
+   justifyContent: "center",
+    
+  },
+  contenairBody: {
+    flex: 1/2,
     justifyContent: "center",
+    marginTop:50
   },
   logo: {
-    marginTop: 45,
-    width: 250,
-    height: 20,
+    //marginTop: 10,
+    width: 200,
+    height: 200,
     overflow: "visible",
     alignSelf: "center",
   },
-  contenairBody: {
-    flex: 1,
-    justifyContent: "center",
-  },
+ 
   caption: {
     fontSize: 19,
     marginBottom: 5,
@@ -100,7 +104,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "black",
-    fontStyle: "oblique",
+    fontStyle:"italic",
   },
   href: {
     fontSize: 15,
