@@ -2,7 +2,47 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.rabbit.iml" filepath="$PROJECT_DIR$/.idea/modules/android.rabbit.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/rabbit.iml" filepath="$PROJECT_DIR$/.idea/rabbit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rabbit.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rabbit.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rabbit.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rabbit.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rabbit.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rabbit.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rabbit.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rabbit.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1969766870/rabbit.expo.iml" filepath="$PROJECT_DIR$/.idea/modules/1969766870/rabbit.expo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1420600537/rabbit.expo-application.iml" filepath="$PROJECT_DIR$/.idea/modules/1420600537/rabbit.expo-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1420600537/rabbit.expo-application.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1420600537/rabbit.expo-application.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1420600537/rabbit.expo-application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1420600537/rabbit.expo-application.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1420600537/rabbit.expo-application.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1420600537/rabbit.expo-application.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/555726872/rabbit.expo-constants.iml" filepath="$PROJECT_DIR$/.idea/modules/555726872/rabbit.expo-constants.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/555726872/rabbit.expo-constants.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/555726872/rabbit.expo-constants.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/555726872/rabbit.expo-constants.main.iml" filepath="$PROJECT_DIR$/.idea/modules/555726872/rabbit.expo-constants.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/555726872/rabbit.expo-constants.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/555726872/rabbit.expo-constants.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/890655529/rabbit.expo-file-system.iml" filepath="$PROJECT_DIR$/.idea/modules/890655529/rabbit.expo-file-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/890655529/rabbit.expo-file-system.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/890655529/rabbit.expo-file-system.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/890655529/rabbit.expo-file-system.main.iml" filepath="$PROJECT_DIR$/.idea/modules/890655529/rabbit.expo-file-system.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/890655529/rabbit.expo-file-system.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/890655529/rabbit.expo-file-system.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/214806694/rabbit.expo-font.iml" filepath="$PROJECT_DIR$/.idea/modules/214806694/rabbit.expo-font.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/214806694/rabbit.expo-font.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/214806694/rabbit.expo-font.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/214806694/rabbit.expo-font.main.iml" filepath="$PROJECT_DIR$/.idea/modules/214806694/rabbit.expo-font.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/214806694/rabbit.expo-font.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/214806694/rabbit.expo-font.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1402470996/rabbit.expo-keep-awake.iml" filepath="$PROJECT_DIR$/.idea/modules/1402470996/rabbit.expo-keep-awake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1402470996/rabbit.expo-keep-awake.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1402470996/rabbit.expo-keep-awake.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1402470996/rabbit.expo-keep-awake.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1402470996/rabbit.expo-keep-awake.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1402470996/rabbit.expo-keep-awake.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1402470996/rabbit.expo-keep-awake.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/28298620/rabbit.expo-modules-core.iml" filepath="$PROJECT_DIR$/.idea/modules/28298620/rabbit.expo-modules-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/28298620/rabbit.expo-modules-core.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/28298620/rabbit.expo-modules-core.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/28298620/rabbit.expo-modules-core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/28298620/rabbit.expo-modules-core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/28298620/rabbit.expo-modules-core.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/28298620/rabbit.expo-modules-core.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1637898789/rabbit.expo-splash-screen.iml" filepath="$PROJECT_DIR$/.idea/modules/-1637898789/rabbit.expo-splash-screen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1637898789/rabbit.expo-splash-screen.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1637898789/rabbit.expo-splash-screen.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1637898789/rabbit.expo-splash-screen.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1637898789/rabbit.expo-splash-screen.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1637898789/rabbit.expo-splash-screen.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1637898789/rabbit.expo-splash-screen.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1969766870/rabbit.expo.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1969766870/rabbit.expo.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1969766870/rabbit.expo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1969766870/rabbit.expo.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1969766870/rabbit.expo.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1969766870/rabbit.expo.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/64606037/react-native-gradle-plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/64606037/react-native-gradle-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/64606037/react-native-gradle-plugin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/64606037/react-native-gradle-plugin.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/64606037/react-native-gradle-plugin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/64606037/react-native-gradle-plugin.test.iml" />
     </modules>
   </component>
 </project>
