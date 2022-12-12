@@ -24,43 +24,32 @@ const HomePageScreen = ({ navigation }) => {
   const action = () => {
     setIsFistPopUpVisible(false);
     setIsSecondPopUpVisible(true);
-    console.log("hy")
+    console.log("hy");
   };
-
-  const incrementNbClick = () => {};
 
   return (
     <View style={styles.container}>
-      {/*********************************************** */}
-      <View style={{ flex: 1 / 3 }}>
-        <View style={{ flex: 1 }}>
-          <Text style={{ flex: 1 }}> Welcome Pseudo</Text>
-          <View style={{ flex: 2 }}>
-            <View
-              style={{
-                flexDirection: "row",
-                flex: 1,
-                justifyContent: "flex-start",
-              }}
-            >
-              <Image
-                source={require("./../../assets/icons/diamant.png")}
-                style={[styles.icon]}
-              />
-
-              {/********* A refaire par sou */}
-              <ProgressExperience />
-              {/********* A refaire par sou */}
-            </View>
-          </View>
-
-          <View style={{ flex: 1, marginTop: 10 }}>
-            <Text> Level 0</Text>
-          </View>
-
-          {/*Pour le diamant qd on atteint un certain niveau le diamant change*/}
+      {/********************* header************************** */}
+      <View style={styles.containerHeader}>
+        <View style={styles.containerPseudoLevel}>
+          <Text style={styles.textPseudo}>Welcome Pseudo</Text>
+          <Text style={styles.textLevel}> Level 0</Text>
         </View>
+        
+        <View style={styles.conatainerDiamondProgressBar}>
+          <Image
+            source={require("./../../assets/icons/dia.png")}
+            style={[styles.icon]}
+          />
+          {/********* A refaire par sou */}
+          <ProgressExperience />
+          {/********* A refaire par sou */}
+        </View>
+
+        
+        {/*Pour le diamant qd on atteint un certain niveau le diamant change*/}
       </View>
+
       {/*********************************************** */}
 
       {/**Pop up with information */}
@@ -71,15 +60,15 @@ const HomePageScreen = ({ navigation }) => {
           isVisible={isFistPopUpVisible}
           action={() => action()}
         />
+
+        {/**navigation vers page add activity */}
         <PopUpInfo
           textModal={textSecondPopUp}
-          textBtn="hy"
+          textBtn="Add new activity"
           isVisible={isSecondPopUpVisible}
           action={() => action()}
         />
       </View>
-
-      <Separator />
       {/**Component with different icons*/}
       <ComponentIcons />
     </View>
@@ -89,15 +78,50 @@ const HomePageScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#E7ECFA",
+    backgroundColor: "#F1F3F3",
+    justifyContent: "space-between",
   },
-  containerHeader: {},
+  containerHeader: {
+    justifyContent: "space-between",
+    backgroundColor: "#fefefe",
+    shadowColor: "#0E0D0D",
+    shadowOffset: {
+      width: 1,
+      height: 3,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  containerPseudoLevel: {
+    justifyContent: "space-around",
+    marginTop: 10,
+    flexDirection: "row",
+  },
+  textPseudo: {
+    color: "#0F4E67",
+    fontSize: 15,
+    fontWeight: "bold",
+  },
+  textLevel: {
+    color: "#0F4E67",
+    fontSize: 15,
+    fontStyle: "italic",
+  },
+  conatainerDiamondProgressBar: {
+    flex: 2,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    marginTop: 10,
+    paddingBottom: 10,
+  },
   containerBody: {
     flex: 2,
   },
   icon: {
-    height: 50,
-    width: 50,
+    height: 35,
+    width: 35,
   },
 });
 

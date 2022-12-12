@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { TextInput, View, StyleSheet } from "react-native";
+import React from "react";
+import { TextInput, StyleSheet } from "react-native";
 
 export type Props = {
   placeHolderText: string;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, View ,StyleSheet, Pressable, Text } from 'react-native';
+import { View ,StyleSheet} from 'react-native';
 
 
 const Separator = () => {
