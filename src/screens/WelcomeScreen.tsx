@@ -24,6 +24,9 @@ const WelcomeScreen = ({navigation}) => {
       <View>
       <CostumedButton text='Sign up' action={()=> navigation.navigate('SignUp')}/>
       </View>
+      <View>
+      <CostumedButton text='Home Page' action={()=> navigation.navigate('TabNavigator')}/>
+      </View>
     </View>
   );
 };
@@ -31,7 +34,7 @@ const WelcomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#9da5c0',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -44,8 +47,8 @@ const styles = StyleSheet.create({
   },
   logo : {
     margin:0,
-    width : 200,
-    height : 200,
+    width : 230,
+    height : 246,
     overflow: 'visible'
   }
 });

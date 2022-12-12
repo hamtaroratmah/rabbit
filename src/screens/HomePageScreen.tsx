@@ -63,25 +63,9 @@ const HomePageScreen = ({ navigation }) => {
       </View>
       {/*********************************************** */}
 
-      {/**Pop up with information */}
-      <View style={styles.containerBody}>
-        <PopUpInfo
-          textModal={textFirstPopUp}
-          textBtn="Next"
-          isVisible={isFistPopUpVisible}
-          action={() => action()}
-        />
-        <PopUpInfo
-          textModal={textSecondPopUp}
-          textBtn="hy"
-          isVisible={isSecondPopUpVisible}
-          action={() => action()}
-        />
-      </View>
 
       <Separator />
       {/**Component with different icons*/}
-      <ComponentIcons />
     </View>
   );
 };
