@@ -11,7 +11,6 @@ import {
 import Separator from "../components/CostumedLine";
 import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
-import ComponentIcons from "../components/ComponentIcons";
 
 const HomePageScreen = ({ navigation }) => {
   const textFirstPopUp: string = ` Welcome to us, we're glad you're joining us and becoming a productive rabbit who is ready to learn new habits.
@@ -63,6 +62,21 @@ const HomePageScreen = ({ navigation }) => {
       </View>
       {/*********************************************** */}
 
+      {/**Pop up with information */}
+      <View style={styles.containerBody}>
+        <PopUpInfo
+          textModal={textFirstPopUp}
+          textBtn="Next"
+          isVisible={isFistPopUpVisible}
+          action={() => action()}
+        />
+        <PopUpInfo
+          textModal={textSecondPopUp}
+          textBtn="hy"
+          isVisible={isSecondPopUpVisible}
+          action={() => action()}
+        />
+      </View>
 
       <Separator />
       {/**Component with different icons*/}

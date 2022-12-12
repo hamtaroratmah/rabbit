@@ -5,6 +5,7 @@ import PageStack from "./PageStack";
 import { StyleSheet } from "react-native";
 import { View } from "react-native";
 import ComponentIcon from "../components/CompenentIcon";
+import SignInScreen from "../screens/SignInScreen";
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -20,7 +21,7 @@ const TabNavigator = () => {
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="PageStack" component={PageStack} options={{tabBarIcon(props) {
+                <Tab.Screen name="PageStack" component={SignInScreen} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
                             <ComponentIcon />

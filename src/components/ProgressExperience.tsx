@@ -5,7 +5,7 @@ const ProgressExperience = () => {
   return (
     <LinearProgress
       value={0.2}
-      color="0E0D0D"
+      color="#0E0D0D"
       trackColor="#F59801"
       style={styles.progress}
       variant="indeterminate"
