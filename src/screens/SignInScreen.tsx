@@ -21,6 +21,7 @@ const SignInScreen = ({navigation}) => {
             require('./../../assets/img/logo.png')
           }
           style = {styles.logo}
+          
           />
         </View>
         <View>
