@@ -11,14 +11,13 @@ const CostumedButton =({ text, action }: Props) => {
 
     return (
         <Pressable style={styles.button} onPress={action}>
-            <Text> {text} </Text>
+            <Text style={styles.textBtn}> {text} </Text>
         </Pressable>
     )   
 }
 
 const styles = StyleSheet.create({
     button : {
-        fontSize:18,
         width: 150,
         height:50,
         margin:10,
@@ -26,7 +25,12 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         alignSelf: 'center',
         borderRadius : 25,
-        backgroundColor : '#F59801'
+        backgroundColor : '#207B9F',
+        
+      },
+      textBtn : {
+        color:'#FFFBFB',
+        fontSize:18,
       }
   });
 
