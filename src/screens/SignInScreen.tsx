@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, Image, StyleSheet, Text, View, Button } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import CostumedButton from '../components/CostumedButton';
 import CostumedTextInput from '../components/CostumedTextInput';
 import Separator from '../components/CostumedLine';
