@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, View ,StyleSheet } from 'react-native';
+import { Button, View ,StyleSheet, Pressable, Text } from 'react-native';
 
 export type Props = {
     text: string;
@@ -10,13 +10,9 @@ export type Props = {
 const CostumedButton =({ text, action }: Props) => {
 
     return (
-        <View style={styles.button}>
-          <Button
-              title={text}
-              color="white" 
-              onPress={action}
-          />
-        </View>
+        <Pressable style={styles.button} onPress={action}>
+            <Text> {text} </Text>
+        </Pressable>
     )   
 }
 
@@ -28,6 +24,7 @@ const styles = StyleSheet.create({
         margin:10,
         alignItems : 'center',
         justifyContent : 'center',
+        alignSelf: 'center',
         borderRadius : 25,
         backgroundColor : '#F59801'
       }

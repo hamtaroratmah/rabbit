@@ -24,13 +24,13 @@ const CostumedTextInput =({placeHolderText,value,setValue,secureTextEntry}: Prop
 
 const styles = StyleSheet.create({
     inputs:{
-      width:300,
-      //backgroundColor: 'white',
+      width:280,
+      backgroundColor: '#EAF2EF',
       margin:10,
       padding:15,
       borderRadius:25,
       borderColor:'#142b6f',
-      borderWidth:2
+      borderWidth:1.3, 
     }
   });
 

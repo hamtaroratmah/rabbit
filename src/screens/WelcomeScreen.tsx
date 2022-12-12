@@ -19,10 +19,10 @@ const WelcomeScreen = ({navigation}) => {
       </Text>
       </View>
       <View>
-      <CostumedButton text='Log in' action={()=> navigation.navigate('LogIn')}/>
+      <CostumedButton text='Sign in' action={()=> navigation.navigate('SignIn')}/>
       </View>
       <View>
-      <CostumedButton text='Sign in' action={()=> navigation.navigate('SignIn')}/>
+      <CostumedButton text='Sign up' action={()=> navigation.navigate('SignUp')}/>
       </View>
     </View>
   );
@@ -31,7 +31,7 @@ const WelcomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#9da5c0',
     alignItems: 'center',
     justifyContent: 'center',
   },
