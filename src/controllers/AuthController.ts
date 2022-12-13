@@ -1,6 +1,6 @@
 import {Services} from "../services/services";
 
-export class RegisterController {
+export class AuthController {
 
   constructor() {
   }

@@ -11,7 +11,7 @@ import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
-import {RegisterController} from "../controllers/RegisterController";
+import {AuthController} from "../controllers/AuthController";
 
 // @ts-ignore
 const SignUpScreen = ({ navigation }) => {
@@ -19,7 +19,7 @@ const SignUpScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmationPassword, setConfirmationPassword] = useState("");
-  const controller = new RegisterController();
+  const controller = new AuthController();
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "position" : "height"}
