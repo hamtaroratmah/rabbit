@@ -20,3 +20,4 @@ Footer
 ios
 assets
 android/app/build
+.env
