@@ -18,3 +18,5 @@ web-build/
 .DS_Store
 Footer
 ios
+assets
+android/app/build
