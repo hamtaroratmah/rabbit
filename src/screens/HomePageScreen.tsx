@@ -60,7 +60,7 @@ const HomePageScreen = ({ navigation }) => {
         />
       </View>
       {/**Component with different icons*/}
-      <ComponentIcons/>
+      
     </View>
   );
 };

@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     view:{
         flex: 1,
         flexDirection:'column',
-        backgroundColor: '#007271',
+        backgroundColor: '#207B9F',
     },
     container: {
         alignItems:'flex-start',

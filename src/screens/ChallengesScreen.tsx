@@ -1,12 +1,13 @@
 import { View,StyleSheet,Text, FlatList,ScrollView, Pressable } from "react-native";
-import { LinearGradient } from 'expo-linear-gradient';
+import CostumedButton from "../components/CostumedButton";
 export type  Props = {
     title : string,
-    description : string
-    objective:string
+    description : string,
+    objective:string,
+    action:any
 }
-const Item = ({title , description, objective}:Props) => (
-    <Pressable  style={styles.box} >
+const Item = ({title , description, objective,action}:Props) => (
+    <Pressable  style={styles.box}  onPress={action}>
         <Text style={styles.boxText} >{title} </Text>
         <Text style={styles.boxText} >{description} </Text>
         <Text style={styles.boxText} >{objective} </Text>
@@ -40,7 +41,7 @@ const DATA = [
     }
   ];
 
-const ChallengesScrren = () =>{
+const ChallengesScrren = ({navigation}) =>{
     return (
         <ScrollView style={styles.view}>
             <View  style={styles.container} >
@@ -49,7 +50,7 @@ const ChallengesScrren = () =>{
             <View style={styles.bodyStyle}>
                 <FlatList
                     data={DATA}
-                    renderItem={({ item }) => <Item title={item.title} description={item.description} objective={item.objective}/>} 
+                    renderItem={({ item }) => <Item title={item.title} description={item.description} objective={item.objective} action={()=> navigation.navigate('Profile')}/>} 
                 />
             </View>
         </ScrollView>
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     view:{
         flex: 1,
         flexDirection:'column',
-        backgroundColor: '#007271',
+        backgroundColor: '#207B9F',
     },
     container: {
         alignItems:'flex-start',

@@ -1,4 +1,4 @@
-import React, { version } from "react";
+
 import { Image, StyleSheet, Text, View } from "react-native";
 import CostumedButton from "../components/CostumedButton";
 
