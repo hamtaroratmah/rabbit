@@ -34,7 +34,7 @@ const HomePageScreen = ({ navigation }) => {
           <Text style={styles.textPseudo}>Welcome Pseudo</Text>
           <Text style={styles.textLevel}> Level 0</Text>
         </View>
-        
+
         <View style={styles.conatainerDiamondProgressBar}>
           <Image
             source={require("./../../assets/icons/dia.png")}
@@ -45,7 +45,6 @@ const HomePageScreen = ({ navigation }) => {
           {/********* A refaire par sou */}
         </View>
 
-        
         {/*Pour le diamant qd on atteint un certain niveau le diamant change*/}
       </View>
 
@@ -80,6 +79,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   containerHeader: {
+    flex: 1 / 4,
     justifyContent: "space-between",
     backgroundColor: "#fefefe",
     shadowColor: "#0E0D0D",
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   conatainerDiamondProgressBar: {
     flex: 2,
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
     alignItems: "center",
     marginTop: 10,
     paddingBottom: 10,
@@ -118,8 +118,9 @@ const styles = StyleSheet.create({
     flex: 2,
   },
   icon: {
-    height: 35,
-    width: 35,
+    height: 30,
+    width: 30,
+    marginRight:10
   },
 });
 
