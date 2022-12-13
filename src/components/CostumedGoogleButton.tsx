@@ -2,7 +2,7 @@ import * as React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
-const ButtonLoginGoogle = (props) => {
+const ButtonLoginGoogle = () => {
   const loginWithGoogle = () => {
     console.log("Button pressed");
   };
