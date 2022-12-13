@@ -7,6 +7,8 @@ import TabNavigator from "./src/navigation/TabNavigator";
 import SignInScreen from "./src/screens/SignInScreen";
 import SignUpScreen from "./src/screens/SignUpScreen";
 import AddActivityScreen from "./src/screens/AddActivityScreen";
+import ObjectifInputScreen from "./src/screens/ObjectifInputScreen";
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -14,11 +16,15 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Activity"
+        initialRouteName="ObjectifInputScreen"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
-        <Stack.Screen name="Activity" component={AddActivityScreen} />
+        <Stack.Screen name="AddActivityScreen" component={AddActivityScreen} />
+        <Stack.Screen
+          name="ObjectifInputScreen"
+          component={ObjectifInputScreen}
+        />
 
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="SignIn" component={SignInScreen} />
