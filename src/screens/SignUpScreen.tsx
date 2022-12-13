@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#0E0D0D",
-    fontStyle: "oblique",
+    fontStyle: "italic",
   },
   href: {
     fontSize: 15,
