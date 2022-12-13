@@ -1,4 +1,4 @@
-import React from "react";
+import { useState} from "react";
 import {
   Image,
   StyleSheet,
@@ -11,12 +11,15 @@ import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
+import {AuthController} from "../controllers/AuthController";
 
+// @ts-ignore
 const SignUpScreen = ({ navigation }) => {
-  const [pseudo, setPseudo] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [confirmationPassword, setConfirmationPassword] = React.useState("");
+  const [pseudo, setPseudo] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmationPassword, setConfirmationPassword] = useState("");
+  const controller = new AuthController();
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "position" : "height"}
@@ -60,7 +63,7 @@ const SignUpScreen = ({ navigation }) => {
       <View style={styles.center}>
         <CostumedButton
           text="Create"
-          action={() => navigation.navigate("Welcome")}
+          action={async () => await controller.register(pseudo, email, password, confirmationPassword) ? navigation.navigate("HomePage") : console.log("Error SignUp") }
         />
       </View>
       <View>
@@ -103,7 +106,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#0E0D0D",
-    fontStyle: "oblique",
+    fontStyle: "italic",
   },
   href: {
     fontSize: 15,

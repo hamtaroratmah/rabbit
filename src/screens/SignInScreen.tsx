@@ -1,13 +1,16 @@
-import React from "react";
 import { Image, StyleSheet, Text, View, KeyboardAvoidingView, Platform } from "react-native";
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
+import {AuthController} from "../controllers/AuthController";
+import { useState } from "react";
 
+// @ts-ignore
 const SignInScreen = ({ navigation }) => {
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const controller = new AuthController();
   return (
     <KeyboardAvoidingView 
     behavior={Platform.OS === "ios" ? "position" : "height" }
@@ -39,7 +42,7 @@ const SignInScreen = ({ navigation }) => {
         <View style={styles.button}>
           <CostumedButton
             text="Log in"
-            action={() => navigation.navigate("Welcome")}
+            action={async () => await controller.login(email, password) ? navigation.navigate("HomePage"): console.log("error on login")}
           />
         </View>
 
@@ -55,7 +58,7 @@ const SignInScreen = ({ navigation }) => {
         <View>
           <Separator />
         </View>
-        <ButtonLoginGoogle text="Connect with Google" />
+        <ButtonLoginGoogle/>
       </View>
     </KeyboardAvoidingView>
   );
