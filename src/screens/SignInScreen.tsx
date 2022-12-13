@@ -1,5 +1,12 @@
 import React from "react";
-import { Image, StyleSheet, Text, View, KeyboardAvoidingView, Platform } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
@@ -9,9 +16,10 @@ const SignInScreen = ({ navigation }) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   return (
-    <KeyboardAvoidingView 
-    behavior={Platform.OS === "ios" ? "position" : "height" }
-    style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "position" : "height"}
+      style={styles.container}
+    >
       <View style={styles.contenairLogo}>
         <Image
           source={require("./../../assets/img/logo.png")}
@@ -64,19 +72,18 @@ const SignInScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#FFFBFB",
   },
   contenairLogo: {
-   flex: 1/2,
-   justifyContent: "center",
-    
+    flex: 1 / 2,
+    justifyContent: "center",
   },
   contenairBody: {
-    flex: 1/2,
+    flex: 1 / 2,
     justifyContent: "center",
-    marginTop:50
+    marginTop: 50,
   },
   logo: {
     //marginTop: 10,
@@ -85,7 +92,7 @@ const styles = StyleSheet.create({
     overflow: "visible",
     alignSelf: "center",
   },
- 
+
   caption: {
     fontSize: 19,
     marginBottom: 5,
@@ -104,7 +111,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "black",
-    fontStyle:"italic",
+    fontStyle: "italic",
   },
   href: {
     fontSize: 15,
