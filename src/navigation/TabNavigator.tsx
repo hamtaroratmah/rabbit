@@ -6,7 +6,6 @@ import { ImageBackground, ImageComponent, StyleSheet } from "react-native";
 import { View } from "react-native";
 import ComponentIcon from "../components/CompenentIcon";
 import SignInScreen from "../screens/SignInScreen";
-import { Image } from "react-native-elements";
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -58,19 +57,8 @@ const styles = StyleSheet.create({
     tabBar : {
         position:'absolute',
         backgroundColor:'#ffffff',
-        borderRadius:20,
-        bottom:20,
-        left:13,
-        right:13,
-        height:70,
-        shadowColor:'#7f5df0',
-        shadowOffset: {
-            width:0,
-            height:10
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.5,
-        elevation: 5 
+        height:65,
+        
     },
     iconContainer : {
         alignItems:'center',
