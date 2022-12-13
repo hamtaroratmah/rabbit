@@ -1,28 +1,20 @@
-import React, { useState } from "react";
-import {
-  Pressable,
-  Modal,
-  View,
-  StyleSheet,
-  Text,
-  Image,
-  Alert,
-} from "react-native";
-import Separator from "../components/CostumedLine";
+import  {useState} from "react";
+import {Image, StyleSheet, Text, View,} from "react-native";
 import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
 import ComponentIcons from "../components/ComponentIcons";
 
+// @ts-ignore
 const HomePageScreen = ({ navigation }) => {
   const textFirstPopUp: string = ` Welcome to us, we're glad you're joining us and becoming a productive rabbit who is ready to learn new habits.
   Before we start let's find out how the application works`;
 
   const textSecondPopUp: string = `To begin, start by adding a new activity`;
 
-  const [isFistPopUpVisible, setIsFistPopUpVisible] = useState(true);
+  const [isFirstPopUpVisible, setIsFirstPopUpVisible] = useState(true);
   const [isSecondPopUpVisible, setIsSecondPopUpVisible] = useState(false);
   const action = () => {
-    setIsFistPopUpVisible(false);
+    setIsFirstPopUpVisible(false);
     setIsSecondPopUpVisible(true);
     console.log("hy");
   };
@@ -36,13 +28,13 @@ const HomePageScreen = ({ navigation }) => {
           <Text style={styles.textLevel}> Level 0</Text>
         </View>
 
-        <View style={styles.conatainerDiamondProgressBar}>
+        <View style={styles.containerDiamondProgressBar}>
           <Image
             source={require("./../../assets/icons/dia.png")}
             style={[styles.icon]}
           />
           {/********* A refaire par sou */}
-          <ProgressExperience />
+          <ProgressExperience/>
           {/********* A refaire par sou */}
         </View>
 
@@ -56,7 +48,7 @@ const HomePageScreen = ({ navigation }) => {
         <PopUpInfo
           textModal={textFirstPopUp}
           textBtn="Next"
-          isVisible={isFistPopUpVisible}
+          isVisible={isFirstPopUpVisible}
           action={() => action()}
         />
 
@@ -69,7 +61,7 @@ const HomePageScreen = ({ navigation }) => {
         />
       </View>
       {/**Component with different icons*/}
-      <ComponentIcons />
+      <ComponentIcons/>
     </View>
   );
 };
@@ -108,7 +100,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontStyle: "italic",
   },
-  conatainerDiamondProgressBar: {
+  containerDiamondProgressBar: {
     flex: 2,
     flexDirection: "row",
     justifyContent: "center",
@@ -122,7 +114,7 @@ const styles = StyleSheet.create({
   icon: {
     height: 30,
     width: 30,
-    marginRight:10
+    marginRight: 10
   },
 });
 
