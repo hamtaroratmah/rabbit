@@ -29,4 +29,9 @@ export class Services {
     });
   }
 
+  public async loginWithGoogle() {
+    return await this.supabase.auth.signInWithOAuth({
+      provider: 'google'
+    });
+  }
 }
