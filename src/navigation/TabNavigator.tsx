@@ -2,50 +2,51 @@ import React from "react"
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import HomeStack from "../navigation/HomeStack"
 import PageStack from "./PageStack";
-import { StyleSheet } from "react-native";
+import { ImageBackground, ImageComponent, StyleSheet } from "react-native";
 import { View } from "react-native";
 import ComponentIcon from "../components/CompenentIcon";
 import SignInScreen from "../screens/SignInScreen";
+import { Image } from "react-native-elements";
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
     return(
             <Tab.Navigator 
-                initialRouteName="HomeStack" 
-                screenOptions={{headerShown:false , tabBarShowLabel:false , tabBarStyle:styles.tabBar}}
+                initialRouteName="Home" 
+                screenOptions={{headerShown:false , tabBarShowLabel:true , tabBarStyle:styles.tabBar}}
             >
-                <Tab.Screen name="HomeStack" component={HomeStack} options={{tabBarIcon(props) {
+                <Tab.Screen name="Home" component={HomeStack} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
-                            <ComponentIcon />
+                            <ComponentIcon source="home"/>
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="PageStack" component={SignInScreen} options={{tabBarIcon(props) {
+                <Tab.Screen name="Habbits" component={SignInScreen} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
-                            <ComponentIcon />
+                            <ComponentIcon source="habbit"/>
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="hALLO" component={PageStack} options={{tabBarIcon(props) {
+                <Tab.Screen name="Chat" component={PageStack} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
-                            <ComponentIcon />
+                            <ComponentIcon source="msg"/>
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="Stack" component={PageStack} options={{tabBarIcon(props) {
+                <Tab.Screen name="Challenges" component={PageStack} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
-                            <ComponentIcon />
+                            <ComponentIcon source="challenge"/>
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="Page" component={PageStack} options={{tabBarIcon(props) {
+                <Tab.Screen name="Profile" component={PageStack} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
-                            <ComponentIcon />
+                            <ComponentIcon source="profile"/>
                         </View>
                     )
                 },}}/>
@@ -59,9 +60,9 @@ const styles = StyleSheet.create({
         backgroundColor:'#ffffff',
         borderRadius:20,
         bottom:20,
-        left:15,
-        right:15,
-        height:80,
+        left:13,
+        right:13,
+        height:70,
         shadowColor:'#7f5df0',
         shadowOffset: {
             width:0,
