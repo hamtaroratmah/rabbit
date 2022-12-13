@@ -1,10 +1,13 @@
 import {createClient} from '@supabase/supabase-js';
+import 'react-native-url-polyfill/auto';
+// @ts-ignore
+import { SUPABASE_CLIENT_KEY } from '@env';
 
 export class Services {
 
-  private supabaseUrl = "https://etefnzdgrjqcafqbztoy.supabase.co";
-  private token = process.env.token as string;
-  private supabase = createClient(this.supabaseUrl, this.token);
+  private readonly url = "https://etefnzdgrjqcafqbztoy.supabase.co";
+  private readonly token = SUPABASE_CLIENT_KEY as string;
+  private readonly supabase = createClient("https://etefnzdgrjqcafqbztoy.supabase.co", this.token);
 
   public async register(username: string, email: string, password: string) {
     const response = await this.supabase.auth.signUp({
@@ -16,7 +19,7 @@ export class Services {
         }
       }
     });
-    console.log(response);
+    return response;
   }
 
 }

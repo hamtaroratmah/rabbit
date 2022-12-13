@@ -63,7 +63,7 @@ const SignUpScreen = ({ navigation }) => {
       <View style={styles.center}>
         <CostumedButton
           text="Create"
-          action={() => controller.register(pseudo, email, password, confirmationPassword)}
+          action={async () => await controller.register(pseudo, email, password, confirmationPassword) ? navigation.navigate("HomePage") : console.log("Error SignUp") }
         />
       </View>
       <View>
