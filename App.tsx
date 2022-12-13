@@ -1,20 +1,25 @@
 import { NavigationContainer } from "@react-navigation/native";
-import WelcomeScreen from "./src/screens/WelcomeScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
+import HomeStack from "./src/navigation/HomeStack"
+import WelcomeScreen from "./src/screens/WelcomeScreen";
+import TabNavigator from "./src/navigation/TabNavigator";
 import SignInScreen from "./src/screens/SignInScreen";
 import SignUpScreen from "./src/screens/SignUpScreen";
-import HomePageScreen from "./src/screens/HomePageScreen";
-
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="HomePage">
-        <Stack.Screen name="HomePage" component={HomePageScreen} />
+
+      <Stack.Navigator initialRouteName="Welcome" screenOptions={{headerShown:false}}>
+        <Stack.Screen name="TabNavigator" component={TabNavigator} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="SignIn" component={SignInScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
       </Stack.Navigator>
-    </NavigationContainer>
+  </NavigationContainer>
+  
   );
 }

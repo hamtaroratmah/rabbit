@@ -11,7 +11,6 @@ import {
 import Separator from "../components/CostumedLine";
 import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
-import ComponentIcons from "../components/ComponentIcons";
 
 const HomePageScreen = ({ navigation }) => {
   const textFirstPopUp: string = ` Welcome to us, we're glad you're joining us and becoming a productive rabbit who is ready to learn new habits.
@@ -69,7 +68,6 @@ const HomePageScreen = ({ navigation }) => {
         />
       </View>
       {/**Component with different icons*/}
-      <ComponentIcons />
     </View>
   );
 };

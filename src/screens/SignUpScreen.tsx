@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   logo: {
-    width: 180,
-    height: 180,
+    width: 150,
+    height: 150,
     overflow: "visible",
     alignSelf: "center",
   },

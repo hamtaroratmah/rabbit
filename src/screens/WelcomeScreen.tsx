@@ -32,6 +32,9 @@ const WelcomeScreen = ({ navigation }) => {
           />
         </View>
       </View>
+      <View>
+      <CostumedButton text='Home Page' action={()=> navigation.navigate('TabNavigator')}/>
+      </View>
     </View>
   );
 };
