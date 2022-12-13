@@ -1,4 +1,4 @@
-import React from "react"
+
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import HomeStack from "../navigation/HomeStack"
 import PageStack from "./PageStack";
@@ -6,6 +6,8 @@ import { ImageBackground, ImageComponent, StyleSheet } from "react-native";
 import { View } from "react-native";
 import ComponentIcon from "../components/CompenentIcon";
 import SignInScreen from "../screens/SignInScreen";
+import ProfileScreen from "../screens/ProfileScreen";
+import ChallengesScreen from "../screens/ChallengesScreen";
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -35,14 +37,14 @@ const TabNavigator = () => {
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="Challenges" component={PageStack} options={{tabBarIcon(props) {
+                <Tab.Screen name="Challenges" component={ChallengesScreen} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
                             <ComponentIcon source="challenge"/>
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="Profile" component={PageStack} options={{tabBarIcon(props) {
+                <Tab.Screen name="Profile" component={ProfileScreen} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
                             <ComponentIcon source="profile"/>

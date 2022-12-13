@@ -50,7 +50,7 @@ const HomePageScreen = ({ navigation }) => {
 
       {/*********************************************** */}
 
-      {/**Pop up with information */}
+      {/**Pop up with information 
       <View style={styles.containerBody}>
         <PopUpInfo
           textModal={textFirstPopUp}
@@ -59,7 +59,7 @@ const HomePageScreen = ({ navigation }) => {
           action={() => action()}
         />
 
-        {/**navigation vers page add activity */}
+        {/**navigation vers page add activity 
         <PopUpInfo
           textModal={textSecondPopUp}
           textBtn="Add new activity"
