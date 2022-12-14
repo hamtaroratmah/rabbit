@@ -1,17 +1,19 @@
-import { useState} from "react";
+import { useState } from "react";
 import {
   Image,
   StyleSheet,
   Text,
   View,
-  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
   Platform,
+  KeyboardAvoidingView,
 } from "react-native";
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
-import {AuthController} from "../controllers/AuthController";
+import { AuthController } from "../controllers/AuthController";
+import { ScrollView } from "react-native-gesture-handler";
 
 // @ts-ignore
 const SignUpScreen = ({ navigation }) => {
@@ -22,59 +24,74 @@ const SignUpScreen = ({ navigation }) => {
   const controller = new AuthController();
   return (
     <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "position" : "height"}
-      style={styles.container}
+      behavior="padding"
+      style={[{ flex: 1 }, styles.container]}
+      enabled
     >
-      <View>
-        <Image
-          source={require("./../../assets/img/logo.png")}
-          style={styles.logo}
-        />
-      </View>
-      <View>
-        <Text style={styles.caption}>Create new account</Text>
-      </View>
-      <View style={styles.center}>
-        <CostumedTextInput
-          placeHolderText="Pseudo"
-          value={pseudo}
-          setValue={setPseudo}
-          secureTextEntry={false}
-        />
-        <CostumedTextInput
-          placeHolderText="Email"
-          value={email}
-          setValue={setEmail}
-          secureTextEntry={false}
-        />
-        <CostumedTextInput
-          placeHolderText="Password"
-          value={password}
-          setValue={setPassword}
-          secureTextEntry={true}
-        />
-        <CostumedTextInput
-          placeHolderText="Confirm password"
-          value={confirmationPassword}
-          setValue={setConfirmationPassword}
-          secureTextEntry={true}
-        />
-      </View>
-      <View style={styles.center}>
-        <CostumedButton
-          text="Create"
-          action={async () => await controller.register(pseudo, email, password, confirmationPassword) ? navigation.navigate("TabNavigator") : console.log("Error SignUp") }
-        />
-      </View>
-      <View>
-        <Text style={styles.textQuestion}>Already have an account ?</Text>
-        <Text onPress={() => navigation.navigate("SignIn")} style={styles.href}>
-          Log in to your account
-        </Text>
-      </View>
+      <ScrollView>
+        <View>
+          <Image
+            source={require("./../../assets/img/logo.png")}
+            style={styles.logo}
+          />
+        </View>
+        <View>
+          <Text style={styles.caption}>Create new account</Text>
+        </View>
+        <View style={styles.center}>
+          <CostumedTextInput
+            placeHolderText="Pseudo"
+            value={pseudo}
+            setValue={setPseudo}
+            secureTextEntry={false}
+          />
+          <CostumedTextInput
+            placeHolderText="Email"
+            value={email}
+            setValue={setEmail}
+            secureTextEntry={false}
+          />
+          <CostumedTextInput
+            placeHolderText="Password"
+            value={password}
+            setValue={setPassword}
+            secureTextEntry={true}
+          />
+          <CostumedTextInput
+            placeHolderText="Confirm password"
+            value={confirmationPassword}
+            setValue={setConfirmationPassword}
+            secureTextEntry={true}
+          />
+        </View>
+        <View style={styles.center}>
+          <CostumedButton
+            text="Create"
+            action={async () =>
+              (await controller.register(
+                pseudo,
+                email,
+                password,
+                confirmationPassword
+              ))
+                ? navigation.navigate("TabNavigator")
+                : console.log("Error SignUp")
+            }
+          />
+        </View>
+        <View>
+          <Text style={styles.textQuestion}>Already have an account ?</Text>
+          <Text
+            onPress={() => navigation.navigate("SignIn")}
+            style={styles.href}
+          >
+            Log in to your account
+          </Text>
+        </View>
 
-      <Separator/>
-      <ButtonLoginGoogle />
+        <Separator />
+        <ButtonLoginGoogle />
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 };
@@ -97,6 +114,7 @@ const styles = StyleSheet.create({
     height: 150,
     overflow: "visible",
     alignSelf: "center",
+    marginTop: 40,
   },
   center: {
     alignSelf: "center",

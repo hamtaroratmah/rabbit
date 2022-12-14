@@ -5,13 +5,13 @@ import {
   Text,
   View,
   KeyboardAvoidingView,
-  Platform,
+  ScrollView,
 } from "react-native";
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
-import {AuthController} from "../controllers/AuthController";
+import { AuthController } from "../controllers/AuthController";
 import { useState } from "react";
 
 // @ts-ignore
@@ -21,54 +21,63 @@ const SignInScreen = ({ navigation }) => {
   const controller = new AuthController();
   return (
     <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "position" : "height"}
-      style={styles.container}
+      behavior="padding"
+      style={[{ flex: 1 }, styles.container]}
+      enabled
     >
-      <View style={styles.contenairLogo}>
-        <Image
-          source={require("./../../assets/img/logo.png")}
-          style={styles.logo}
-        />
-      </View>
-      <View style={styles.contenairBody}>
-        <View>
-          <Text style={styles.caption}>Log in to your account</Text>
-        </View>
-        <View style={styles.button}>
-          <CostumedTextInput
-            placeHolderText="Email"
-            value={email}
-            setValue={setEmail}
-            secureTextEntry={false}
-          />
-          <CostumedTextInput
-            placeHolderText="Password"
-            value={password}
-            setValue={setPassword}
-            secureTextEntry={true}
+      <ScrollView>
+        <View style={styles.contenairLogo}>
+          <Image
+            source={require("./../../assets/img/logo.png")}
+            style={styles.logo}
           />
         </View>
-        <View style={styles.button}>
-          <CostumedButton
-            text="Log in"
-            action={async () => await controller.login(email, password) ? navigation.navigate("TabNavigator",{screen: 'HomePageUser'}): console.log("error on login")}
-          />
-        </View>
+        <View style={styles.contenairBody}>
+          <View>
+            <Text style={styles.caption}>Log in to your account</Text>
+          </View>
+          <View style={styles.button}>
+            <CostumedTextInput
+              placeHolderText="Email"
+              value={email}
+              setValue={setEmail}
+              secureTextEntry={false}
+            />
+            <CostumedTextInput
+              placeHolderText="Password"
+              value={password}
+              setValue={setPassword}
+              secureTextEntry={true}
+            />
+          </View>
+          <View style={styles.button}>
+            <CostumedButton
+              text="Log in"
+              action={async () =>
+                (await controller.login(email, password))
+                  ? navigation.navigate("TabNavigator", {
+                      screen: "HomePageUser",
+                    })
+                  : console.log("error on login")
+              }
+            />
+          </View>
 
-        <View>
-          <Text style={styles.textQuestion}>Want to join us ?</Text>
-          <Text
-            onPress={() => navigation.navigate("SignUp")}
-            style={styles.href}
-          >
-            Create new account
-          </Text>
+          <View>
+            <Text style={styles.textQuestion}>Want to join us ?</Text>
+            <Text
+              onPress={() => navigation.navigate("SignUp")}
+              style={styles.href}
+            >
+              Create new account
+            </Text>
+          </View>
+          <View>
+            <Separator />
+          </View>
+          <ButtonLoginGoogle />
         </View>
-        <View>
-          <Separator />
-        </View>
-        <ButtonLoginGoogle/>
-      </View>
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 };
@@ -90,7 +99,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   logo: {
-    //marginTop: 10,
+    marginTop: 40,
     width: 200,
     height: 200,
     overflow: "visible",
