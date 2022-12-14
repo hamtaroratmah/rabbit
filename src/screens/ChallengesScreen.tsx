@@ -1,5 +1,6 @@
 import { View,StyleSheet,Text, FlatList,ScrollView, Pressable } from "react-native";
-import CostumedButton from "../components/CostumedButton";
+import { ChallengesController } from "../controllers/ChallengesController";
+import {useState  , useEffect} from "react"
 export type  Props = {
     title : string,
     description : string,
@@ -13,6 +14,7 @@ const Item = ({title , description, objective,action}:Props) => (
         <Text style={styles.boxText} >{objective} </Text>
     </Pressable>
 );
+
 
 const DATA = [
     {
@@ -40,18 +42,33 @@ const DATA = [
         objective:"objective"
     }
   ];
-
+  
 const ChallengesScrren = ({navigation}) =>{
+    
+    const controller = new ChallengesController();
+    const [challenges, setChallenges] = useState([])
+      
+    const getChallenges = async () => {
+        const data = await controller.getAllChallenges()
+        console.log(data.data);
+        
+    } 
+        useEffect(() => {
+          getChallenges()
+        }, [])
     return (
         <ScrollView style={styles.view}>
             <View  style={styles.container} >
                 <Text style={styles.title}>Challenges</Text>
             </View>
             <View style={styles.bodyStyle}>
-                <FlatList
-                    data={DATA}
+                {/** 
+                 * <FlatList
+                    data={challenges}
                     renderItem={({ item }) => <Item title={item.title} description={item.description} objective={item.objective} action={()=> navigation.navigate('Profile')}/>} 
                 />
+                 */}
+                
             </View>
         </ScrollView>
     );

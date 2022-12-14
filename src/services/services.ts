@@ -23,23 +23,6 @@ export class Services {
 
 
 // Subscribe registers your client with the server
-public test(){
-  const channel = this.supabase.channel('room1')
- channel.subscribe((status) => {
-    if (status === 'SUBSCRIBED') {
-      // now you can start broadcasting cursor positions
-      setInterval(() => {
-          channel.send({
-          type: 'broadcast',
-          event: 'cursor-pos',
-          payload: { x: Math.random(), y: Math.random() },
-        })
-        console.log(status)
-      }, 100)
-    }
-  });
-}
-
 
 
   public async register(username: string, email: string, password: string) {
@@ -65,5 +48,11 @@ public test(){
     return await this.supabase.auth.signInWithOAuth({
       provider: 'google'
     });
+  }
+
+  public async getAllChallenges(){
+    return await this.supabase
+    .from('challenges')
+    .select('*')
   }
 }
