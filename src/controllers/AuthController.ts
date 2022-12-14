@@ -12,7 +12,7 @@ export class AuthController {
     if(pseudo===null || email=== null || password === null || confirmationPassword===null) throw new Error("All fields must be filled");
     if (password !== confirmationPassword) console.log("passwords are not the same");
       const response = await this.service.register(pseudo, email, password);
-    return response.error!==null;
+    return response.error===null;
   }
 
   public async login(email:string, password:string){

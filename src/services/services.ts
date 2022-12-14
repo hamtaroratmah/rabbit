@@ -51,8 +51,13 @@ export class Services {
   }
 
   public async getAllChallenges(){
-    return await this.supabase
+     const {data,error} = await this.supabase
     .from('challenges')
     .select('*')
+    if(error){
+      return null
+    }else{
+      return data
+    }
   }
 }

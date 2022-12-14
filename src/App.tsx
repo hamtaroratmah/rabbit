@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import TabNavigator from "./navigation/TabNavigator";
 import ChatScreen from "./screens/ChatScreen";
 
+
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (

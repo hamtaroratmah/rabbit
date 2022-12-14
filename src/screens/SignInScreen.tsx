@@ -42,7 +42,7 @@ const SignInScreen = ({ navigation }) => {
         <View style={styles.button}>
           <CostumedButton
             text="Log in"
-            action={async () => await controller.login(email, password) ? navigation.navigate("HomePage"): console.log("error on login")}
+            action={async () => await controller.login(email, password) ? navigation.navigate("TabNavigator"): console.log("error on login")}
           />
         </View>
 

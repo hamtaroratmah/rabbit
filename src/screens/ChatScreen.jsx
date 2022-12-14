@@ -6,9 +6,6 @@ import { GiftedChat, Message } from 'react-native-gifted-chat'
 const ChatScreen = ({ navigation}) => {
 	const messages = ['message1' , 'message2']
 
-    const id = 1 
-    const name = "username"
-	
 	function onSend(messages) {
 		console.log(messages);
 	}
@@ -19,9 +16,8 @@ const ChatScreen = ({ navigation}) => {
             showAvatarForEveryMessage={false}
             onSend={messages => onSend(messages)}
             user={{
-                _id: auth?.currentUser?.email,
-                name: auth?.currentUser?.displayName,
-
+                _id: session?.currentUser?.id,
+                name: session?.currentUser?.username,
             }}
         />
     );

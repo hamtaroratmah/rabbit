@@ -50,7 +50,7 @@ const ChallengesScrren = ({navigation}) =>{
       
     const getChallenges = async () => {
         const data = await controller.getAllChallenges()
-        console.log(data.data);
+        console.log(data);
         
     } 
         useEffect(() => {
