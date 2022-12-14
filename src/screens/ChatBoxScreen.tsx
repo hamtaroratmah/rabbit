@@ -1,5 +1,6 @@
 import { View,StyleSheet,Text, FlatList,ScrollView, Pressable } from "react-native";
 import { Image } from "react-native-elements";
+import { Screen } from "react-native-screens";
 import CostumedHeader from "../components/CostumedHeader";
 
 export type  Props = {
@@ -80,7 +81,7 @@ const ChatBoxScreen = ({navigation}) =>{
                         </View>
                         <View style={styles.TextSection}>
                             <View style={styles.UserInfoText}>
-                                <Item title={item.title} description={item.description} objective={item.objective} action={()=> navigation.navigate('Profile')}/>
+                                <Item title={item.title} description={item.description} objective={item.objective} action={()=> navigation.navigate('ChatScreen',{ screen: 'ChatScreen'})}/>
                             </View>
                         </View>
                         </View>

@@ -29,7 +29,7 @@ public test(){
     if (status === 'SUBSCRIBED') {
       // now you can start broadcasting cursor positions
       setInterval(() => {
-        channel.send({
+          channel.send({
           type: 'broadcast',
           event: 'cursor-pos',
           payload: { x: Math.random(), y: Math.random() },

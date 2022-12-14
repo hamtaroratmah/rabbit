@@ -8,7 +8,7 @@ import {
   export type Props = {
     titlePage: string;
     text: string;
-};
+  };
 
 
 const CostumedHeader = ({titlePage, text }: Props) => {
