@@ -4,12 +4,16 @@ import CostumedOrangeButton from "../components/CostumedOrangeButton";
 import CostumedHeader from "../components/CostumedHeader";
 import CostumedTextInputActivity from "../components/CostumedTextInputActivity";
 import CostumedButton from "../components/CostumedButton";
+import { Header } from "react-native-elements";
+
 
 const FormAddPersonalGoal = ({ navigation }) => {
   const [goal, setGoal] = useState("");
   const [desciptipn, setDescription] = useState("");
   return (
     <View style={styles.container}>
+            <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
+
       {/** Header */}
       <View style={styles.containerHeader}>
         <CostumedHeader

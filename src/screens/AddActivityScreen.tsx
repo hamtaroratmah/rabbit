@@ -11,6 +11,7 @@ import CostumedOrangeButton from "../components/CostumedOrangeButton";
 import CostumedHeader from "../components/CostumedHeader";
 import { useState } from "react";
 
+
 const AddActivityScreen = ({ navigation }) => {
   const activities = [
     {
@@ -46,6 +47,7 @@ const AddActivityScreen = ({ navigation }) => {
     <View style={styles.container}>
       {/** Header */}
       <View style={{ flex: 1 / 3 }}>
+      <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
         <CostumedHeader
           text="Choose your activity and make a challenge"
           titlePage="Activities"

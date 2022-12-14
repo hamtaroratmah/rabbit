@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Modal,
   Image,
@@ -8,10 +7,11 @@ import {
   View,
 } from "react-native";
 
+
 const PopUpInfo = (props) => {
   return (
     <View>
-      <Modal transparent={true} visible={props.isVisible}>
+      <Modal transparent={true} visible={props.isVisible} animationType="fade">
         <View style={styles.centeredView}>
           <Image
             source={require("./../../assets/icons/rabbitCrown.png")}

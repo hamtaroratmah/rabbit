@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
-  Pressable,
-  Modal,
   View,
   StyleSheet,
   Text,
   Image,
-  Alert,
 } from "react-native";
-import Separator from "../components/CostumedLine";
+import { Header } from "react-native-elements";
 import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
+import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 
 const HomePageScreen = ({ navigation }) => {
   const textFirstPopUp: string = ` Welcome to us, we're glad you're joining us and becoming a productive rabbit who is ready to learn new habits.
@@ -29,24 +27,8 @@ const HomePageScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/********************* header************************** */}
-      <View style={styles.containerHeader}>
-        <View style={styles.containerPseudoLevel}>
-          <Text style={styles.textPseudo}>Welcome Pseudo</Text>
-          <Text style={styles.textLevel}> Level 0</Text>
-        </View>
-
-        <View style={styles.conatainerDiamondProgressBar}>
-          <Image
-            source={require("./../../assets/icons/dia.png")}
-            style={[styles.icon]}
-          />
-          {/********* A refaire par sou */}
-          <ProgressExperience />
-          {/********* A refaire par sou */}
-        </View>
-
-        {/*Pour le diamant qd on atteint un certain niveau le diamant change*/}
-      </View>
+      <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
+      <CostumedHeaderDiamond/>
 
       {/*********************************************** */}
 
@@ -79,9 +61,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   containerHeader: {
-    flex: 1 / 4,
-    justifyContent: "space-between",
-    backgroundColor: "#fefefe",
+    backgroundColor: "#FEFEFE",
+    borderBottomRightRadius: 25,
+    borderTopLeftRadius: 25,
+    // marginTop: 40,//à changer
+    marginHorizontal: 10,
+    justifyContent: "center",
+    height: 90,
     shadowColor: "#0E0D0D",
     shadowOffset: {
       width: 1,
@@ -90,6 +76,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
+
   },
   containerPseudoLevel: {
     justifyContent: "space-around",
