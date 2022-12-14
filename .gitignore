@@ -21,3 +21,4 @@ ios
 assets
 android/app/build
 .env
+android/
