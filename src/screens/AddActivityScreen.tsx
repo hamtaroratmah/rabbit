@@ -11,7 +11,7 @@ import CostumedOrangeButton from "../components/CostumedOrangeButton";
 import CostumedHeader from "../components/CostumedHeader";
 import { useState } from "react";
 
-
+// @ts-ignore
 const AddActivityScreen = ({ navigation }) => {
   const activities = [
     {

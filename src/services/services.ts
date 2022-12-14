@@ -5,18 +5,9 @@ import {SUPABASE_CLIENT_KEY} from '@env';
 
 export class Services {
 
-<<<<<<< HEAD
   private readonly url = "https://etefnzdgrjqcafqbztoy.supabase.co";
   private readonly token = SUPABASE_CLIENT_KEY as string;
-  private readonly supabase = createClient(this.url, this.token ,
-    {
-      realtime: {
-        params: {
-          eventsPerSecond: 10,
-        },
-      },
-    } 
-  );
+  private readonly supabase = createClient(this.url, this.token);
 
   // Channel name can be any string.
 // Create channels with the same name for both the broadcasting and receiving clients.
@@ -24,11 +15,6 @@ export class Services {
 
 // Subscribe registers your client with the server
 
-=======
-	private readonly url = "https://etefnzdgrjqcafqbztoy.supabase.co";
-	private readonly token = SUPABASE_CLIENT_KEY as string;
-	private readonly supabase = createClient(this.url, this.token);
->>>>>>> origin/service
 
 	public async register(username: string, email: string, password: string) {
 		return await this.supabase.auth.signUp({
@@ -49,7 +35,6 @@ export class Services {
 		});
 	}
 
-<<<<<<< HEAD
   public async loginWithGoogle() {
     return await this.supabase.auth.signInWithOAuth({
       provider: 'google'
@@ -66,12 +51,5 @@ export class Services {
       return data
     }
   }
-=======
-	public async loginWithGoogle() {
-		console.log("login with google");
-		return await this.supabase.auth.signInWithOAuth({
-			provider: 'google'
-		});
-	}
->>>>>>> origin/service
+
 }

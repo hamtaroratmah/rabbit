@@ -19,5 +19,5 @@ web-build/
 Footer
 ios
 assets
-android/app/build
+android
 .env

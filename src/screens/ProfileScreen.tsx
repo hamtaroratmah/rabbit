@@ -10,7 +10,7 @@ const ProfileScreen = () =>{
             </View>
             <View  style={styles.bodyStyle} >
                 <View style={styles.userInfo}>
-                    <Image  source={require('../../assets/img/avatar.jpg')} style={styles.userAvatar}/>
+                    <Image  source={require('../../assets/img/utilisateur.png')} style={styles.userAvatar}/>
                     <Text style={styles.userInfoText}>Hello username ! </Text>
                 </View>
                 <View style={styles.boxContainer}>

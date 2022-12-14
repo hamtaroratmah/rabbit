@@ -1,6 +1,5 @@
 import { View,StyleSheet,Text, FlatList,ScrollView, Pressable } from "react-native";
 import { Image } from "react-native-elements";
-import { Screen } from "react-native-screens";
 import CostumedHeader from "../components/CostumedHeader";
 
 export type  Props = {
@@ -77,7 +76,7 @@ const ChatBoxScreen = ({navigation}) =>{
                     <View  style={styles.box} >
                         <View style={styles.ChallengeInfo}>
                         <View style={styles.imgWrapper}>
-                             <Image source={require('../../assets/img/avatar.jpg')}  style={styles.image}/>
+                             <Image source={require('../../assets/img/utilisateur.png')}  style={styles.image}/>
                         </View>
                         <View style={styles.TextSection}>
                             <View style={styles.UserInfoText}>
