@@ -96,11 +96,9 @@ const styles = StyleSheet.create({
   textInputDescription: {
     height: 150,
     alignSelf: "stretch",
+    justifyContent:"flex-start",
     margin: 10,
     alignItems: "stretch",
-  },
-  containerBtn: {
-    flex: 1 / 2,
   },
 });
 export default FormCreateChallenge;

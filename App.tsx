@@ -9,6 +9,7 @@ import SignUpScreen from "./src/screens/SignUpScreen";
 import AddActivityScreen from "./src/screens/AddActivityScreen";
 import FormAddPersonalGoal from "./src/screens/FormAddPersonalGoal";
 import FormCreateChallenge from "./src/screens/FormCreateChallenge";
+import JoinChallengeScreen from "./src/screens/JoinChallengeScreen";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -17,7 +18,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="FormCreateChallenge"
+        initialRouteName="JoinChallengeScreen"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
@@ -25,9 +26,18 @@ export default function App() {
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="AddActivityScreen" component={AddActivityScreen} />
-        <Stack.Screen name="FormAddPersonalGoal" component={FormAddPersonalGoal}  />
-        <Stack.Screen name="FormCreateChallenge" component={FormCreateChallenge}  />
-
+        <Stack.Screen
+          name="FormAddPersonalGoal"
+          component={FormAddPersonalGoal}
+        />
+        <Stack.Screen
+          name="FormCreateChallenge"
+          component={FormCreateChallenge}
+        />
+        <Stack.Screen
+          name="JoinChallengeScreen"
+          component={JoinChallengeScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

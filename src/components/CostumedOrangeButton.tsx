@@ -1,4 +1,3 @@
-import React from 'react'
 import {StyleSheet, Pressable, Text } from 'react-native';
 
 export type Props = {
@@ -10,7 +9,14 @@ export type Props = {
 const CostumedOrangeButton =({ text, action }: Props) => {
 
     return (
-        <Pressable style={styles.button} onPress={action}>
+        <Pressable  style={({ pressed }) => [
+            {
+              backgroundColor: pressed
+                ? "rgba(255, 185, 138,0.5)"
+                : "#FE9801",
+            },
+            styles.button,
+          ]} onPress={action}>
             <Text style={styles.textBtn}> {text} </Text>
         </Pressable>
     )   
@@ -25,7 +31,7 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         alignSelf: 'center',
         borderRadius : 25,
-        backgroundColor : '#FE9801',
+        //backgroundColor : '#FE9801',
         
       },
       textBtn : {
