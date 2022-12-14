@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     userAvatar:{
         width:80,
         height:80,
-        overflow:'visible',
+        overflow:'scroll',
         borderRadius:80/2
     },
     boxContainer:{

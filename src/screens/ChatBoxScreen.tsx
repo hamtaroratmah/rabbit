@@ -1,4 +1,5 @@
 import { View,StyleSheet,Text, FlatList,ScrollView, Pressable } from "react-native";
+import { Image } from "react-native-elements";
 import CostumedHeader from "../components/CostumedHeader";
 
 export type  Props = {
@@ -71,7 +72,19 @@ const ChatBoxScreen = ({navigation}) =>{
             <View style={styles.view}>
                 <FlatList
                     data={DATA}
-                    renderItem={({ item }) => <View  style={styles.box} ><Item title={item.title} description={item.description} objective={item.objective} action={()=> navigation.navigate('Profile')}/></View>} 
+                    renderItem={({ item }) =>
+                    <View  style={styles.box} >
+                        <View style={styles.ChallengeInfo}>
+                        <View style={styles.imgWrapper}>
+                             <Image source={require('../../assets/img/avatar.jpg')}  style={styles.image}/>
+                        </View>
+                        <View style={styles.TextSection}>
+                            <View style={styles.UserInfoText}>
+                                <Item title={item.title} description={item.description} objective={item.objective} action={()=> navigation.navigate('Profile')}/>
+                            </View>
+                        </View>
+                        </View>
+                    </View>} 
                     style={styles.box}
                 />
             </View>
@@ -81,20 +94,48 @@ const ChatBoxScreen = ({navigation}) =>{
 
 const styles = StyleSheet.create({
     view : {
-        flex:1,
-        alignItems:"flex-start",
-        flexDirection:"column",
+        flex: 1,
+        paddingLeft: 20,
+        paddingRight: 20,
+        alignItems: 'center',
+        backgroundColor: '#ffffffv '
     },
     boxText : {
-        color:'black',
-        fontSize:18
+        fontSize: 14,
+        fontWeight: "bold",
+        fontFamily: 'Lato-Regular',
     },
     box:{
-        width:"100%",
-        margin:20,
-        //backgroundColor:'red',
-        borderColor:'#ebecf0',
-        borderBottomWidth:1,
+        width:" 100%",
+    },
+    ChallengeInfo:{
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+    imgWrapper:{
+        paddingTop: 15,
+        paddingBottom: 15,
+    },
+    image:{
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        overflow:'scroll'
+    },
+    TextSection :{
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: 15,
+        paddingLeft: 0,
+        marginLeft: 10,
+        width: 300,
+        borderBottomWidth: 1,
+        borderBottomColor: "#cccccc"
+    },
+    UserInfoText :{
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginBottom: 5,
     }
 });
 
