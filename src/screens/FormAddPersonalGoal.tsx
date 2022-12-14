@@ -3,9 +3,10 @@ import { Text, View, StyleSheet, ScrollView } from "react-native";
 import CostumedOrangeButton from "../components/CostumedOrangeButton";
 import CostumedHeader from "../components/CostumedHeader";
 import CostumedTextInputActivity from "../components/CostumedTextInputActivity";
+import CostumedButton from "../components/CostumedButton";
 
-const ObjectifInputScreen = ({ navigation }) => {
-  const [objectif, setObjectif] = useState("");
+const FormAddPersonalGoal = ({ navigation }) => {
+  const [goal, setGoal] = useState("");
   const [desciptipn, setDescription] = useState("");
   return (
     <View style={styles.container}>
@@ -19,40 +20,42 @@ const ObjectifInputScreen = ({ navigation }) => {
 
       {/** body**/}
       <ScrollView style={styles.containerBody}>
-        <Text style={styles.textStyle}>Your objectif : </Text>
+        <Text style={styles.textStyle}>Your goal : </Text>
 
-        <View style={styles.containerInputObjectif}>
-            <CostumedTextInputActivity
-              placeHolderText="example : 10"
-              value={objectif}
-              setValue={setObjectif}
-              type="numeric"
-              isMultiline={false}
-              maxLength={4}
-              stylesProps={styles.textInputObjectif}
-            />
+        <View style={styles.containerInputGoal}>
+          <CostumedTextInputActivity
+            placeHolderText="example : 10"
+            value={goal}
+            setValue={setGoal}
+            type="numeric"
+            isMultiline={false}
+            maxLength={4}
+            stylesProps={styles.textInputGaol}
+          />
           <Text> unité/ unité </Text>
         </View>
 
         <Text style={styles.textStyle}> Description : </Text>
 
         <CostumedTextInputActivity
-              placeHolderText="maximum 100 letters"
-              value={desciptipn}
-              setValue={setDescription}
-              type="default"
-              isMultiline={true}
-              maxLength={100}
-              stylesProps={styles.textInputDescription}
-            />
-            
-          <View>
-            <Text> Graphe: </Text>
-          </View>
-       
+          placeHolderText="maximum 100 letters"
+          value={desciptipn}
+          setValue={setDescription}
+          type="default"
+          isMultiline={true}
+          maxLength={100}
+          stylesProps={styles.textInputDescription}
+        />
+
+        <View>
+          <Text> Graphe: </Text>
+        </View>
+        <View style={{ alignSelf: "flex-end" }}>
+          <CostumedButton text="Save" action={() => {}} />
+        </View>
       </ScrollView>
       {/**Btn challengens */}
-      <View style={styles.containerBtn}>
+      <View style={styles.containerBtnChallenges}>
         <CostumedOrangeButton text="Challengens" action={() => {}} />
       </View>
     </View>
@@ -86,14 +89,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     margin: 10,
   },
-  containerInputObjectif: {
+  containerInputGoal: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-evenly",
     marginTop: 10,
     marginBottom: 15,
   },
-  textInputObjectif: {
+  textInputGaol: {
     width: 200,
   },
   textInputDescription: {
@@ -102,8 +105,8 @@ const styles = StyleSheet.create({
     margin: 10,
     alignItems: "stretch",
   },
-  containerBtn:{
+  containerBtnChallenges: {
     flex: 1 / 2,
-  }
+  },
 });
-export default ObjectifInputScreen;
+export default FormAddPersonalGoal;
