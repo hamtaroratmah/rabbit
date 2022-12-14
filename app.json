@@ -1,5 +1,6 @@
 {
   "expo": {
+    "entryPoint": "./Boot.tsx",
     "name": "rabbit",
     "slug": "rabbit",
     "version": "1.0.1",

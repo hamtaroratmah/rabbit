@@ -1,10 +1,11 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {Image, StyleSheet, Text, View,} from "react-native";
 import {Header} from "react-native-elements";
 import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
 import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 import ComponentIcon from "../components/CompenentIcon";
+import {Context as UserIdContext} from "../contexts/IdUserContext";
 
 // @ts-ignore
 const HomePageScreenNewUser = ({navigation}) => {
@@ -15,7 +16,10 @@ const HomePageScreenNewUser = ({navigation}) => {
 
 	const [isFirstPopUpVisible, setIsFirstPopUpVisible] = useState(true);
 	const [isSecondPopUpVisible, setIsSecondPopUpVisible] = useState(false);
+	// @ts-ignore
+	const {idUser, defineIdUser} = useContext(UserIdContext);
 	const action = () => {
+		console.log(idUser);
 		setIsFirstPopUpVisible(false);
 		setIsSecondPopUpVisible(true);
 		console.log("hy");
