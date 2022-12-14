@@ -1,19 +1,25 @@
-import  {useState} from "react";
-import {Image, StyleSheet, Text, View,} from "react-native";
+import { useState } from "react";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+} from "react-native";
+import { Header } from "react-native-elements";
 import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
+import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 
-// @ts-ignore
-const HomePageScreen = ({ navigation }) => {
+const HomePageScreenNewUser = ({ navigation }) => {
   const textFirstPopUp: string = ` Welcome to us, we're glad you're joining us and becoming a productive rabbit who is ready to learn new habits.
   Before we start let's find out how the application works`;
 
   const textSecondPopUp: string = `To begin, start by adding a new activity`;
 
-  const [isFirstPopUpVisible, setIsFirstPopUpVisible] = useState(true);
+  const [isFistPopUpVisible, setIsFistPopUpVisible] = useState(true);
   const [isSecondPopUpVisible, setIsSecondPopUpVisible] = useState(false);
   const action = () => {
-    setIsFirstPopUpVisible(false);
+    setIsFistPopUpVisible(false);
     setIsSecondPopUpVisible(true);
     console.log("hy");
   };
@@ -21,37 +27,21 @@ const HomePageScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/********************* header************************** */}
-      <View style={styles.containerHeader}>
-        <View style={styles.containerPseudoLevel}>
-          <Text style={styles.textPseudo}>Welcome Pseudo</Text>
-          <Text style={styles.textLevel}> Level 0</Text>
-        </View>
-
-        <View style={styles.containerDiamondProgressBar}>
-          <Image
-            source={require("./../../assets/icons/dia.png")}
-            style={[styles.icon]}
-          />
-          {/********* A refaire par sou */}
-          <ProgressExperience/>
-          {/********* A refaire par sou */}
-        </View>
-
-        {/*Pour le diamant qd on atteint un certain niveau le diamant change*/}
-      </View>
+      <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
+      <CostumedHeaderDiamond/>
 
       {/*********************************************** */}
 
-      {/**Pop up with information 
+      {/**Pop up with information */}
       <View style={styles.containerBody}>
         <PopUpInfo
           textModal={textFirstPopUp}
           textBtn="Next"
-          isVisible={isFirstPopUpVisible}
+          isVisible={isFistPopUpVisible}
           action={() => action()}
         />
 
-        {/**navigation vers page add activity 
+        {/**navigation vers page add activity */}
         <PopUpInfo
           textModal={textSecondPopUp}
           textBtn="Add new activity"
@@ -60,7 +50,6 @@ const HomePageScreen = ({ navigation }) => {
         />
       </View>
       {/**Component with different icons*/}
-      
     </View>
   );
 };
@@ -72,9 +61,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   containerHeader: {
-    flex: 1 / 4,
-    justifyContent: "space-between",
-    backgroundColor: "#fefefe",
+    backgroundColor: "#FEFEFE",
+    borderBottomRightRadius: 25,
+    borderTopLeftRadius: 25,
+    // marginTop: 40,//à changer
+    marginHorizontal: 10,
+    justifyContent: "center",
+    height: 90,
     shadowColor: "#0E0D0D",
     shadowOffset: {
       width: 1,
@@ -83,6 +76,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
+
   },
   containerPseudoLevel: {
     justifyContent: "space-around",
@@ -99,7 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontStyle: "italic",
   },
-  containerDiamondProgressBar: {
+  conatainerDiamondProgressBar: {
     flex: 2,
     flexDirection: "row",
     justifyContent: "center",
@@ -113,8 +107,8 @@ const styles = StyleSheet.create({
   icon: {
     height: 30,
     width: 30,
-    marginRight: 10
+    marginRight:10
   },
 });
 
-export default HomePageScreen;
+export default HomePageScreenNewUser;

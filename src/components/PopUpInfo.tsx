@@ -1,4 +1,3 @@
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react";
 import {
   Modal,
   Image,
@@ -6,13 +5,13 @@ import {
   Text,
   Pressable,
   View,
-  GestureResponderEvent,
 } from "react-native";
 
-const PopUpInfo = ({isVisible, textModal, action, textBtn}:{isVisible: boolean, textModal: string, action: any, textBtn: string}) => {
+
+const PopUpInfo = (props) => {
   return (
     <View>
-      <Modal transparent={true} visible={isVisible}>
+      <Modal transparent={true} visible={props.isVisible} animationType="fade">
         <View style={styles.centeredView}>
           <Image
             source={require("./../../assets/icons/rabbitCrown.png")}
@@ -20,9 +19,9 @@ const PopUpInfo = ({isVisible, textModal, action, textBtn}:{isVisible: boolean, 
           />
 
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>{textModal}</Text>
-            <Pressable style={styles.btn} onPress={action}>
-              <Text style={styles.textBtn}> {textBtn} </Text>
+            <Text style={styles.modalText}>{props.textModal}</Text>
+            <Pressable style={styles.btn} onPress={props.action}>
+              <Text style={styles.textBtn}> {props.textBtn} </Text>
             </Pressable>
           </View>
         </View>
