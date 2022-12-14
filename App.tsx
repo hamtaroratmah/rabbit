@@ -10,7 +10,7 @@ import AddActivityScreen from "./src/screens/AddActivityScreen";
 import FormAddPersonalGoal from "./src/screens/FormAddPersonalGoal";
 import FormCreateChallenge from "./src/screens/FormCreateChallenge";
 import JoinChallengeScreen from "./src/screens/JoinChallengeScreen";
-
+import HomePageScreenUser from "./src/screens/HomePageScreenUser";
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="JoinChallengeScreen"
+        initialRouteName="HomePageScreenUser"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
@@ -37,6 +37,11 @@ export default function App() {
         <Stack.Screen
           name="JoinChallengeScreen"
           component={JoinChallengeScreen}
+        />
+
+        <Stack.Screen
+          name="HomePageScreenUser"
+          component={HomePageScreenUser}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -10,7 +10,7 @@ import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
 import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 
-const HomePageScreen = ({ navigation }) => {
+const HomePageScreenNewUser = ({ navigation }) => {
   const textFirstPopUp: string = ` Welcome to us, we're glad you're joining us and becoming a productive rabbit who is ready to learn new habits.
   Before we start let's find out how the application works`;
 
@@ -111,4 +111,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomePageScreen;
+export default HomePageScreenNewUser;
