@@ -1,9 +1,8 @@
-import { NavigationContainer } from "@react-navigation/native";
+
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomePageScreen from "../screens/HomePageScreenNewUser";
-import ProfileScreen from "../screens/ProfileScreen";
-import SignInScreen from "../screens/SignInScreen";
-import SignUpScreen from "../screens/SignUpScreen";
+import HomePageScreenUser from "../screens/HomePageScreenUser";
+import HomePageScreenNewUser from "../screens/HomePageScreenNewUser";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -12,12 +11,12 @@ export default function HomeStack() {
 
       <Stack.Navigator screenOptions={{headerShown:false}}>
         <Stack.Screen 
-          name="HomePage"
-          component={HomePageScreen}
+          name="HomePageUser"
+          component={HomePageScreenUser}
         />
         <Stack.Screen 
-          name="Profile"
-          component={ProfileScreen}
+          name="HomePageNewUser"
+          component={HomePageScreenNewUser}
         />
       </Stack.Navigator> 
   
