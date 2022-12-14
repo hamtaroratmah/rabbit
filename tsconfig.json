@@ -6,6 +6,10 @@
     "baseUrl": ".",
     "paths": {
       "@env": ["node_modules/react-native-dotenv"]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext"
   }
 }
