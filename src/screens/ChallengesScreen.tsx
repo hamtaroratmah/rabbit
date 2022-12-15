@@ -1,6 +1,8 @@
 import { View,StyleSheet,Text, FlatList,ScrollView, Pressable } from "react-native";
 import { ChallengesController } from "../controllers/ChallengesController";
-import {useState  , useEffect} from "react"
+import {useState, useEffect, useContext} from "react"
+import supabase from "../utils/Client";
+import {Context as SessionContext} from "../contexts/SessionContext";
 export type  Props = {
     title : string,
     description : string,
@@ -42,9 +44,9 @@ const DATA = [
         objective:"objective"
     }
   ];
-  
+
 const ChallengesScrren = ({navigation}) =>{
-    
+    const {session, defineSession} = useContext(SessionContext);
     const controller = new ChallengesController();
     const [challenges, setChallenges] = useState([])
       
@@ -55,7 +57,8 @@ const ChallengesScrren = ({navigation}) =>{
     } 
         useEffect(() => {
           getChallenges()
-        }, [])
+        }, []);
+
     return (
         <ScrollView style={styles.view}>
             <View  style={styles.container} >

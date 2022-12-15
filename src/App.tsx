@@ -11,11 +11,25 @@ import FormCreateChallenge from "./screens/FormCreateChallenge";
 import JoinChallengeScreen from "./screens/JoinChallengeScreen";
 import HomePageScreenUser from "./screens/HomePageScreenUser";
 import HomePageScreenNewUser from "./screens/HomePageScreenNewUser";
+import {useContext, useEffect} from "react";
+import supabase from "./utils/Client";
+import {Context as SessionContext} from './contexts/SessionContext';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+	// @ts-ignore
+	const {session, defineSession} = useContext(SessionContext);
+	useEffect(() => {
+		supabase.auth.getSession().then(({ data: { session } }) => {
+			defineSession(session);
+		});
+
+		supabase.auth.onAuthStateChange((_event, session) => {
+			defineSession(session);
+		});
+	}, []);
 	return (
 		<NavigationContainer>
 			<Stack.Navigator

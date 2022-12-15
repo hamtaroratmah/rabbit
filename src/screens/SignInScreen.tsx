@@ -13,14 +13,14 @@ import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
 import { AuthController } from "../controllers/AuthController";
 import {useContext, useState} from "react";
-import {Context as UserIdContext} from "../contexts/IdUserContext";
+import {Context as UserIdContext} from "../contexts/SessionContext";
 
 // @ts-ignore
 const SignInScreen = ({navigation}) => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	// @ts-ignore
-	const {idUser, defineIdUser} = useContext(UserIdContext);
+	// const {idUser, defineIdUser} = useContext(UserIdContext);
 	const controller = new AuthController();
 	return (
 		<KeyboardAvoidingView
@@ -60,7 +60,7 @@ const SignInScreen = ({navigation}) => {
 							const response = await controller.login(email, password);
 							if (response.error === null) {
 								const userToken = response.data.session?.access_token;
-								defineIdUser(userToken);
+								//defineIdUser(userToken);
 								navigation.navigate("TabNavigator",{screen: 'Home',params: {screen: 'HomePageUser',},});
 							} else {
 								console.log(response.error);

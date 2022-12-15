@@ -3,15 +3,15 @@ import React, {useState} from "react";
 const Context = React.createContext(null);
 
 const ProviderWrapper = (propsIdUser: any) => {
-	const [idUser, setIdUser] = useState(null);
-	const defineIdUser = (newIdUser: any) => {
-		if (newIdUser === null) throw "Invalid idUser";
-		setIdUser(newIdUser);
+	const [session, setSession] = useState(null);
+	const defineSession = (newSession: any) => {
+		if (newSession === null) throw "Invalid idUser";
+		setSession(newSession);
 	}
 
 	const exposedValue = {
-		idUser,
-		defineIdUser
+		session,
+		defineSession
 	}
 
 	// @ts-ignore

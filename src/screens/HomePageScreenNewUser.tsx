@@ -10,7 +10,7 @@ import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
 import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 import ComponentIcon from "../components/CompenentIcon";
-import {Context as UserIdContext} from "../contexts/IdUserContext";
+import {Context as UserIdContext} from "../contexts/SessionContext";
 
 
 // @ts-ignore

@@ -5,7 +5,7 @@ import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
 import {AuthController} from "../controllers/AuthController";
-import {Context as UserIdContext} from "../contexts/IdUserContext";
+import {Context as UserIdContext} from "../contexts/SessionContext";
 
 // @ts-ignore
 const SignUpScreen = ({navigation}) => {
