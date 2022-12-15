@@ -26,8 +26,4 @@ export class AuthController {
 		return response.error === null;
 	}
 
-	public logout(){
-
-	}
-
 }
