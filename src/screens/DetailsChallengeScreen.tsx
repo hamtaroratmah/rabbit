@@ -1,10 +1,10 @@
-import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
+import {Pressable, ScrollView, StyleSheet, Text, View} from "react-native";
 import CostumedHeader from "../components/CostumedHeader";
-import { Header } from "react-native-elements";
-import { useState } from "react";
+import {Header} from "react-native-elements";
+import {useState} from "react";
 import SimpleProgressChart from "./../components/CircularGraph";
 
-const DetailsChallengeScreen = ({ navigation }) => {
+const DetailsChallengeScreen = () => {
   const [nbOfYes, setNbOfYes] = useState(0);
   const [nbOfNo, setNbOfNo] = useState(0);
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);

@@ -32,14 +32,18 @@ export class Services {
 	}
 
 	public async getAllChallenges() {
-		const {data, error} = await supabase
+		const {data: challenges, error: errorChallenges} = await supabase
 		.from('challenges')
-		.select('*')
-		console.log(data)
-		if (error) {
+		.select('*');
+		const {data: creator, error: errorUsername} = await supabase
+			.from('profiles')
+			.select('username')
+			.eq('id', challenges[0].id_creator)
+		challenges[0].creator=creator[0].username
+		if (errorChallenges || errorUsername) {
 			return null
 		} else {
-			return data
+			return challenges
 		}
 	}
 

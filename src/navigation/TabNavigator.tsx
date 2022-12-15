@@ -1,14 +1,12 @@
-
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 import HomeStack from "../navigation/HomeStack"
-import { StyleSheet } from "react-native";
-import { View } from "react-native";
+import {StyleSheet, View} from "react-native";
 import ComponentIcon from "../components/CompenentIcon";
-import SignInScreen from "../screens/SignInScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-import ChallengesScreen from "../screens/ChallengesScreen";
 import ChatBoxStack from "./ChatBoxStack";
 import AddActivityScreen from "../screens/AddActivityScreen";
+import JoinChallengeScreen from "../screens/JoinChallengeScreen";
+
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -38,7 +36,7 @@ const TabNavigator = () => {
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="Challenges" component={ChallengesScreen} options={{tabBarIcon(props) {
+                <Tab.Screen name="Challenges" component={JoinChallengeScreen} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
                             <ComponentIcon source="challenge"/>

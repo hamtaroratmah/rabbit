@@ -1,22 +1,15 @@
-import {
-  Text,
-  View,
-  StyleSheet,
-  FlatList,
-  Pressable,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
-import { Button, Header } from "react-native-elements";
+import {FlatList, Pressable, StyleSheet, Text, View,} from "react-native";
+import {Header} from "react-native-elements";
 import CostumedOrangeButton from "../components/CostumedOrangeButton";
 import CostumedHeader from "../components/CostumedHeader";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import Separator from "../components/CostumedLine";
 import PopUpFormJoinChallenge from "../components/PopUpFormJoinChallenge";
+import {ChallengesController} from "../controllers/ChallengesController";
 
 const opacityBody = 1;
-const JoinChallengeScreen = () => {
-  const challenges = [
+const JoinChallengeScreen = ({navigation}) => {
+  const [challenges, setChallenges] = useState([
     {
       id: "1",
       pseudo: "pseudo",
@@ -41,7 +34,7 @@ const JoinChallengeScreen = () => {
       description:
         "Radio buttons are an essential element of forms. They are used when there is a list of two or more options that are mutually exclusive and the user must select exactly one choice. In other words, clicking a non-selected radio button will deselect whatever other button was previously selected in the list.",
     },
-  ];
+  ]);
   let nbOfColoumns = 1;
   const [isPopUpVisible, setIsPopUpVisible] = useState(false);
   const [opacityBody, setOpacityBody] = useState(1);
@@ -53,6 +46,21 @@ const JoinChallengeScreen = () => {
     setIsPopUpVisible(true);
     setOpacityBody(0.5);
   };
+
+  const controller = new ChallengesController();
+
+  let newChallenges;
+  const getChallenges = async ()=>{
+    newChallenges = await controller.getAllChallenges();
+    return newChallenges;
+  }
+useEffect(()=>{
+  getChallenges().then((data)=>{
+    // @ts-ignore
+    setChallenges(data);
+  })
+}, [])
+
 
   return (
     <View style={styles.container}>
@@ -76,9 +84,9 @@ const JoinChallengeScreen = () => {
             return (
               <View style={styles.contenairChallenge}>
                 <View>
-                  <Text style={styles.textPseudo}> By {item.pseudo}</Text>
+                  <Text style={styles.textPseudo}> By {item.creator}</Text>
                   <Text>
-                    {item.dateStart} - {item.dateEnd}{" "}
+                    {item.start} - {item.end}{" "}
                   </Text>
                   <Separator />
                 </View>
@@ -112,7 +120,7 @@ const JoinChallengeScreen = () => {
 
       {/**Btn add */}
       <View>
-        <CostumedOrangeButton text="Create challenge" action={() => {}} />
+        <CostumedOrangeButton text="Create challenge" action={navigation.navigate("FormCreateChallenge")} />
       </View>
 
       {/**Pop up */}
