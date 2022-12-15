@@ -34,7 +34,6 @@ const HomePageScreenNewUser = ({navigation}) => {
 		<View style={styles.container}>
 			{/********************* header************************** */}
 			<Header containerStyle={{backgroundColor: "#F1F3F3"}}/>
-			<CostumedHeaderDiamond/>
 			<View style={styles.containerHeader}>
 				<View style={styles.containerPseudoLevel}>
 					<Text style={styles.textPseudo}>Welcome Pseudo</Text>

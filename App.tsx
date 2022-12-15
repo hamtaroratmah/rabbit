@@ -11,6 +11,7 @@ import FormAddPersonalGoal from "./src/screens/FormAddPersonalGoal";
 import FormCreateChallenge from "./src/screens/FormCreateChallenge";
 import JoinChallengeScreen from "./src/screens/JoinChallengeScreen";
 import HomePageScreenUser from "./src/screens/HomePageScreenUser";
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 

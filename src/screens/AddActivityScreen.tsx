@@ -45,7 +45,7 @@ const AddActivityScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/** Header */}
-      <View style={{ flex: 1 / 3 }}>
+      <View style={styles.containerHeader}>
       <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
         <CostumedHeader
           text="Choose your activity and make a challenge"
@@ -83,6 +83,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#F1F3F3",
+  },
+  containerHeader:{
+    flex:1/3
   },
   containerBody: {
     justifyContent: "center",
