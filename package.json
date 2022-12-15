@@ -28,6 +28,7 @@
     "expo-app-loading": "^2.1.1",
     "expo-font": "^11.0.1",
     "expo-status-bar": "~1.4.2",
+    "nanoid": "^4.0.0",
     "react": "18.1.0",
     "react-chat-elements": "^12.0.6",
     "react-circle-chart": "^1.0.4",
