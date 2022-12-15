@@ -1,9 +1,4 @@
-import {createClient} from '@supabase/supabase-js';
 import 'react-native-url-polyfill/auto';
-// @ts-ignore
-//import {SUPABASE_CLIENT_KEY} from '@env';
-import {useContext, useEffect} from "react";
-import {Context as SessionContext} from '../contexts/SessionContext';
 import supabase from "../utils/Client";
 
 export class Services {
