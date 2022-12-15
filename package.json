@@ -77,8 +77,5 @@
     "@types/react-native-modern-datepicker": "^1.0.1",
     "typescript": "^4.6.3"
   },
-  "private": true,
-  "browsers": {
-    "fs": false
-  }
+  "private": true
 }

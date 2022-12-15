@@ -10,7 +10,8 @@ import ProgressExperience from "../components/ProgressExperience";
 import PopUpInfo from "../components/PopUpInfo";
 import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 import ComponentIcon from "../components/CompenentIcon";
-import {Context as UserIdContext} from "../contexts/IdUserContext";
+import {Context as UserIdContext} from "../contexts/SessionContext";
+
 
 // @ts-ignore
 const HomePageScreenNewUser = ({navigation}) => {
@@ -42,7 +43,7 @@ const HomePageScreenNewUser = ({navigation}) => {
 
 				<View style={styles.containerDiamondProgressBar}>
 					<Image
-						source={require("./../../assets/icons/dia.png")}
+						source={require("../../assets/icons/dia.png")}
 						style={[styles.icon]}
 					/>
 					{/********* A refaire par sou */}
@@ -67,11 +68,14 @@ const HomePageScreenNewUser = ({navigation}) => {
 					textModal={textSecondPopUp}
 					textBtn="Add new activity"
 					isVisible={isSecondPopUpVisible}
-					action={() => action()}
+					action={() =>{
+						navigation.navigate('TabNavigator', { screen: "Home" , params: {screen: 'AddActivity',},})
+						setIsSecondPopUpVisible(false)
+					}}
 				/>
 			</View>
 			{/**Component with different icons*/}
-			<ComponentIcon source={require("../../assets/icon.png")}/>
+			<ComponentIcon source={require("../../assets/icons/dia.png")}/>
 		</View>
 	);
 };

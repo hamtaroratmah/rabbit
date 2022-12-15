@@ -1,4 +1,4 @@
-import {ProviderWrapper as UserProviderWrapper} from "./src/contexts/IdUserContext";
+import {ProviderWrapper as UserProviderWrapper} from "./src/contexts/SessionContext";
 import App from "./src/App";
 import {registerRootComponent} from "expo";
 

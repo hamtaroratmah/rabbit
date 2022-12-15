@@ -11,59 +11,39 @@ import FormCreateChallenge from "./screens/FormCreateChallenge";
 import JoinChallengeScreen from "./screens/JoinChallengeScreen";
 import HomePageScreenUser from "./screens/HomePageScreenUser";
 import HomePageScreenNewUser from "./screens/HomePageScreenNewUser";
-import DetailsActivityScreen from "./screens/DetailsActivityScreen";
-import DetailsChallengeScreen from "./screens/DetailsChallengeScreen";
-import ProfileScreen from "./screens/ProfileScreen";
+import {useContext, useEffect} from "react";
+import supabase from "./utils/Client";
+import {Context as SessionContext} from './contexts/SessionContext';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="ProfileScreen"
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="TabNavigator" component={TabNavigator} />
-        <Stack.Screen name="SignIn" component={SignInScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="AddActivityScreen" component={AddActivityScreen} />
-        <Stack.Screen
-          name="FormAddPersonalGoal"
-          component={FormAddPersonalGoal}
-        />
-        <Stack.Screen
-          name="FormCreateChallenge"
-          component={FormCreateChallenge}
-        />
-        <Stack.Screen
-          name="JoinChallengeScreen"
-          component={JoinChallengeScreen}
-        />
+	// @ts-ignore
+	const {session, defineSession} = useContext(SessionContext);
+	useEffect(() => {
+		supabase.auth.getSession().then(({ data: { session } }) => {
+			defineSession(session);
+		});
 
-        <Stack.Screen
-          name="HomePageScreenUser"
-          component={HomePageScreenUser}
-        />
-        <Stack.Screen
-          name="HomePageScreenNewUser"
-          component={HomePageScreenNewUser}
-        />
-        <Stack.Screen
-          name="DetailsActivityScreen"
-          component={DetailsActivityScreen}
-        />
-        <Stack.Screen
-          name="DetailsChallengeScreen"
-          component={DetailsChallengeScreen}
-        />
-
-        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+		supabase.auth.onAuthStateChange((_event, session) => {
+			defineSession(session);
+		});
+	}, []);
+	return (
+		<NavigationContainer>
+			<Stack.Navigator
+				initialRouteName="Welcome"
+				screenOptions={{headerShown: false}}
+			>
+				<Stack.Screen name="TabNavigator" component={TabNavigator}/>
+				<Stack.Screen name="SignIn" component={SignInScreen}/>
+				<Stack.Screen name="SignUp" component={SignUpScreen}/>
+				<Stack.Screen name="Welcome" component={WelcomeScreen}/>
+				<Stack.Screen name="AddActivityScreen" component={AddActivityScreen}/>
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
+}
 
 export default App;

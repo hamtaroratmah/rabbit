@@ -5,7 +5,7 @@ import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
 import {AuthController} from "../controllers/AuthController";
-import {Context as UserIdContext} from "../contexts/IdUserContext";
+import {Context as UserIdContext} from "../contexts/SessionContext";
 
 // @ts-ignore
 const SignUpScreen = ({navigation}) => {
@@ -67,7 +67,7 @@ const SignUpScreen = ({navigation}) => {
 							const userToken = response.data.session?.access_token;
 							defineIdUser(userToken);
 							console.log(userToken);
-							navigation.navigate("HomePageScreenNewUser");
+							navigation.navigate("TabNavigator",{screen: 'Home',params: {screen: 'HomePageNewUser',},});
 						} else {
 							console.log(response.error);
 						}
