@@ -11,6 +11,7 @@
   "dependencies": {
     "@expo-google-fonts/quicksand": "^0.2.2",
     "@expo/webpack-config": "^0.17.2",
+    "@react-native-community/datetimepicker": "^6.7.1",
     "@flyerhq/react-native-chat-ui": "^1.4.3",
     "@react-native-camera-roll/camera-roll": "^5.2.0",
     "@react-native-community/netinfo": "^9.3.7",
@@ -19,16 +20,14 @@
     "@react-navigation/native-stack": "^6.9.5",
     "@stream-io/flat-list-mvcp": "^0.10.2",
     "@supabase/supabase-js": "^2.1.4",
-    "@react-native-community/datetimepicker": "6.5.2",
-    "@truffle/hdwallet-provider": "^1.0.41-1",
     "dotenv": "^16.0.3",
     "expo": "~47.0.8",
     "expo-app-loading": "^2.1.1",
     "expo-font": "^11.0.1",
     "expo-status-bar": "~1.4.2",
-    "react": "^17.0.2",
+    "react": "18.1.0",
     "react-chat-elements": "^12.0.6",
-    "react-dom": "^17.0.2",
+    "react-dom": "18.1.0",
     "react-native": "0.70.5",
     "react-native-date-picker": "^4.2.6",
     "react-native-datepicker": "^1.7.2",
@@ -57,11 +56,7 @@
     "react-native-vector-icons": "^9.2.0",
     "react-native-video": "^5.2.1",
     "react-native-web": "~0.18.9",
-    "stream-chat-react-native": "^5.6.1",
-    "react-navigation": "^4.4.4",
-    "react-navigation-material-bottom-tabs": "^2.3.5",
-    "react-navigation-tabs": "^2.11.2",
-    "rn-nodeify": "^10.3.0"
+    "stream-chat-react-native": "^5.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -71,8 +66,5 @@
     "@types/react-native-modern-datepicker": "^1.0.1",
     "typescript": "^4.6.3"
   },
-  "private": true,
-  "browsers": {
-    "fs": false
-  }
+  "private": true
 }

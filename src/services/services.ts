@@ -1,13 +1,12 @@
 import {createClient} from '@supabase/supabase-js';
 import 'react-native-url-polyfill/auto';
 // @ts-ignore
-import {SUPABASE_CLIENT_KEY} from '@env';
+//import {SUPABASE_CLIENT_KEY} from '@env';
 
 export class Services {
 
-<<<<<<< HEAD
   private readonly url = "https://etefnzdgrjqcafqbztoy.supabase.co";
-  private readonly token = SUPABASE_CLIENT_KEY as string;
+  private readonly token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0ZWZuemRncmpxY2FmcWJ6dG95Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzA0Mjg0NTMsImV4cCI6MTk4NjAwNDQ1M30.1yK2-fVdu3E5YWDZj3eaL1W5GU49MVjTX3GyvNXddmA";
   private readonly supabase = createClient(this.url, this.token ,
     {
       realtime: {
@@ -24,32 +23,26 @@ export class Services {
 
 // Subscribe registers your client with the server
 
-=======
-	private readonly url = "https://etefnzdgrjqcafqbztoy.supabase.co";
-	private readonly token = SUPABASE_CLIENT_KEY as string;
-	private readonly supabase = createClient(this.url, this.token);
->>>>>>> origin/service
 
-	public async register(username: string, email: string, password: string) {
-		return await this.supabase.auth.signUp({
-			email: email,
-			password: password,
-			options: {
-				data: {
-					username: username,
-				}
-			}
-		});
-	}
+    public async register(username: string, email: string, password: string) {
+        return await this.supabase.auth.signUp({
+            email: email,
+            password: password,
+            options: {
+                data: {
+                    username: username,
+                }
+            }
+        });
+    }
 
-	public async login(email: string, password: string) {
-		return await this.supabase.auth.signInWithPassword({
-			email: email,
-			password: password
-		});
-	}
+    public async login(email: string, password: string) {
+        return await this.supabase.auth.signInWithPassword({
+            email: email,
+            password: password
+        });
+    }
 
-<<<<<<< HEAD
   public async loginWithGoogle() {
     return await this.supabase.auth.signInWithOAuth({
       provider: 'google'
@@ -66,12 +59,5 @@ export class Services {
       return data
     }
   }
-=======
-	public async loginWithGoogle() {
-		console.log("login with google");
-		return await this.supabase.auth.signInWithOAuth({
-			provider: 'google'
-		});
-	}
->>>>>>> origin/service
+
 }

@@ -58,7 +58,7 @@ const SignInScreen = ({navigation}) => {
 							if (response.error === null) {
 								const userToken = response.data.session?.access_token;
 								defineIdUser(userToken);
-								navigation.navigate("HomePageScreenUser");
+								navigation.navigate("TabNavigator",{screen: 'Home',params: {screen: 'HomePageUser',},});
 							} else {
 								console.log(response.error);
 							}

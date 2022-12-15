@@ -63,18 +63,14 @@ const AddActivityScreen = ({ navigation }) => {
           keyExtractor={(item)=>item.id.toString()}
           renderItem={({ item }) => {
             return (
-              <Pressable  onPress={() => {}} style={styles.contenairActivity}>
+              <Pressable  onPress={() => {navigation.navigate("Home",{screen:"FormAddPersonalGoal"})}} style={styles.contenairActivity}>
                 <Text style={styles.textActivity}>{item.name}</Text>
               </Pressable >
 
             );
           }}
         />
-
         {/**Btn add */}
-        <View>
-          <CostumedOrangeButton text="Add" action={() => {}} />
-        </View>
       </View>
     </View>
   );
@@ -101,8 +97,8 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
-    height: 150,
-    width: 150,
+    height: 130,
+    width: 130,
     shadowColor: "#0E0D0D",
     shadowOffset: {
       width: 1,

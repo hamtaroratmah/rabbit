@@ -12,6 +12,7 @@ import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 import ComponentIcon from "../components/CompenentIcon";
 import {Context as UserIdContext} from "../contexts/IdUserContext";
 
+
 // @ts-ignore
 const HomePageScreenNewUser = ({navigation}) => {
 	const textFirstPopUp: string = ` Welcome to us, we're glad you're joining us and becoming a productive rabbit who is ready to learn new habits.
@@ -34,7 +35,6 @@ const HomePageScreenNewUser = ({navigation}) => {
 		<View style={styles.container}>
 			{/********************* header************************** */}
 			<Header containerStyle={{backgroundColor: "#F1F3F3"}}/>
-			<CostumedHeaderDiamond/>
 			<View style={styles.containerHeader}>
 				<View style={styles.containerPseudoLevel}>
 					<Text style={styles.textPseudo}>Welcome Pseudo</Text>
@@ -43,7 +43,7 @@ const HomePageScreenNewUser = ({navigation}) => {
 
 				<View style={styles.containerDiamondProgressBar}>
 					<Image
-						source={require("./../../assets/icons/dia.png")}
+						source={require("../../assets/icons/dia.png")}
 						style={[styles.icon]}
 					/>
 					{/********* A refaire par sou */}
@@ -68,11 +68,14 @@ const HomePageScreenNewUser = ({navigation}) => {
 					textModal={textSecondPopUp}
 					textBtn="Add new activity"
 					isVisible={isSecondPopUpVisible}
-					action={() => action()}
+					action={() =>{
+						navigation.navigate('TabNavigator', { screen: "Home" , params: {screen: 'AddActivity',},})
+						setIsSecondPopUpVisible(false)
+					}}
 				/>
 			</View>
 			{/**Component with different icons*/}
-			<ComponentIcon source={require("../../assets/icon.png")}/>
+			<ComponentIcon source={require("../../assets/icons/dia.png")}/>
 		</View>
 	);
 };

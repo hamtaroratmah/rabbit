@@ -1,11 +1,11 @@
 import { View,Image,StyleSheet} from "react-native";
 
 const slides = {
-    home: require("../../assets/img/domicile.png"),
-    profile: require("../../assets/img/utilisateur.png"),
-    challenge: require("../../assets/img/drapeau.png"),
-    habbit: require("../../assets/img/habitudes.png"),
-    chat: require("../../assets/img/discuter.png"),
+    home: require("../../assets/icons/domicile.png"),
+    profile: require("../../assets/icons/utilisateur.png"),
+    challenge: require("../../assets/icons/drapeau.png"),
+    habbit: require("../../assets/icons/habitudes.png"),
+    chat: require("../../assets/icons/discuter.png"),
   }
 export type Props = {
     source:string

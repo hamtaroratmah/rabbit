@@ -8,6 +8,7 @@ import SignInScreen from "../screens/SignInScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import ChallengesScreen from "../screens/ChallengesScreen";
 import ChatBoxStack from "./ChatBoxStack";
+import AddActivityScreen from "../screens/AddActivityScreen";
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -23,7 +24,7 @@ const TabNavigator = () => {
                         </View>
                     )
                 },}}/>
-                <Tab.Screen name="Habbits" component={SignInScreen} options={{tabBarIcon(props) {
+                <Tab.Screen name="Activities" component={AddActivityScreen} options={{tabBarIcon(props) {
                     return (
                         <View style={styles.iconContainer}>
                             <ComponentIcon source="habbit"/>

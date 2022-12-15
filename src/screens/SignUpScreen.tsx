@@ -65,7 +65,7 @@ const SignUpScreen = ({navigation}) => {
 							const userToken = response.data.session?.access_token;
 							defineIdUser(userToken);
 							console.log(userToken);
-							navigation.navigate("HomePageScreenNewUser");
+							navigation.navigate("TabNavigator",{screen: 'Home',params: {screen: 'HomePageNewUser',},});
 						} else {
 							console.log(response.error);
 						}
