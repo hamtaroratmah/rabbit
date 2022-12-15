@@ -1,115 +1,112 @@
 import {
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  KeyboardAvoidingView,
-  ScrollView,
+	Image,
+	StyleSheet,
+	Text,
+	View,
+	KeyboardAvoidingView,
+	ScrollView,
 } from "react-native";
 
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
-import { AuthController } from "../controllers/AuthController";
+import {AuthController} from "../controllers/AuthController";
 import {useContext, useState} from "react";
-import {Context as UserIdContext} from "../contexts/IdUserContext";
+import {Context as UserIdContext} from "../contexts/SessionContext";
 
 // @ts-ignore
 const SignInScreen = ({navigation}) => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	// @ts-ignore
-	const {idUser, defineIdUser} = useContext(UserIdContext);
+	// const {idUser, defineIdUser} = useContext(UserIdContext);
 	const controller = new AuthController();
 	return (
 		<KeyboardAvoidingView
-      behavior="padding"
-      style={[{ flex: 1 }, styles.container]}
-      enabled
-    >
-      <ScrollView>
-			<View style={styles.contenairLogo}>
-				<Image
-					source={require("./../../assets/img/logo.png")}
-					style={styles.logo}
-				/>
-			</View>
-			<View style={styles.contenairBody}>
-				<View>
-					<Text style={styles.caption}>Log in to your account</Text>
-				</View>
-				<View style={styles.button}>
-					<CostumedTextInput
-						placeHolderText="Email"
-						value={email}
-						setValue={setEmail}
-						secureTextEntry={false}
-					/>
-					<CostumedTextInput
-						placeHolderText="Password"
-						value={password}
-						setValue={setPassword}
-						secureTextEntry={true}
+			behavior="padding"
+			style={[{flex: 1}, styles.container]}
+			enabled
+		>
+			<ScrollView>
+				<View style={styles.contenairLogo}>
+					<Image
+						source={require("./../../assets/img/logo.png")}
+						style={styles.logo}
 					/>
 				</View>
-				<View style={styles.button}>
-					<CostumedButton
-						text="Log in"
-						action={async () => {
-							const response = await controller.login(email, password);
-							if (response.error === null) {
-								const userToken = response.data.session?.access_token;
-								defineIdUser(userToken);
-								navigation.navigate("HomePageScreenUser");
-							} else {
-								console.log(response.error);
-							}
-						}}
-					/>
+				<View style={styles.contenairBody}>
+					<View>
+						<Text style={styles.caption}>Log in to your account</Text>
+					</View>
+					<View style={styles.button}>
+						<CostumedTextInput
+							placeHolderText="Email"
+							value={email}
+							setValue={setEmail}
+							secureTextEntry={false}
+						/>
+						<CostumedTextInput
+							placeHolderText="Password"
+							value={password}
+							setValue={setPassword}
+							secureTextEntry={true}
+						/>
+					</View>
+					<View style={styles.button}>
+						<CostumedButton
+							text="Log in"
+							action={async () => {
+								await controller.login(email, password);
+								navigation.navigate("TabNavigator", {
+									screen: 'Home',
+									params: {screen: 'HomePageUser',},
+								});
+							}}
+						/>
+					</View>
+					<View>
+						<Text style={styles.textQuestion}>Want to join us ?</Text>
+						<Text
+							onPress={() => navigation.navigate("SignUp")}
+							style={styles.href}
+						>
+							Create new account
+						</Text>
+					</View>
+					<View>
+						<Separator/>
+					</View>
+					<ButtonLoginGoogle/>
 				</View>
-				<View>
-					<Text style={styles.textQuestion}>Want to join us ?</Text>
-					<Text
-						onPress={() => navigation.navigate("SignUp")}
-						style={styles.href}
-					>
-						Create new account
-					</Text>
-				</View>
-				<View>
-					<Separator/>
-				</View>
-				<ButtonLoginGoogle/>
-			</View>
 			</ScrollView>
 		</KeyboardAvoidingView>
 	);
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FFFBFB",
-  },
-  contenairLogo: {
-    flex: 1 / 2,
-    justifyContent: "center",
-  },
-  contenairBody: {
-    flex: 1 / 2,
-    justifyContent: "center",
-    marginTop: 50,
-  },
-  logo: {
-    marginTop: 40,
-    width: 200,
-    height: 200,
-    overflow: "visible",
-    alignSelf: "center",
-  },
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+		backgroundColor: "#FFFBFB",
+	},
+	contenairLogo: {
+		flex: 1 / 2,
+		justifyContent: "center",
+	},
+	contenairBody: {
+		flex: 1 / 2,
+		justifyContent: "center",
+		marginTop: 50,
+	},
+	logo: {
+		marginTop: 40,
+		width: 200,
+		height: 200,
+		overflow: "visible",
+		alignSelf: "center",
+	},
 
 	caption: {
 		fontSize: 19,
