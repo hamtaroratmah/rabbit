@@ -56,6 +56,7 @@ const AddActivityScreen = ({ navigation }) => {
       {/** body => list of activities*/}
       <View style={styles.containerBody}>
         <FlatList
+        scrollEnabled={false}
           contentContainerStyle={styles.listActivities}
           numColumns={nbOfColoumns}
           data={activities}
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     flex: 2,
     marginBottom: 20,
-    marginTop: 40,
+    marginTop: 100,
   },
   listActivities: {
     alignSelf: "center",
