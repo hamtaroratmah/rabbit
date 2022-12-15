@@ -2,7 +2,7 @@ import { View, StyleSheet, Text, Pressable, ScrollView } from "react-native";
 import { Image } from "react-native-elements";
 import CostumedHeader from "../components/CostumedHeader";
 import { Header } from "react-native-elements";
-import Diamant from "../components/Diamant";
+import CostumedXpProgressProfile from "../components/CostumedXpProgressProfile";
 
 const ProfileScreen = () => {
   return (
@@ -36,7 +36,7 @@ const ProfileScreen = () => {
           </View>
         </View>
         <View>
-          <Diamant />
+          <CostumedXpProgressProfile />
         </View>
 
         <View style={{ marginTop: 50 }}>
