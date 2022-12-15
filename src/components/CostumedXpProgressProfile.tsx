@@ -1,20 +1,16 @@
 import { View, StyleSheet, Text, Image } from "react-native";
-import ProgressExperience from "../components/ProgressExperience";
+import ProgressExperience from "./ProgressExperience";
 
-const Diamond = () => {
+const CostumedXpProgressProfile = () => {
   return (
-   
-      <View style={styles.conatainerDiamondProgressBar}>
-        <Image
-          source={require("./../../assets/icons/dia.png")}
-          style={[styles.icon]}
-        />
-        {/********* A refaire par sou */}
-        <ProgressExperience />
-        {/********* A refaire par sou */}
-      </View>
+    <View style={styles.conatainerDiamondProgressBar}>
+      <Image
+        source={require("./../../assets/icons/dia.png")}
+        style={[styles.icon]}
+      />
 
-   
+      <ProgressExperience />
+    </View>
   );
 };
 
@@ -52,12 +48,10 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   conatainerDiamondProgressBar: {
-
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     marginTop: 20,
-    
   },
   icon: {
     height: 30,
@@ -66,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Diamond;
+export default CostumedXpProgressProfile;
