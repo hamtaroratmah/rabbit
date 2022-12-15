@@ -3,8 +3,8 @@ import { View, StyleSheet, Text, FlatList, Pressable } from "react-native";
 export type Props = {
   dataList: any;
 };
-
-const ComponentListHorizontalChallengens = ({ dataList }: Props) => {
+//@ts-ignore
+const ComponentListHorizontalChallengens = ({ dataList }: Props, {navigation}) => {
   return (
     <View>
       <FlatList
@@ -12,13 +12,13 @@ const ComponentListHorizontalChallengens = ({ dataList }: Props) => {
         pagingEnabled={true}
         contentContainerStyle={[{ flexDirection: "row" }]}
         data={dataList}
-        keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => {
           return (
             <View style={[styles.habit]}>
-              <Text style={styles.textTitleItem}>{item.title}</Text>
+              
               {/**addichage de detail d'une habitude/challenge */}
-              <Pressable onPress={() => {}}>
+              <Pressable onPress={()=>{navigation.navigate('Home',{screen:"DetailsChallengeScreen",params : {id_challenge:item.id}})}}>
+                <Text style={styles.textTitleItem}>{item.title}</Text>
                 <Text style={styles.textMoreDetails}>More details</Text>
               </Pressable>
             </View>

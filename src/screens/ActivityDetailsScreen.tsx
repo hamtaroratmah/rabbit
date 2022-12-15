@@ -1,12 +1,37 @@
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import CostumedHeader from "../components/CostumedHeader";
 import { Header } from "react-native-elements";
-import { useState } from "react";
-import SimpleProgressChart from "../components/CircularGraph";
+import { useState , useEffect ,useContext} from "react";
+import {Context as UserSessionContext} from '../contexts/SessionContext';
 import CostumedTextInputActivity from "./../components/CostumedTextInputActivity";
+import {ActivitiesController} from "./../controllers/ActivitiesController"
+//@ts-ignore
+const ActivityDetailsScreen = ({ route }) => {
+  const { id_activity } = route.params;
+
+  const activitiesController = new ActivitiesController();
+
+	// @ts-ignore
+	const value = useContext(UserSessionContext);
+	const [activity , setActivity] = useState([])
 
 
-const ActivityDetailsScreen = ({ navigation }) => {
+	const getActivity = async () => {
+	  //@ts-ignore
+	  const userId = value.session.user.id
+	  const data = await activitiesController.getActivity(userId,id_activity)
+	  console.log("acitivity",data[0].activities);
+	  
+	  //@ts-ignore
+	  setActivity(data[0].activities)
+	} 
+
+		
+	useEffect(() => {
+		getActivity();
+	}, [])
+
+
   const [goal, setGoal] = useState("");
   return (
     <View style={styles.container}>
@@ -15,8 +40,8 @@ const ActivityDetailsScreen = ({ navigation }) => {
       {/** Header */}
       <View>
         <CostumedHeader
-          titlePage="mettre activite choisi (SOULI) "
-          text="Keep moving forward "
+          titlePage={activity.title}
+          text=""
         />
       </View>
 
@@ -25,7 +50,7 @@ const ActivityDetailsScreen = ({ navigation }) => {
         {/** Description */}
         <View style={styles.contenairDescription}>
           <View style={styles.boxDescription}>
-            <Text style={styles.textDescription}>Description</Text>
+            <Text style={styles.textDescription}>{activity.description}</Text>
           </View>
         </View>
         {/**Goal */}
@@ -46,7 +71,7 @@ const ActivityDetailsScreen = ({ navigation }) => {
                 maxLength={4}
                 stylesProps={styles.textInputProgress}
               />
-              <Text> unité/ unité </Text>
+              <Text> {activity.mesure} </Text>
             </View>
             <Pressable
             style={({ pressed }) => [
@@ -57,7 +82,9 @@ const ActivityDetailsScreen = ({ navigation }) => {
               },
               styles.btnSave,
             ]}
-            onPress={() => {}}
+            onPress={() => {
+
+            }}
           >
             <Text style={styles.textBtnSave}>Save</Text>
           </Pressable>

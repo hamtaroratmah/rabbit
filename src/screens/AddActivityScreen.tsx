@@ -63,7 +63,7 @@ const AddActivityScreen = ({ navigation }) => {
           keyExtractor={(item)=>item.id.toString()}
           renderItem={({ item }) => {
             return (
-              <Pressable  onPress={() => {navigation.navigate("Home",{screen:"FormAddPersonalGoal"})}} style={styles.contenairActivity}>
+              <Pressable  onPress={() => {navigation.navigate("Home",{screen:"ActivityDetailsScreen"})}} style={styles.contenairActivity}>
                 <Text style={styles.textActivity}>{item.name}</Text>
               </Pressable >
 

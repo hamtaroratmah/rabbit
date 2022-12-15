@@ -1,13 +1,46 @@
 import {Pressable, ScrollView, StyleSheet, Text, View} from "react-native";
 import CostumedHeader from "../components/CostumedHeader";
 import {Header} from "react-native-elements";
-import {useState} from "react";
+import {useState,useContext,useEffect} from "react";
 import SimpleProgressChart from "./../components/CircularGraph";
+import {ChallengesController} from "./../controllers/ChallengesController"
+import {Context as UserSessionContext} from '../contexts/SessionContext';
 
-const DetailsChallengeScreen = () => {
+//@ts-ignore
+const DetailsChallengeScreen = ({route}) => {
+  const { id_challenge } = route.params;
+
   const [nbOfYes, setNbOfYes] = useState(0);
   const [nbOfNo, setNbOfNo] = useState(0);
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
+
+	const challengesController = new ChallengesController();
+	// @ts-ignore
+	const value = useContext(UserSessionContext);
+	
+	const [challenge , setChallenge] = useState([]) 
+
+	const getChallenge = async () => {
+		//@ts-ignore
+		const userId = value.session.user.id
+		const data = await challengesController.getMyChallenge(id_challenge , userId)
+		//@ts-ignore
+    console.log(data[0].challenges);
+    
+		setChallenge(data[0].challenges);
+
+    const stats = await challengesController.getStats(id_challenge , userId)
+
+    console.log(stats);
+    
+    setNbOfNo(nbrYes)
+    setNbOfNo(nbrNo)
+    //setNbOfYes()
+	} 
+		
+	useEffect(() => {
+		getChallenge();
+	}, [])
 
   let currentDate = new Date();
   let midnightOfCurrentDate = new Date(
@@ -31,11 +64,21 @@ const DetailsChallengeScreen = () => {
     }
   };
 
-  const actionBtnYes = () => {
+  const actionBtnYes = async () => {
+    //@ts-ignore
+    const userId = value.session.user.id
+		const data = await challengesController.updateYES(id_challenge , userId , nbOfYes+1)
+		//@ts-ignore
+		setChallenge(data)
     setNbOfYes(nbOfYes + 1);
   };
 
-  const actionBtnNo = () => {
+  const actionBtnNo = async () => {
+    //@ts-ignore
+    const userId = value.session.user.id
+		const data = await challengesController.updateNo(id_challenge , userId , nbOfNo+1)
+		//@ts-ignore
+		setChallenge(data)
     setNbOfNo(nbOfNo + 1);
   };
 
@@ -47,7 +90,7 @@ const DetailsChallengeScreen = () => {
       <View>
         <CostumedHeader
           titlePage="Details challenge "
-          text="Focus on your goal and don't give up "
+          text={challenge.title}
         />
       </View>
 
@@ -56,7 +99,7 @@ const DetailsChallengeScreen = () => {
         {/**Goal */}
         <View style={styles.contenairGoal}>
           <Text style={styles.textStyleTitle}>Your goal : </Text>
-          <Text style={styles.textStyle}>goal</Text>
+          <Text style={styles.textStyle}>{challenge.objective}</Text>
           <Text style={styles.textStyle}> unité/ unité </Text>
         </View>
 
@@ -64,9 +107,7 @@ const DetailsChallengeScreen = () => {
         <View style={styles.contenairDescription}>
           <Text style={styles.textStyleTitle}> Description : </Text>
           <ScrollView style={styles.boxDescription}>
-            <Text style={styles.textDescription}>Description
-            Description  
-            </Text>
+            <Text style={styles.textDescription}>{challenge.description}</Text>
           </ScrollView>
         </View>
 
