@@ -57,13 +57,11 @@ const TabNavigator = () => {
 const styles = StyleSheet.create({
     tabBar : {
         position:'absolute',
-        backgroundColor:'#ffffff',
-        height:65,
-        
+        backgroundColor:'#ffffff',        
     },
     iconContainer : {
         alignItems:'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     }
 })
 export default TabNavigator; 

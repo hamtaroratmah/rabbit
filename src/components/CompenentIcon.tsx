@@ -63,8 +63,8 @@ const ComponentIcon =({source}:Props)=>{
 
 const styles = StyleSheet.create({
     icon: {
-        height: 40,
-        width: 40,
+        maxHeight: 40,
+        maxWidth: 40,
     },
     
 })
