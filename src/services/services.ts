@@ -1,5 +1,7 @@
 import 'react-native-url-polyfill/auto';
 import supabase from "../utils/Client";
+import {Context as SessionContext} from '../contexts/SessionContext';
+import { useContext } from 'react';
 
 export class Services {
 
@@ -36,12 +38,17 @@ export class Services {
 		.from('challenges')
 		.select('*');
 		if (challenges === null) return challenges;
-		const {data: creator, error: errorUsername} = await supabase
-		.from('profiles')
-		.select('username')
-		.eq('id', challenges[0].id_creator)
-		challenges[0].creator = creator ? creator[0].username : "un inconnu";
-		if (errorChallenges || errorUsername) {
+		for (let index = 0; index<= challenges.length-1; index++) {
+			const {data: creator, error: errorUsername} = await supabase
+			.from('profiles')
+			.select('username')
+			.eq('id', challenges[index].id_creator)
+			challenges[index].creator = creator ? creator[0].username : "un inconnu";
+			console.log(challenges[index].creator);
+			if(errorUsername) return errorUsername;
+		}
+
+		if (errorChallenges) {
 			return null
 		} else {
 			return challenges
@@ -49,22 +56,53 @@ export class Services {
 	}
 
 	public async createChallenge(title: string, description: string, start: Date, end: Date,
-	                             objectif: number, private_: boolean, id_activity: string,
-	                             code: string) {
+	                             objective: number, private_: boolean, id_activity: string, idCreator: string) {
 		const {data: challenge, error: errorChallenge} = await supabase
 		.from('challenges')
 		.insert({
+			id_creator: idCreator,
 			title: title,
 			description: description,
 			start: start,
 			end: end,
-			objectif: objectif,
+			objective: objective,
 			private: private_,
-			code: code,
 			id_activity: id_activity,
 		})
 		.select();
-		console.log(challenge);
+		// console.log("Challenge décrit dans le service : ",challenge);
+		// console.log("Erreur décrit dans le service : ",errorChallenge);
+		const idChallenge = challenge[0].id;
+		const codeChallenge = challenge[0].code;
+		await this.createChat(idChallenge, codeChallenge, idCreator);
+		return [challenge, errorChallenge]
+	}
+
+	private async createChat(idChallenge: string, codeChallenge: string, idCreator: string){
+		const {data: chat, error: errorChat} = await supabase
+		.from('chats')
+		.insert({
+			id_challenge: idChallenge,
+			code: codeChallenge
+		})
+		.select();
+		const chatId = chat[0].id;
+		// console.log("Data from chat insert : ", chat);
+		// console.log("Error from chat insert : ", errorChat);
+		await this.createParticipator(idChallenge, idCreator, chatId);
+	}
+
+	private async createParticipator(idChallenge: string, profileId: string, chatId: string){
+		const {data: participator, error: errorParticipator} = await supabase
+		.from('participators')
+		.insert({
+			challenge_id: idChallenge,
+			profile_id: profileId,
+			chat_id: chatId
+		})
+		.select();
+		// console.log("Data from participator insert : ", participator);
+		// console.log("Error from participator insert : ", errorParticipator);
 	}
 
 }
