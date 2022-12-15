@@ -1,24 +1,15 @@
+
+import CostumedXpProgressProfile from "../components/CostumedXpProgressProfile";
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Header, Image } from 'react-native-elements';
 import CostumedHeader from '../components/CostumedHeader';
-import Diamant from '../components/Diamant';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Context as SessionContext } from '../contexts/SessionContext';
-import { getXpAndLevel } from '../controllers/ProfileController';
 
 // @ts-ignore
 const ProfileScreen = async ({ navigation }) => {
   // @ts-ignore
   const { session, defineSession } = useContext(SessionContext);
-  const getLevelInformations = async  ()=>{
-    return await getXpAndLevel(session);
-  }
-
-  useEffect(()=>{
-    getLevelInformations().then((data)=>{
-      console.log(data);
-    });
-    }, []);
 
   return (
     <View style={styles.contenair}>
