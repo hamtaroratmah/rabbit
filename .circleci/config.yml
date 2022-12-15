@@ -13,7 +13,7 @@ jobs:
             - checkout
             -   run:
                     name: Install node_modules
-                    command: npm i && sudo npm install -g expo-cli eas-cli
+                    command: npm i --legacy-peer-deps && sudo npm install -g expo-cli eas-cli --legacy-peer-deps
     eas_build:
         executor: default
         steps:
