@@ -4,7 +4,6 @@ import {
   StyleSheet,
   FlatList,
   Pressable,
-  TouchableOpacity,
 } from "react-native";
 import { Header } from "react-native-elements";
 import CostumedOrangeButton from "../components/CostumedOrangeButton";
