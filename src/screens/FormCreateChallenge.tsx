@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import {useState} from "react";
+import {ScrollView, StyleSheet, Text, View} from "react-native";
 import CostumedOrangeButton from "../components/CostumedOrangeButton";
 import CostumedHeader from "../components/CostumedHeader";
 import CostumedTextInputActivity from "../components/CostumedTextInputActivity";
 import Calendar from "../components/Calendar";
 import RadioBoxPrivatePublic from "../components/RadioBoxPrivatePublic";
-import { Header } from "react-native-elements";
+import {Header} from "react-native-elements";
 
 const FormCreateChallenge = ({ navigation }) => {
   const [objectif, setObjectif] = useState("");

@@ -22,7 +22,6 @@ export class AuthController {
 
 	public async loginWithGoogle() {
 		const response = await this.service.loginWithGoogle();
-		console.log(response)
 		return response.error === null;
 	}
 

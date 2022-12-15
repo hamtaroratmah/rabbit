@@ -1,11 +1,10 @@
-import {useContext, useState} from "react";
+import {useState} from "react";
 import {Image, KeyboardAvoidingView, StyleSheet, Text, View,ScrollView} from "react-native";
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
 import {AuthController} from "../controllers/AuthController";
-import {Context as UserIdContext} from "../contexts/SessionContext";
 
 // @ts-ignore
 const SignUpScreen = ({navigation}) => {
@@ -14,7 +13,6 @@ const SignUpScreen = ({navigation}) => {
 	const [password, setPassword] = useState("");
 	const [confirmationPassword, setConfirmationPassword] = useState("");
 	// @ts-ignore
-	const {idUser, defineIdUser} = useContext(UserIdContext);
 	const controller = new AuthController();
 	return (
 		<KeyboardAvoidingView
@@ -62,16 +60,8 @@ const SignUpScreen = ({navigation}) => {
 				<CostumedButton
 					text="Create"
 					action={async () => {
-						const response = await controller.register(pseudo, email, password, confirmationPassword);
-						if (response.error === null) {
-							const userToken = response.data.session?.access_token;
-							defineIdUser(userToken);
-							console.log(userToken);
-							navigation.navigate("TabNavigator",{screen: 'Home',params: {screen: 'HomePageNewUser',},});
-						} else {
-							console.log(response.error);
+						await controller.register(pseudo, email, password, confirmationPassword);
 						}
-					}
 					}
 				/>
 			</View>
