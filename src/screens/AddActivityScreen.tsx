@@ -6,38 +6,25 @@ import {
   Pressable,
 } from "react-native";
 import { Header } from "react-native-elements";
-import CostumedOrangeButton from "../components/CostumedOrangeButton";
+import { ActivitiesController } from "../controllers/ActivitiesController";
 import CostumedHeader from "../components/CostumedHeader";
-import { useState } from "react";
-
+import {useState,useEffect} from "react"
 
 const AddActivityScreen = ({ navigation }) => {
-  const activities = [
-    {
-      id: '1',
-      name: "sport",
-    },
-    {
-      id: '2',
-      name: "Food",
-    },
-    {
-      id: '3',
-      name: "Drink",
-    },
-    {
-      id: 4,
-      name: "Sleep",
-    },
-    {
-      id: 5,
-      name: "Meditation",
-    },
-    {
-      id: 6,
-      name: "Work",
-    },
-  ];
+
+  const controller = new ActivitiesController();
+  const [activities , setActivities] = useState([])
+
+  const getActivities = async () => {
+    const data = await controller.getAllActivities()
+    //@ts-ignore
+    setActivities(data)
+    console.log(data);  
+  } 
+    useEffect(() => {
+      getActivities()
+    }, [])
+
   let nbOfColoumns = 2;
 
 
@@ -60,13 +47,11 @@ const AddActivityScreen = ({ navigation }) => {
           contentContainerStyle={styles.listActivities}
           numColumns={nbOfColoumns}
           data={activities}
-          keyExtractor={(item)=>item.id.toString()}
           renderItem={({ item }) => {
             return (
-              <Pressable  onPress={() => {navigation.navigate("Home",{screen:"ActivityDetailsScreen"})}} style={styles.contenairActivity}>
-                <Text style={styles.textActivity}>{item.name}</Text>
+              <Pressable  onPress={() => {navigation.navigate("Home",{screen:"ActivityDetailsScreen" , params: { id_activity: item.id }})}} style={styles.contenairActivity}>
+                <Text style={styles.textActivity}>{item.title}</Text>
               </Pressable >
-
             );
           }}
         />
