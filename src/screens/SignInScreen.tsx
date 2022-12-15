@@ -14,6 +14,7 @@ import ButtonLoginGoogle from "../components/CostumedGoogleButton";
 import {AuthController} from "../controllers/AuthController";
 import {useContext, useState} from "react";
 import {Context as UserIdContext} from "../contexts/SessionContext";
+import { err } from 'react-native-svg/lib/typescript/xml';
 
 // @ts-ignore
 const SignInScreen = ({navigation}) => {
@@ -57,7 +58,8 @@ const SignInScreen = ({navigation}) => {
 						<CostumedButton
 							text="Log in"
 							action={async () => {
-								await controller.login(email, password);
+								const {error} = await controller.login(email, password);
+								if(error) throw error.message
 								navigation.navigate("TabNavigator", {
 									screen: 'Home',
 									params: {screen: 'HomePageUser',},

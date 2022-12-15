@@ -98,4 +98,14 @@ export class Services {
 		.select();
 	}
 
+	public async getXpAndLevel(idUser:string){
+		console.log('bonsoir');
+		const {data: xp, error: xpError} = await supabase
+		.from('profiles')
+		.select('experience')
+		.eq('id', idUser);
+		console.log(xp);
+		return [xp, idUser]
+	}
+
 }

@@ -1,22 +1,31 @@
-import { View, StyleSheet, Text, Pressable, ScrollView } from "react-native";
-import { Image } from "react-native-elements";
-import CostumedHeader from "../components/CostumedHeader";
-import { Header } from "react-native-elements";
-import Diamant from "../components/Diamant";
-import { AuthController } from '../controllers/AuthController';
-import { useContext } from 'react';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Header, Image } from 'react-native-elements';
+import CostumedHeader from '../components/CostumedHeader';
+import Diamant from '../components/Diamant';
+import { useContext, useEffect } from 'react';
 import { Context as SessionContext } from '../contexts/SessionContext';
+import { getXpAndLevel } from '../controllers/ProfileController';
 
 // @ts-ignore
-const ProfileScreen = ({navigation}) => {
+const ProfileScreen = async ({ navigation }) => {
   // @ts-ignore
-  const {defineSession} = useContext(SessionContext);
+  const { session, defineSession } = useContext(SessionContext);
+  const getLevelInformations = async  ()=>{
+    return await getXpAndLevel(session);
+  }
+
+  useEffect(()=>{
+    getLevelInformations().then((data)=>{
+      console.log(data);
+    });
+    }, []);
+
   return (
     <View style={styles.contenair}>
       {/**Header */}
       <View style={styles.containerHeader}>
-        <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
-        <CostumedHeader text="" titlePage="My profile" />
+        <Header containerStyle={{ backgroundColor: '#F1F3F3' }} />
+        <CostumedHeader text='' titlePage='My profile' />
       </View>
 
       {/**Body */}
@@ -24,7 +33,7 @@ const ProfileScreen = ({navigation}) => {
         {/**user info */}
         <View style={styles.contenairUserInfo}>
           <Image
-            source={require("../../assets/img/avatar.jpg")}
+            source={require('../../assets/img/avatar.jpg')}
             style={styles.userAvatar}
           />
           <View>
@@ -50,14 +59,14 @@ const ProfileScreen = ({navigation}) => {
             style={({ pressed }) => [
               {
                 backgroundColor: pressed
-                  ? "rgba(255, 185, 138,0.5)"
-                  : "#FE9801",
+                  ? 'rgba(255, 185, 138,0.5)'
+                  : '#FE9801'
               },
-              styles.btnLogOut,
+              styles.btnLogOut
             ]}
-            onPress={()=>{
+            onPress={() => {
               defineSession(null);
-              console.log("Je suis deconnecté");
+              console.log('Je suis deconnecté');
               navigation.navigate('Welcome');
             }
             }
@@ -73,85 +82,85 @@ const ProfileScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   contenair: {
     flex: 1,
-    backgroundColor: "#F1F3F3",
+    backgroundColor: '#F1F3F3'
   },
   containerHeader: {
-    flex: 0.2,
+    flex: 0.2
   },
   containerBody: {
-    alignContent: "center",
-    backgroundColor: "#FEFEFE",
-    justifyContent: "center",
+    alignContent: 'center',
+    backgroundColor: '#FEFEFE',
+    justifyContent: 'center',
     margin: 15,
     borderRadius: 25,
-    shadowColor: "#0E0D0D",
+    shadowColor: '#0E0D0D',
     shadowOffset: {
       width: 1,
-      height: 3,
+      height: 3
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
     maxHeight: 550,
-    flex: 0.7,
+    flex: 0.7
   },
   contenairUserInfo: {
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "row",
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row'
   },
   userAvatar: {
     width: 80,
     height: 80,
     marginTop: 30,
-    overflow: "scroll",
-    borderRadius: 80 / 2,
+    overflow: 'scroll',
+    borderRadius: 80 / 2
   },
 
   userInfoText: {
-    color: "#0f4e67",
+    color: '#0f4e67',
     fontSize: 20,
-    margin: 8,
+    margin: 8
   },
 
   contenairLevelExperience: {
-    justifyContent: "space-around",
-    flexDirection: "row",
+    justifyContent: 'space-around',
+    flexDirection: 'row'
   },
   backLevelExperience: {
     width: 130,
     height: 50,
-    backgroundColor: "#6E9CAE",
+    backgroundColor: '#6E9CAE',
     margin: 20,
     borderRadius: 25,
-    shadowColor: "#0E0D0D",
+    shadowColor: '#0E0D0D',
     shadowOffset: {
       width: 3,
-      height: 3,
+      height: 3
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   textLevelExperience: {
-    color: "white",
-    fontSize: 18,
+    color: 'white',
+    fontSize: 18
   },
   btnLogOut: {
     width: 150,
     height: 50,
     margin: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
-    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: 25
     //backgroundColor : '#FE9801',
   },
   textBtnLogOut: {
-    color: "#010101",
-    fontSize: 18,
-  },
+    color: '#010101',
+    fontSize: 18
+  }
 });
 
 export default ProfileScreen;
