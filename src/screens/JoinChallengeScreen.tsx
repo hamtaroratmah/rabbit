@@ -15,7 +15,7 @@ import Separator from "../components/CostumedLine";
 import PopUpFormJoinChallenge from "../components/PopUpFormJoinChallenge";
 
 const opacityBody = 1;
-const JoinChallengeScreen = ({ navigation }) => {
+const JoinChallengeScreen = () => {
   const challenges = [
     {
       id: "1",

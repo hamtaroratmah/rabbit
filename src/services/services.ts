@@ -14,7 +14,6 @@ export class Services {
 				}
 			}
 		});
-		console.log(error)
 		return {data, error};
 	}
 
@@ -23,8 +22,6 @@ export class Services {
 			email: email,
 			password: password
 		});
-		 console.log("error = ", data.session)
-		// console.log("data = ", data)
 		return {data, error};
 	}
 
@@ -38,6 +35,7 @@ export class Services {
 		const {data, error} = await supabase
 		.from('challenges')
 		.select('*')
+		console.log(data)
 		if (error) {
 			return null
 		} else {

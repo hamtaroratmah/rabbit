@@ -2,6 +2,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import CostumedButton from "../components/CostumedButton";
 
+// @ts-ignore
 const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
