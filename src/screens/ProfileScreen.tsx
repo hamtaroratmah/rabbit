@@ -3,8 +3,14 @@ import { Image } from "react-native-elements";
 import CostumedHeader from "../components/CostumedHeader";
 import { Header } from "react-native-elements";
 import Diamant from "../components/Diamant";
+import { AuthController } from '../controllers/AuthController';
+import { useContext } from 'react';
+import { Context as SessionContext } from '../contexts/SessionContext';
 
-const ProfileScreen = () => {
+// @ts-ignore
+const ProfileScreen = ({navigation}) => {
+  // @ts-ignore
+  const {defineSession} = useContext(SessionContext);
   return (
     <View style={styles.contenair}>
       {/**Header */}
@@ -49,7 +55,12 @@ const ProfileScreen = () => {
               },
               styles.btnLogOut,
             ]}
-            onPress={() => {}}
+            onPress={()=>{
+              defineSession(null);
+              console.log("Je suis deconnecté");
+              navigation.navigate('Welcome');
+            }
+            }
           >
             <Text style={styles.textBtnLogOut}>Log out</Text>
           </Pressable>

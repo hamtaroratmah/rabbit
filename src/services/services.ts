@@ -44,7 +44,6 @@ export class Services {
 			.select('username')
 			.eq('id', challenges[index].id_creator)
 			challenges[index].creator = creator ? creator[0].username : "un inconnu";
-			console.log(challenges[index].creator);
 			if(errorUsername) return errorUsername;
 		}
 
@@ -70,8 +69,6 @@ export class Services {
 			id_activity: id_activity,
 		})
 		.select();
-		// console.log("Challenge décrit dans le service : ",challenge);
-		// console.log("Erreur décrit dans le service : ",errorChallenge);
 		const idChallenge = challenge[0].id;
 		const codeChallenge = challenge[0].code;
 		await this.createChat(idChallenge, codeChallenge, idCreator);
@@ -87,8 +84,6 @@ export class Services {
 		})
 		.select();
 		const chatId = chat[0].id;
-		// console.log("Data from chat insert : ", chat);
-		// console.log("Error from chat insert : ", errorChat);
 		await this.createParticipator(idChallenge, idCreator, chatId);
 	}
 
@@ -101,8 +96,6 @@ export class Services {
 			chat_id: chatId
 		})
 		.select();
-		// console.log("Data from participator insert : ", participator);
-		// console.log("Error from participator insert : ", errorParticipator);
 	}
 
 }

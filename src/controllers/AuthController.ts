@@ -1,6 +1,7 @@
 import {Services} from "../services/services";
 
 
+
 export class AuthController {
 
 	constructor() {
@@ -23,6 +24,10 @@ export class AuthController {
 	public async loginWithGoogle() {
 		const response = await this.service.loginWithGoogle();
 		return response.error === null;
+	}
+
+	public logout(){
+
 	}
 
 }
