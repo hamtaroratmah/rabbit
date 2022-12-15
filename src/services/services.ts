@@ -69,8 +69,11 @@ export class Services {
 			id_activity: id_activity,
 		})
 		.select();
-		const idChallenge = challenge[0].id;
-		const codeChallenge = challenge[0].code;
+		let idChallenge, codeChallenge;
+		if (challenge) {
+			idChallenge = challenge[0].id;
+			codeChallenge = challenge[0].code;
+		}
 		await this.createChat(idChallenge, codeChallenge, idCreator);
 		return [challenge, errorChallenge]
 	}
@@ -83,7 +86,10 @@ export class Services {
 			code: codeChallenge
 		})
 		.select();
-		const chatId = chat[0].id;
+		let chatId;
+		if (chat) {
+			chatId = chat[0].id;
+		}
 		await this.createParticipator(idChallenge, idCreator, chatId);
 	}
 
@@ -96,16 +102,6 @@ export class Services {
 			chat_id: chatId
 		})
 		.select();
-	}
-
-	public async getXpAndLevel(idUser:string){
-		console.log('bonsoir');
-		const {data: xp, error: xpError} = await supabase
-		.from('profiles')
-		.select('experience')
-		.eq('id', idUser);
-		console.log(xp);
-		return [xp, idUser]
 	}
 
 }
