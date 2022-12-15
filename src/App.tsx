@@ -15,6 +15,9 @@ import { useContext, useEffect } from "react";
 import supabase from "./utils/Client";
 import { Context as SessionContext } from "./contexts/SessionContext";
 import ActivityDetailsScreen from "./screens/ActivityDetailsScreen";
+import GraphProgress from "./components/GraphProgress";
+import ProfileScreen from "./screens/ProfileScreen";
+
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -37,6 +40,11 @@ const App = () => {
         initialRouteName="SignIn"
         screenOptions={{ headerShown: false }}
       >
+        <Stack.Screen name="GraphProgress" component={GraphProgress} />
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="HomePageScreenUser" component={HomePageScreenUser} />
+
+
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
         <Stack.Screen name="SignIn" component={SignInScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
