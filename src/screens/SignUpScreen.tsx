@@ -1,5 +1,5 @@
 import {useContext, useState} from "react";
-import {Image, KeyboardAvoidingView, Platform, StyleSheet, Text, View,} from "react-native";
+import {Image, KeyboardAvoidingView, StyleSheet, Text, View,ScrollView} from "react-native";
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
@@ -18,9 +18,11 @@ const SignUpScreen = ({navigation}) => {
 	const controller = new AuthController();
 	return (
 		<KeyboardAvoidingView
-			behavior={Platform.OS === "ios" ? "position" : "height"}
-			style={styles.container}
-		>
+      behavior="padding"
+      style={[{ flex: 1 }, styles.container]}
+      enabled
+    >
+      <ScrollView>
 			<View>
 				<Image
 					source={require("./../../assets/img/logo.png")}
@@ -80,49 +82,51 @@ const SignUpScreen = ({navigation}) => {
 				</Text>
 			</View>
 
-			<Separator/>
-			<ButtonLoginGoogle/>
-		</KeyboardAvoidingView>
-	);
+        <Separator />
+        <ButtonLoginGoogle />
+      </ScrollView>
+    </KeyboardAvoidingView>
+  );
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#FFFBFB",
-		justifyContent: "center",
-	},
-	caption: {
-		fontSize: 18,
-		justifyContent: "center",
-		textAlign: "center",
-		color: "#142b6f",
-		alignSelf: "center",
-	},
-	logo: {
-		width: 150,
-		height: 150,
-		overflow: "visible",
-		alignSelf: "center",
-	},
-	center: {
-		alignSelf: "center",
-	},
-	textQuestion: {
-		fontSize: 15,
-		justifyContent: "center",
-		textAlign: "center",
-		color: "#0E0D0D",
-		fontStyle: "italic",
-	},
-	href: {
-		fontSize: 15,
-		margin: 10,
-		justifyContent: "center",
-		textAlign: "center",
-		color: "#142b6f",
-		alignSelf: "center",
-		textDecorationLine: "underline",
-	},
+  container: {
+    flex: 1,
+    backgroundColor: "#FFFBFB",
+    justifyContent: "center",
+  },
+  caption: {
+    fontSize: 18,
+    justifyContent: "center",
+    textAlign: "center",
+    color: "#142b6f",
+    alignSelf: "center",
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    overflow: "visible",
+    alignSelf: "center",
+    marginTop: 40,
+  },
+  center: {
+    alignSelf: "center",
+  },
+  textQuestion: {
+    fontSize: 15,
+    justifyContent: "center",
+    textAlign: "center",
+    color: "#0E0D0D",
+    fontStyle: "italic",
+  },
+  href: {
+    fontSize: 15,
+    margin: 10,
+    justifyContent: "center",
+    textAlign: "center",
+    color: "#142b6f",
+    alignSelf: "center",
+    textDecorationLine: "underline",
+  },
 });
 export default SignUpScreen;

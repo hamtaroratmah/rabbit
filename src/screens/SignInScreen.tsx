@@ -4,13 +4,14 @@ import {
   Text,
   View,
   KeyboardAvoidingView,
-  Platform,
+  ScrollView,
 } from "react-native";
+
 import CostumedButton from "../components/CostumedButton";
 import CostumedTextInput from "../components/CostumedTextInput";
 import Separator from "../components/CostumedLine";
 import ButtonLoginGoogle from "../components/CostumedGoogleButton";
-import {AuthController} from "../controllers/AuthController";
+import { AuthController } from "../controllers/AuthController";
 import {useContext, useState} from "react";
 import {Context as UserIdContext} from "../contexts/IdUserContext";
 
@@ -23,9 +24,11 @@ const SignInScreen = ({navigation}) => {
 	const controller = new AuthController();
 	return (
 		<KeyboardAvoidingView
-			behavior={Platform.OS === "ios" ? "position" : "height"}
-			style={styles.container}
-		>
+      behavior="padding"
+      style={[{ flex: 1 }, styles.container]}
+      enabled
+    >
+      <ScrollView>
 			<View style={styles.contenairLogo}>
 				<Image
 					source={require("./../../assets/img/logo.png")}
@@ -79,33 +82,34 @@ const SignInScreen = ({navigation}) => {
 				</View>
 				<ButtonLoginGoogle/>
 			</View>
+			</ScrollView>
 		</KeyboardAvoidingView>
 	);
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: "center",
-		justifyContent: "center",
-		backgroundColor: "#FFFBFB",
-	},
-	contenairLogo: {
-		flex: 1 / 2,
-		justifyContent: "center",
-	},
-	contenairBody: {
-		flex: 1 / 2,
-		justifyContent: "center",
-		marginTop: 50,
-	},
-	logo: {
-		//marginTop: 10,
-		width: 200,
-		height: 200,
-		overflow: "visible",
-		alignSelf: "center",
-	},
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#FFFBFB",
+  },
+  contenairLogo: {
+    flex: 1 / 2,
+    justifyContent: "center",
+  },
+  contenairBody: {
+    flex: 1 / 2,
+    justifyContent: "center",
+    marginTop: 50,
+  },
+  logo: {
+    marginTop: 40,
+    width: 200,
+    height: 200,
+    overflow: "visible",
+    alignSelf: "center",
+  },
 
 	caption: {
 		fontSize: 19,
