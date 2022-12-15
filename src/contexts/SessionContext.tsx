@@ -5,7 +5,6 @@ const Context = React.createContext(null);
 const ProviderWrapper = (propsIdUser: any) => {
 	const [session, setSession] = useState(null);
 	const defineSession = (newSession: any) => {
-		if (newSession === null) throw "Invalid idUser";
 		setSession(newSession);
 	}
 

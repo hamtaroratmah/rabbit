@@ -34,7 +34,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="ActivityDetailsScreen"
+        initialRouteName="SignIn"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
