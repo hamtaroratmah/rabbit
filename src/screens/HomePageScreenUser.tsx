@@ -1,48 +1,46 @@
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, Text, View,Pressable,FlatList} from "react-native";
 import {Header} from "react-native-elements";
 import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 import ComponentListHorizontalHabits from "../components/ComponentListHorizontalHabits";
 import ComponentListHorizontalChallengens from "../components/ComponentListHorizontalChallengens";
+import {useContext,useState,useEffect} from "react";
+import {Context as UserSessionContext} from '../contexts/SessionContext';
+import { ActivitiesController } from "../controllers/ActivitiesController";
+import { ChallengesController } from "../controllers/ChallengesController";
 
 // @ts-ignore
 const HomePageScreenUser = ({navigation}) => {
-	const habits = [
-		{
-			id: 1,
-			title: "bla bla bla bla bla",
-		},
-		{
-			id: 2,
-			title: "Title",
-		},
-		{
-			id: 3,
-			title: "Title",
-		},
-		{
-			id: 4,
-			title: "Title",
-		},
-	];
+	const activitiesController = new ActivitiesController();
+	const challengesController = new ChallengesController();
+	// @ts-ignore
+	const value = useContext(UserSessionContext);
+	const [activities , setActivities] = useState([])
+	const [challenges , setChallenges] = useState([])
 
-	const challengens = [
-		{
-			id: 1,
-			title: "Title",
-		},
-		{
-			id: 2,
-			title: "Title",
-		},
-		{
-			id: 3,
-			title: "Title",
-		},
-		{
-			id: 4,
-			title: "Title",
-		},
-	];
+	const getActivities = async () => {
+	  //@ts-ignore
+	  const userId = value.session.user.id
+	  const data = await activitiesController.getMyActivities(userId)
+	  console.log(data);
+	  
+	  //@ts-ignore
+	  setActivities(data)
+	} 
+
+	const getChallenges = async () => {
+		//@ts-ignore
+		const userId = value.session.user.id
+		const data = await challengesController.getMyChallenges(userId)
+		//@ts-ignore
+		console.log("challenges", data);
+		
+		setChallenges(data)
+	} 
+		
+	useEffect(() => {
+		getActivities();
+		getChallenges();
+	}, [])
 
 	return (
 		<View style={styles.container}>
@@ -62,14 +60,58 @@ const HomePageScreenUser = ({navigation}) => {
 					<Text style={styles.textAuthor}>Chay Souli</Text>
 				</View>
 				<View style={styles.contenairScrollHorizental}>
-					<ComponentListHorizontalHabits dataList={habits}/>
+				<View>
+					<FlatList
+						horizontal
+						pagingEnabled={true}
+						contentContainerStyle={[{ flexDirection: "row" }]}
+						data={activities}
+						renderItem={({ item }) => {
+						return (
+							<View style={[styles.habittt]}>
+							{/**addichage de detail d'une habitude/challenge */}
+							<Pressable onPress={()=>{
+								navigation.navigate('Home',{screen:"ActivityDetailsScreen",params:{id_activity:item.activities.id}})
+								console.log("navigate");	
+							}}>
+								<Text style={styles.textTitleItem}>{item.activities.title}</Text>
+								<Text style={styles.textTitleItem}>{item.activities.description}</Text>
+						
+							</Pressable>
+							</View>
+						);
+						}}
+					/>
+					</View>
 					<Text style={{alignSelf: "center", fontSize: 17}}>
 						Go to habits
 					</Text>
 				</View>
 
 				<View style={styles.contenairScrollHorizental}>
-					<ComponentListHorizontalChallengens dataList={challengens}/>
+				<View>
+					<FlatList
+						horizontal
+						pagingEnabled={true}
+						contentContainerStyle={[{ flexDirection: "row" }]}
+						data={challenges}
+						renderItem={({ item }) => {
+						return (
+							<View style={[styles.habitt]}>
+							{/**addichage de detail d'une habitude/challenge */}
+							<Pressable onPress={()=>{
+								navigation.navigate('Home',{screen:"DetailsChallengeScreen",params : {id_challenge:item.challenges.id}})
+								console.log("navigate");
+								
+							}}>
+								<Text style={styles.textTitleItem}>{item.challenges.title}</Text>
+								<Text style={styles.textTitleItem}>{item.challenges.description}</Text>
+							</Pressable>
+							</View>
+						);
+						}}
+					/>
+					</View>
 					<Text style={{alignSelf: "center", fontSize: 17}}>
 						Go to challenges
 					</Text>
@@ -151,6 +193,51 @@ const styles = StyleSheet.create({
 		elevation: 5,
 		flex: 1 / 4,
 	},
+	habitt: {
+		backgroundColor: "#A1CDDE",
+		margin: 15,
+		padding:5,
+		borderRadius: 25,
+		justifyContent: "center",
+		alignContent: "space-between",
+		height: 100,
+		width: 220,
+		shadowColor: "#0E0D0D",
+		shadowOffset: {
+		  width: 1,
+		  height: 3,
+		},
+		shadowOpacity: 0.25,
+		shadowRadius: 4,
+		elevation: 5,
+	  },
+	  textTitleItem: {
+		fontSize: 15,
+		color:"white"
+	  },
+	  textMoreDetails: {
+		alignSelf: "flex-end",
+		padding: 10,
+		fontSize: 16,
+		fontStyle: "italic",
+	  },
+	  habittt: {
+		backgroundColor: "#E0A156",
+		margin: 15,
+		borderRadius: 25,
+		justifyContent: "center",
+		alignContent: "space-between",
+		height: 100,
+		width: 220,
+		shadowColor: "#0E0D0D",
+		shadowOffset: {
+		  width: 1,
+		  height: 3,
+		},
+		shadowOpacity: 0.25,
+		shadowRadius: 4,
+		elevation: 5,
+	  },
 });
 
 export default HomePageScreenUser;

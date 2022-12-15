@@ -51,7 +51,7 @@ const ProfileScreen = async ({ navigation }) => {
           </View>
         </View>
         <View>
-          <Diamant />
+          <CostumedXpProgressProfile />
         </View>
 
         <View style={{ marginTop: 50 }}>

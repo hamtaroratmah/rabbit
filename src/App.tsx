@@ -34,18 +34,13 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SignIn"
+        initialRouteName="Welcome"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
         <Stack.Screen name="SignIn" component={SignInScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="AddActivityScreen" component={AddActivityScreen} />
-        <Stack.Screen
-          name="ActivityDetailsScreen"
-          component={ActivityDetailsScreen}
-        />
       </Stack.Navigator>
     </NavigationContainer>
   );
