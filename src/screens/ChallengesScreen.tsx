@@ -1,8 +1,6 @@
-import {View, StyleSheet, Text, FlatList, ScrollView, Pressable} from "react-native";
+import {Pressable, ScrollView, StyleSheet, Text, View} from "react-native";
 import {ChallengesController} from "../controllers/ChallengesController";
-import {useState, useEffect, useContext} from "react"
-import supabase from "../utils/Client";
-import {Context as SessionContext} from "../contexts/SessionContext";
+import {useEffect, useState} from "react"
 
 export type  Props = {
 	title: string,
@@ -53,7 +51,7 @@ const ChallengesScrren = ({navigation}) => {
 
 	const getChallenges = async () => {
 		controller.getAllChallenges().then((data) => {
-        return setChallenges(data as []);
+			return setChallenges(data as []);
 		})
 
 	}

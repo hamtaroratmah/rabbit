@@ -3,8 +3,6 @@ import {Header} from "react-native-elements";
 import CostumedHeaderDiamond from "../components/CostumedHeaderDiamond";
 import ComponentListHorizontalHabits from "../components/ComponentListHorizontalHabits";
 import ComponentListHorizontalChallengens from "../components/ComponentListHorizontalChallengens";
-import {useContext} from "react";
-import {Context as SessionContext} from '../contexts/SessionContext';
 
 // @ts-ignore
 const HomePageScreenUser = ({navigation}) => {
@@ -45,10 +43,6 @@ const HomePageScreenUser = ({navigation}) => {
 			title: "Title",
 		},
 	];
-
-	// @ts-ignore
-	const {session} = useContext(SessionContext);
-	console.log(session);
 
 	return (
 		<View style={styles.container}>
