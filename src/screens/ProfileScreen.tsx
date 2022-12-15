@@ -1,6 +1,5 @@
-import CostumedXpProgressProfile from '../components/CostumedXpProgressProfile';
 
-<<<<<<< HEAD
+import CostumedXpProgressProfile from "../components/CostumedXpProgressProfile";
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Header, Image } from 'react-native-elements';
 import CostumedHeader from '../components/CostumedHeader';
