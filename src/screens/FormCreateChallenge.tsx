@@ -57,17 +57,11 @@ const FormCreateChallenge = ({ navigation, route }) => {
 
         <Calendar />
         <RadioBoxPrivatePublic />
-<<<<<<< HEAD
         <CostumedOrangeButton text="Create challenge" action={async ()=>{
           console.log(id_activity);
           await controller.createChallenge(
           description,global.dateStart, global.dateEnd, objectif, global.private, id_activity, session
         )}} />
-=======
-        <CostumedOrangeButton text="Create challenge" action={()=>{
-            CreateChallenge()
-        }} />
->>>>>>> 386ccf8 (master)
       </ScrollView>
     </View>
   );
