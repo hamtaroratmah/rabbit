@@ -48,10 +48,11 @@ export class Services {
 			challenges[index].creator = creator ? creator[0].username : "un inconnu";
 			const {data: activity, error: errorActivity} = await supabase
 			.from('activities')
-			.select('title')
+			.select('title, mesure')
 			.eq('id', challenges[index].id_activity);
 			if(errorActivity) throw errorActivity
 			challenges[index].activityName=activity[0].title;
+			challenges[index].activityUnit=activity[0].mesure;
 		}
 
 
