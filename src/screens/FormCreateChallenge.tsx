@@ -9,11 +9,12 @@ import {Header} from "react-native-elements";
 import { ChallengesController } from "../controllers/ChallengesController";
 import {Context as SessionContext} from '../contexts/SessionContext';
 
-const FormCreateChallenge = ({ navigation }) => {
+const FormCreateChallenge = ({ navigation, route }) => {
   const [objectif, setObjectif] = useState("");
   const [description, setDescription] = useState("");
   const {session} = useContext(SessionContext);
   const controller = new ChallengesController();
+  const { id_activity } = route.params;
 
   return (
     <View style={styles.container}>
@@ -55,8 +56,10 @@ const FormCreateChallenge = ({ navigation }) => {
 
         <Calendar />
         <RadioBoxPrivatePublic />
-        <CostumedOrangeButton text="Create challenge" action={()=>{controller.createChallenge(
-          description,global.dateStart, global.dateEnd, objectif, global.private, '10c5330f-f458-46da-9863-9956105709e2', session
+        <CostumedOrangeButton text="Create challenge" action={async ()=>{
+          console.log(id_activity);
+          await controller.createChallenge(
+          description,global.dateStart, global.dateEnd, objectif, global.private, id_activity, session
         )}} />
       </ScrollView>
     </View>
