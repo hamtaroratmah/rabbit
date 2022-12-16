@@ -243,13 +243,12 @@ export class Services {
 
 	
 
-	public async createChallenge(title: string, description: string, start: Date, end: Date,
-	                             objective: number, private_: boolean, id_activity: string, idCreator: string) {
+	public async createChallenge(description: string, start: Date, end: Date,
+	                             objective: string, private_: boolean, id_activity: string, idCreator: string) {
 		const {data: challenge, error: errorChallenge} = await supabase
 		.from('challenges')
 		.insert({
 			id_creator: idCreator,
-			title: title,
 			description: description,
 			start: start,
 			end: end,

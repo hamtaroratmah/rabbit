@@ -6,10 +6,15 @@ import CostumedTextInputActivity from "./CostumedTextInputActivity";
 const Calendar = () => {
   const [isDateStartVisible, setIsDateStartVisible] = useState(false);
   const [isDateEndVisible, setIsDateEndVisible] = useState(false);
-  const [dateStart, setDateStart] = useState("");
-  const [dateEnd, setDateEnd] = useState("");
+  const [dateStart, setDateStart] = useState(null);
+  const [dateEnd, setDateEnd] = useState(null);
 
   let currentDate: any = new Date();
+
+  // @ts-ignore
+  global.dateStart = dateStart;
+  // @ts-ignore
+  global.dateEnd = dateEnd;
 
   const showDateStart = () => {
     setIsDateStartVisible(true);
@@ -28,15 +33,17 @@ const Calendar = () => {
   };
 
   const getDateStart = () => {
+    if(!dateStart) return ;
     let tempDate = dateStart.toString().split(" ");
-    return dateStart !== ""
+    return dateStart !== null
       ? `${tempDate[0]} ${tempDate[1]} ${tempDate[2]} ${tempDate[3]}`
       : "";
   };
 
   const getDateEnd = () => {
+    if(!dateEnd) return ;
     let tempDate = dateEnd.toString().split(" ");
-    return dateEnd !== ""
+    return dateEnd !== null
       ? `${tempDate[0]} ${tempDate[1]} ${tempDate[2]} ${tempDate[3]}`
       : "";
   };

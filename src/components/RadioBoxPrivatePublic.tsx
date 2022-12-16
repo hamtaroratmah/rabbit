@@ -8,11 +8,13 @@ const RadioBoxPrivatePublic = () => {
   const [isPublic, setIsPublic] = useState(false);
 
   const privateSelected = () => {
+    global.private = isPrivate;
     setIsPrivate(true);
     setIsPublic(false);
   };
 
   const publicSelected = () => {
+    global.private = isPrivate;
     setIsPrivate(false);
     setIsPublic(true);
   };
