@@ -22,4 +22,19 @@ export class ActivitiesController {
     const response = await this.service.getActivity(idUser,id_activity);
     return response;
   }
+
+  public async getUserActivity(idUser:string , id_activity:string) {
+    const response = await this.service.getUserActivity(idUser,id_activity);
+    return response;
+  }
+
+  public async startActivity(idUser:string , id_activity:string) {
+    const response = await this.service.startActivity(idUser,id_activity);
+    return response;
+  }
+
+  public async saveDailyUpdate(idUser:string , id_activity:string , goal : any) {
+    const response = await this.service.saveDailyUpdate(idUser,id_activity,goal);
+    return response;
+  }
 }

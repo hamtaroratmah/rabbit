@@ -40,7 +40,6 @@ const App = () => {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="GraphProgress" component={GraphProgress} />
-        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         <Stack.Screen
           name="HomePageScreenUser"
           component={HomePageScreenUser}

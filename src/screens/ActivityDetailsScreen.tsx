@@ -1,12 +1,13 @@
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import CostumedHeader from "../components/CostumedHeader";
 import { Header } from "react-native-elements";
-import { useState , useEffect ,useContext} from "react";
+import { useState , useEffect ,useContext,useCallback} from "react";
 import {Context as UserSessionContext} from '../contexts/SessionContext';
 import CostumedTextInputActivity from "./../components/CostumedTextInputActivity";
 import {ActivitiesController} from "./../controllers/ActivitiesController"
 //@ts-ignore
-const ActivityDetailsScreen = ({ route }) => {
+
+const ActivityDetailsScreen = ({ navigation,route }) => {
   const { id_activity } = route.params;
 
   const activitiesController = new ActivitiesController();
@@ -14,83 +15,170 @@ const ActivityDetailsScreen = ({ route }) => {
 	// @ts-ignore
 	const value = useContext(UserSessionContext);
 	const [activity , setActivity] = useState([])
-
+  
 
 	const getActivity = async () => {
 	  //@ts-ignore
 	  const userId = value.session.user.id
 	  const data = await activitiesController.getActivity(userId,id_activity)
-	  console.log("acitivity",data[0].activities);
-	  
+    //@ts-ignore
+	  console.log("acitivity",data[0]);
 	  //@ts-ignore
-	  setActivity(data[0].activities)
+	  setActivity(data[0])
+	} 
+
+  const getUserActivity = async () => {
+	  //@ts-ignore
+	  const userId = value.session.user.id
+	  const data = await activitiesController.getUserActivity(userId,id_activity)
+    //@ts-ignore
+	  console.log("user acitivity",data[0]);
+	  if(data[0].id_activity){
+      setStarted(true)
+    }
+	  //@ts-ignore
+	} 
+  
+  const startActivity = async () => {
+	  //@ts-ignore
+	  const userId = value.session.user.id
+	  const data = await activitiesController.startActivity(userId,id_activity)
+    //@ts-ignore
+	  console.log("user acitivity",data[0]);
+    //@ts-ignore
+	} 
+
+  const saveDailyUpdate = async () => {
+	  //@ts-ignore
+	  const userId = value.session.user.id
+	  const data = await activitiesController.saveDailyUpdate(userId,id_activity,goal)
+    //@ts-ignore
+	  console.log("user acitivity",data[0]);
+    //@ts-ignore
 	} 
 
 		
 	useEffect(() => {
 		getActivity();
+    getUserActivity();
 	}, [])
 
-
+  
   const [goal, setGoal] = useState("");
-  return (
-    <View style={styles.container}>
-      <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
+  const [started , setStarted] = useState(false)
 
-      {/** Header */}
-      <View>
-        <CostumedHeader
-          titlePage={activity.title}
-          text=""
-        />
-      </View>
-
-      {/** body**/}
-      <ScrollView style={styles.containerBody}>
-        {/** Description */}
-        <View style={styles.contenairDescription}>
-          <View style={styles.boxDescription}>
-            <Text style={styles.textDescription}>{activity.description}</Text>
-          </View>
+  if(started==true){
+    return (
+      <View style={styles.container}>
+        <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
+  
+        {/** Header */}
+        <View>
+          <CostumedHeader
+            titlePage={activity.title}
+            text=""
+          />
         </View>
-        {/**Goal */}
-    
-          <Text style={styles.textTitleInput}>
-            Marque your progress of the day:
-          </Text>
-        
-
-         {/**Goal input */}
-         <View style={styles.containerInputProgress}>
-              <CostumedTextInputActivity
-                placeHolderText="example : 10"
-                value={goal}
-                setValue={setGoal}
-                type="numeric"
-                isMultiline={false}
-                maxLength={4}
-                stylesProps={styles.textInputProgress}
-              />
-              <Text> {activity.mesure} </Text>
+  
+        {/** body**/}
+        <ScrollView style={styles.containerBody}>
+          {/** Description */}
+          <View style={styles.contenairDescription}>
+            <View style={styles.boxDescription}>
+              <Text style={styles.textDescription}>{activity.description}</Text>
             </View>
-            <Pressable
-            style={({ pressed }) => [
-              {
-                backgroundColor: pressed
-                  ? "rgba(255, 185, 138,0.5)"
-                  : "#FE9801",
-              },
-              styles.btnSave,
-            ]}
-            onPress={() => {
-
-            }}
-          >
-            <Text style={styles.textBtnSave}>Save</Text>
-          </Pressable>
-      </ScrollView>
-    </View>
-  );
+          </View>
+          {/**Goal */}
+      
+            <Text style={styles.textTitleInput}>
+              Marque your progress of the day:
+            </Text>
+          
+          
+           {/**Goal input */}
+           <View style={styles.containerInputProgress}>
+                <CostumedTextInputActivity
+                  placeHolderText="example : 10"
+                  value={goal}
+                  setValue={setGoal}
+                  type="numeric"
+                  isMultiline={false}
+                  maxLength={4}
+                  stylesProps={styles.textInputProgress}
+                />
+                <Text> {activity.mesure} </Text>
+              </View>
+              <Pressable
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed
+                    ? "rgba(255, 185, 138,0.5)"
+                    : "#FE9801",
+                },
+                styles.btnSave,
+              ]}
+              onPress={() => {
+                saveDailyUpdate();
+                setGoal(goal)
+              }}
+            >
+              <Text style={styles.textBtnSave}>Save</Text>
+            </Pressable>
+        </ScrollView>
+      </View>
+    );
+  }else{
+    return (
+      <View style={styles.container}>
+        <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
+  
+        {/** Header */}
+        <View>
+          <CostumedHeader
+            titlePage={activity.title}
+            text=""
+          />
+        </View>
+  
+        {/** body**/}
+        <ScrollView style={styles.containerBody}>
+          {/** Description */}
+          <View style={styles.contenairDescription}>
+            <View style={styles.boxDescription}>
+              <Text style={styles.textDescription}>{activity.description}</Text>
+            </View>
+          </View>
+          {/**Goal */}
+      
+            <Text style={styles.textTitleInput}>
+              Marque your progress of the day:
+            </Text>
+          
+          
+           {/**Goal input */}
+           <View style={styles.containerInputProgress}>
+              </View>
+              <Pressable
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed
+                    ? "rgba(255, 185, 138,0.5)"
+                    : "#FE9801",
+                },
+                styles.btnSave,
+              ]}
+              onPress={() => {
+                startActivity()   
+                setStarted(true)           
+              }}
+            >
+              <Text style={styles.textBtnSave}>Start activity</Text>
+            </Pressable>
+        </ScrollView>
+      </View>
+    );
+  }
+  
 };
 
 const styles = StyleSheet.create({

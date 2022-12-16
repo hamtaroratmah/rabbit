@@ -106,7 +106,7 @@ const JoinChallengeScreen = ({ navigation }) => {
 
       {/**Btn add */}
       <View>
-        <CostumedOrangeButton text='Create challenge' action={() => console.log('bonsoir')} />
+        <CostumedOrangeButton text='Create challenge' action={() =>{navigation.navigate('Home',{screen:"FormCreateChallenge"})}} />
       </View>
 
       {/**Pop up */}
