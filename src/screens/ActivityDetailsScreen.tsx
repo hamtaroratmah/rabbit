@@ -5,6 +5,7 @@ import { useState , useEffect ,useContext,useCallback} from "react";
 import {Context as UserSessionContext} from '../contexts/SessionContext';
 import CostumedTextInputActivity from "./../components/CostumedTextInputActivity";
 import {ActivitiesController} from "./../controllers/ActivitiesController"
+import CostumedOrangeButton from "./../components/CostumedOrangeButton"
 //@ts-ignore
 
 const ActivityDetailsScreen = ({ navigation,route }) => {
@@ -124,6 +125,9 @@ const ActivityDetailsScreen = ({ navigation,route }) => {
             >
               <Text style={styles.textBtnSave}>Save</Text>
             </Pressable>
+            <View>
+              <CostumedOrangeButton text='Create challenge' action={() =>{navigation.navigate('Home',{screen:"FormCreateChallenge" , params:{id_activity : activity.id}})}} />
+            </View>
         </ScrollView>
       </View>
     );
@@ -174,6 +178,7 @@ const ActivityDetailsScreen = ({ navigation,route }) => {
             >
               <Text style={styles.textBtnSave}>Start activity</Text>
             </Pressable>
+            
         </ScrollView>
       </View>
     );
