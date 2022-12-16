@@ -68,7 +68,7 @@ const SignUpScreen = ({ navigation }) => {
 		  <Text style={styles.messageError}>{text}</Text>
         </View>
         <View style={styles.center}>
-          <
+          <CostumedTextInput
             placeHolderText="Pseudo"
             value={pseudo}
             setValue={setPseudo}
