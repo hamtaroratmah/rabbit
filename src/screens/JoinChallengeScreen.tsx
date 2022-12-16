@@ -34,7 +34,6 @@ const JoinChallengeScreen = ({ navigation }) => {
     getChallenges().then((data) => {
       // @ts-ignore
       setChallenges(data);
-      console.log("DATA",data)
     });
   }, []);
 
@@ -60,7 +59,7 @@ const JoinChallengeScreen = ({ navigation }) => {
           renderItem={({ item }) => {
             return (
               <View style={styles.contenairChallenge}>
-                <Text style={{alignSelf:"flex-start", fontStyle:"italic"}}> Title activité</Text>
+                <Text style={{alignSelf:"flex-start", fontStyle:"italic"}}>{item.activityName}</Text>
                 <View>
                   <Text style={styles.textPseudo}> By {item.creator}</Text>
                   <Text>

@@ -35,15 +35,23 @@ export class Services {
 		const {data: challenges, error: errorChallenges} = await supabase
 		.from('challenges')
 		.select('*');
-		if (challenges === null) return challenges;
+		if (errorChallenges) throw errorChallenges;
+		if(challenges===null) return ;
 		for (let index = 0; index<= challenges.length-1; index++) {
 			const {data: creator, error: errorUsername} = await supabase
 			.from('profiles')
 			.select('username')
 			.eq('id', challenges[index].id_creator)
+			if(errorUsername) throw errorUsername;
 			challenges[index].creator = creator ? creator[0].username : "un inconnu";
-			if(errorUsername) return errorUsername;
+			const {data: activity, error: errorActivity} = await supabase
+			.from('activities')
+			.select('title')
+			.eq('id', challenges[index].id_activity);
+			if(errorActivity) throw errorActivity
+			challenges[index].activityName=activity[0].title;
 		}
+
 
 		if (errorChallenges) {
 			return null
