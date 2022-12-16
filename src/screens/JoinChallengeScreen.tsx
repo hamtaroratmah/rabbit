@@ -100,6 +100,13 @@ const JoinChallengeScreen = ({ navigation }) => {
                 >
                   <Text style={styles.textBtnJoin}> {join} </Text>
                 </Pressable>
+                <PopUpFormJoinChallenge
+                  isVisible={isPopUpVisible}
+                  actionCancel={hidePopUp}
+                  actionJoin={() => {
+                  }}
+                  activityUnit={item.activityUnit}
+                />
               </View>
             );
           }}
@@ -112,6 +119,8 @@ const JoinChallengeScreen = ({ navigation }) => {
       </View>
 
       {/**Pop up */}
+
+
     </View>
   );
 };
