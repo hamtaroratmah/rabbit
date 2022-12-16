@@ -80,8 +80,8 @@ const ChatBoxScreen = ({navigation}) =>{
                              <Image source={require('../../assets/img/avatar.jpg')}  style={styles.image}/>
                         </View>
                         <View style={styles.TextSection}>
-                            <View style={styles.UserInfoText}>
-                                <Item title={item.title} description={item.description} objective={item.objective} action={()=> navigation.navigate('ChatScreen',{ screen: 'ChatScreen'})}/>
+                            <View style={styles}>
+                                <Item title={item.title} description={item.description} objective={item.objective} action={()=> {}}/>
                             </View>
                         </View>
                         </View>
@@ -104,7 +104,6 @@ const styles = StyleSheet.create({
     boxText : {
         fontSize: 14,
         fontWeight: "bold",
-        fontFamily: 'Lato-Regular',
     },
     box:{
         width:" 100%",

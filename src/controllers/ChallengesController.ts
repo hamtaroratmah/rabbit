@@ -49,5 +49,14 @@ export class ChallengesController {
     return response;
   }
 
+  public async joinChallenge(id_challenge:any , idUser:any ){
+    const chat = await this.service.getChat(id_challenge);
+    console.log("chat",chat);
+    
+    if(chat){
+      const response = await this.service.joinChallenge(id_challenge,idUser,"5c45e2af-7360-425d-873d-78955762aa63")
+      return response
+    }
+  }
   
 }

@@ -6,11 +6,12 @@ import { useEffect, useState, useContext} from 'react';
 import Separator from '../components/CostumedLine';
 import PopUpFormJoinChallenge from '../components/PopUpFormJoinChallenge';
 import { ChallengesController } from '../controllers/ChallengesController';
-
+import {Context as UserSessionContext} from '../contexts/SessionContext';
 
 const JoinChallengeScreen = ({ navigation }) => {
   const [challenges, setChallenges] = useState([])
-    
+  const [join, setJoin] = useState("Join")
+  const value = useContext(UserSessionContext);
   let nbOfColoumns = 1;
   const [isPopUpVisible, setIsPopUpVisible] = useState(false);
   const [opacityBody, setOpacityBody] = useState(1);
@@ -37,7 +38,15 @@ const JoinChallengeScreen = ({ navigation }) => {
     });
   }, []);
 
-
+  const joinChallenge = async (id:string) => {
+    //@ts-ignore
+	  const userId = value.session.user.id
+	  const data = await controller.joinChallenge(userId,id)
+    //@ts-ignore
+    setJoin("Already member")
+	  console.log("acitivity",data);
+	  //@ts-ignore
+  }
   return (
     <View style={styles.container}>
       {/** Header */}
@@ -87,9 +96,9 @@ const JoinChallengeScreen = ({ navigation }) => {
                     styles.btnJoin
 
                   ]}
-                  onPress={showPopUp}
+                  onPress={()=>{joinChallenge(item.id)}}
                 >
-                  <Text style={styles.textBtnJoin}> Join </Text>
+                  <Text style={styles.textBtnJoin}> {join} </Text>
                 </Pressable>
                 <PopUpFormJoinChallenge
                   isVisible={isPopUpVisible}
@@ -105,9 +114,7 @@ const JoinChallengeScreen = ({ navigation }) => {
       </View>
 
       {/**Btn add */}
-      <View>
-        <CostumedOrangeButton text='Create challenge' action={() =>{navigation.navigate('Home',{screen:"FormCreateChallenge"})}} />
-      </View>
+      
 
       {/**Pop up */}
 
