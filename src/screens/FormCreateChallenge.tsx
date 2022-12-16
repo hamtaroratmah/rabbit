@@ -10,14 +10,16 @@ import {Header} from "react-native-elements";
 const FormCreateChallenge = ({ navigation }) => {
   const [objectif, setObjectif] = useState("");
   const [desciptipn, setDescription] = useState("");
-
+  const CreateChallenge = () =>{
+    
+  }
   return (
     <View style={styles.container}>
       {/** Header */}
       <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
       <CostumedHeader
         text="Set your objectif and describe it"
-        titlePage="Activité choisi (souli)"
+        titlePage="Create Challenge"
       />
 
       {/** body**/}
@@ -51,7 +53,9 @@ const FormCreateChallenge = ({ navigation }) => {
 
         <Calendar />
         <RadioBoxPrivatePublic />
-        <CostumedOrangeButton text="Create challenge" action={()=>{}} />
+        <CostumedOrangeButton text="Create challenge" action={()=>{
+            CreateChallenge()
+        }} />
       </ScrollView>
     </View>
   );

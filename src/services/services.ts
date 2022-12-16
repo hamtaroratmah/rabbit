@@ -330,4 +330,20 @@ export class Services {
 		.select();
 	}
 
+	public async getUser(idUser : string){
+		let { data, error, status } = await supabase
+      .from('profiles')
+      .select(`
+        id,
+        username,
+        experience
+      `)
+      .eq("id",idUser)
+      if (error && status !== 406) {
+        throw error
+      }if (data) {
+        return data
+      }
+	}
+
 }

@@ -126,7 +126,7 @@ const ActivityDetailsScreen = ({ navigation,route }) => {
               <Text style={styles.textBtnSave}>Save</Text>
             </Pressable>
             <View>
-              <CostumedOrangeButton text='Create challenge' action={() =>{navigation.navigate('Home',{screen:"FormCreateChallenge" , params:{id_activity : activity.id}})}} />
+              <CostumedOrangeButton text='Create challenge' action={() =>{navigation.navigate('Home',{screen:"FormCreateChallenge" , params:{ id_activity : activity.id }})}} />
             </View>
         </ScrollView>
       </View>
