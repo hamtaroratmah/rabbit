@@ -13,7 +13,7 @@ const DetailsChallengeScreen = ({ route }) => {
   const [nbOfYes, setNbOfYes] = useState(0);
   const [nbOfNo, setNbOfNo] = useState(0);
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
-
+  const [mesure,setMesure] = useState("unit/unit");
   const challengesController = new ChallengesController();
   // @ts-ignore
   const value = useContext(UserSessionContext);
@@ -23,10 +23,7 @@ const DetailsChallengeScreen = ({ route }) => {
   const getChallenge = async () => {
     //@ts-ignore
     const userId = value.session.user.id;
-    const data = await challengesController.getMyChallenge(
-      id_challenge,
-      userId
-    );
+    const data = await challengesController.getMyChallenge(id_challenge,userId);
     //@ts-ignore
     console.log(data[0].challenges);
 
@@ -36,7 +33,8 @@ const DetailsChallengeScreen = ({ route }) => {
     const stats = await challengesController.getStats(id_challenge , userId)
 
     console.log("stats" , stats[0].yes);
-    console.log("stats" , stats[0].no);
+    console.log("mesure" , data[0].challenges.activities.mesure);
+    setMesure(data[0].challenges.activities.mesure)
     setNbOfYes(stats[0].yes)
     setNbOfNo(stats[0].no)
     //setNbOfYes()
@@ -109,7 +107,7 @@ const DetailsChallengeScreen = ({ route }) => {
         <View style={styles.contenairGoal}>
           <Text style={styles.textStyleTitle}>Your goal : </Text>
           <Text style={styles.textStyle}>{challenge.objective}</Text>
-          <Text style={styles.textStyle}> unité/ unité </Text>
+          <Text style={styles.textStyle}> {mesure} </Text>
         </View>
 
         {/** Description */}
@@ -161,7 +159,6 @@ const DetailsChallengeScreen = ({ route }) => {
         {/**Successed rate */}
         <View style={styles.contenairSuccessedRate}>
           <Text style={styles.textStyleTitle}>Successed rate :</Text>
-
           <CircularGraph nbOfYes={nbOfYes} nbOfNo={nbOfNo} />
         </View>
       </ScrollView>
