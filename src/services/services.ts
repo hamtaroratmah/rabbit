@@ -4,8 +4,6 @@ import {Context as SessionContext} from '../contexts/SessionContext';
 import { useContext } from 'react';
 
 export class Services {
-
-
 	public async register(username: string, email: string, password: string) {
 		const {data, error} = await supabase.auth.signUp({
 			email: email,
@@ -128,17 +126,14 @@ export class Services {
 
     public async getActivity(idUser:string,id_activity:string , ){
       let { data, error, status } = await supabase
-        .from('users_activities')
+        .from('activities')
         .select(`
-          id_activity,
-          activities(
             id,
             title,
             description,
             mesure
-          )
-        `).eq('id_profile',idUser)
-        .eq('id_activity',id_activity)
+        `)
+        .eq('id',id_activity)
         if (error && status !== 406) {
           throw error
         }if (data) {
@@ -146,12 +141,59 @@ export class Services {
         }
     }
 
+	public async getUserActivity(idUser:string,id_activity:string , ){
+		let { data, error, status } = await supabase
+		  .from('users_activities')
+		  .select(`
+			id_activity,
+			activities(
+			  id
+			)
+		  `)
+		  .eq('id_profile',idUser)
+		  .eq('id_activity',id_activity)
+		  if (error && status !== 406) {
+			throw error
+		  }if (data) {
+			return data
+		  }
+	}
+
+	public async startActivity(idUser:string,id_activity:string){
+		let { data, error, status } = await supabase
+		  .from('users_activities')
+		  .insert({
+			id_profile:idUser,
+			id_activity:id_activity
+		  })
+		  if (error && status !== 406) {
+			throw error
+		  }if (data) {
+			return data
+		  }
+	}
+
+	public async saveDailyUpdate(idUser:string,id_activity:string,goal:any){
+		let { data, error, status } = await supabase
+		  .from('daily_update')
+		  .insert({
+			id_user:idUser,
+			id_activity:id_activity,
+			result:goal
+		  })
+		  if (error && status !== 406) {
+			throw error
+		  }if (data) {
+			return data
+		  }
+	}
+
 	public async updateYES(id_challenge:string,id_user:string,nbrYES:any){
 		let { data, error, status } = await supabase
 		.from('participators')
-		.update({"yes":nbrYES})
-		.eq("challenge_id",{id_challenge})
-		.eq("profile_id",{id_user})
+		.update({yes:nbrYES})
+		.eq("challenge_id",id_challenge)
+		.eq("profile_id",id_user)
 		if (error && status !== 406) {
 		  throw error
 		}if (data) {
@@ -162,9 +204,9 @@ export class Services {
 	  public async updateNo(id_challenge:string,id_user:string,nbrNo:any){
 		let { data, error, status } = await supabase
 		.from('participators')
-		.update({"no":nbrNo})
-		.eq("challenge_id",{id_challenge})
-		.eq("profile_id",{id_user})
+		.update({no:nbrNo})
+		.eq("challenge_id",id_challenge)
+		.eq("profile_id",id_user)
 		if (error && status !== 406) {
 		  throw error
 		}if (data) {
@@ -180,8 +222,8 @@ export class Services {
         yes,
         no
       `)
-      .eq("challenge_id",{id_challenge})
-      .eq("profile_id",{idUser})
+      .eq("challenge_id",id_challenge)
+      .eq("profile_id",idUser)
       if (error && status !== 406) {
         throw error
       }if (data) {

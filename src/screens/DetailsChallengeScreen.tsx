@@ -31,10 +31,10 @@ const DetailsChallengeScreen = ({route}) => {
 
     const stats = await challengesController.getStats(id_challenge , userId)
 
-    console.log(stats);
-    
-    setNbOfNo(nbrYes)
-    setNbOfNo(nbrNo)
+    console.log("stats" , stats[0].yes);
+    console.log("stats" , stats[0].no);
+    setNbOfYes(stats[0].yes)
+    setNbOfNo(stats[0].no)
     //setNbOfYes()
 	} 
 		

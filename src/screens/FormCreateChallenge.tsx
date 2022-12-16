@@ -51,7 +51,7 @@ const FormCreateChallenge = ({ navigation }) => {
 
         <Calendar />
         <RadioBoxPrivatePublic />
-        <CostumedOrangeButton text="Create challenge" action={} />
+        <CostumedOrangeButton text="Create challenge" action={()=>{}} />
       </ScrollView>
     </View>
   );

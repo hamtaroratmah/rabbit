@@ -36,11 +36,10 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="HomePageScreenUser"
+        initialRouteName="Welcome"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="GraphProgress" component={GraphProgress} />
-        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         <Stack.Screen
           name="HomePageScreenUser"
           component={HomePageScreenUser}

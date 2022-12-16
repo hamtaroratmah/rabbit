@@ -5,7 +5,7 @@ import HomePageScreenNewUser from "../screens/HomePageScreenNewUser";
 import AddActivityScreen from "../screens/AddActivityScreen";
 import ActivityDetailsScreen from "../screens/ActivityDetailsScreen";
 import DetailsChallengeScreen from "../screens/DetailsChallengeScreen"
-
+import FormCreateChallenge from "../screens/FormCreateChallenge"
 const Stack = createNativeStackNavigator();
 
 export default function HomeStack() {
@@ -31,6 +31,10 @@ export default function HomeStack() {
         <Stack.Screen 
           name="DetailsChallengeScreen"
           component={DetailsChallengeScreen}
+        />
+        <Stack.Screen 
+          name="FormCreateChallenge"
+          component={FormCreateChallenge}
         />
       </Stack.Navigator> 
   
