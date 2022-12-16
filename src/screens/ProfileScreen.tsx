@@ -7,7 +7,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Context as SessionContext } from '../contexts/SessionContext';
 
 // @ts-ignore
-const ProfileScreen = async ({ navigation }) => {
+const ProfileScreen = ({ navigation }) => {
   // @ts-ignore
   const { session, defineSession } = useContext(SessionContext);
 
