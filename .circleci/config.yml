@@ -23,7 +23,7 @@ jobs:
                     command: if [ -e package-lock.json ]; then npm ci --legacy-peer-deps; else npm i --legacy-peer-deps; fi
             -   run:
                     name: Trigger build
-                    command: npx eas-cli build --platform android --non-interactive
+                    command: npx eas-cli build --platform android --non-interactive; npm install -g jetifier; npx jetify
     eas_submit:
         executor: default
         steps:
