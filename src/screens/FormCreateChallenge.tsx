@@ -16,13 +16,14 @@ const FormCreateChallenge = ({ navigation, route }) => {
   const controller = new ChallengesController();
   const { id_activity } = route.params;
 
+
   return (
     <View style={styles.container}>
       {/** Header */}
       <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
       <CostumedHeader
         text="Set your objectif and describe it"
-        titlePage="Activité choisi (souli)"
+        titlePage="Create Challenge"
       />
 
       {/** body**/}
@@ -56,11 +57,17 @@ const FormCreateChallenge = ({ navigation, route }) => {
 
         <Calendar />
         <RadioBoxPrivatePublic />
+<<<<<<< HEAD
         <CostumedOrangeButton text="Create challenge" action={async ()=>{
           console.log(id_activity);
           await controller.createChallenge(
           description,global.dateStart, global.dateEnd, objectif, global.private, id_activity, session
         )}} />
+=======
+        <CostumedOrangeButton text="Create challenge" action={()=>{
+            CreateChallenge()
+        }} />
+>>>>>>> 386ccf8 (master)
       </ScrollView>
     </View>
   );
