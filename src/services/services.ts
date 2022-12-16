@@ -113,8 +113,17 @@ export class Services {
             id,
             title,
             description,
-            objective
-          )
+            objective,
+			id_activity,
+			activities(
+				id,
+				mesure
+			)
+          ),
+		  profile_id,
+		  profiles(
+			id
+		  )
         `).eq('profile_id',idUser)
         .eq('challenge_id',id_challenge)
         if (error && status !== 406) {
@@ -123,7 +132,35 @@ export class Services {
           return data
         }
     }
+	public async joinChallenge(idUser:string,id_challenge:string,id_chat:string){
+		let { data, error, status } = await supabase
+        .from('participators')
+        .insert({
+			chat_id:id_chat,
+			challenge_id:id_challenge,
+			profile_id:idUser
+		})
+        
+        if (error && status !== 406) {
+          throw error
+        }if (data) {
+          return data
+        }
+	}
 
+	public async getChat(id_challenge:string  ){
+		let { data, error, status } = await supabase
+		  .from('chats')
+		  .select(`
+			  *
+		  `)
+		  .eq('id_challenge',id_challenge)
+		  if (error && status !== 406) {
+			throw error
+		  }if (data) {
+			return data
+		  }
+	  }
     public async getActivity(idUser:string,id_activity:string , ){
       let { data, error, status } = await supabase
         .from('activities')
