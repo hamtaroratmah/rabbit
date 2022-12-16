@@ -7,34 +7,10 @@ import Separator from '../components/CostumedLine';
 import PopUpFormJoinChallenge from '../components/PopUpFormJoinChallenge';
 import { ChallengesController } from '../controllers/ChallengesController';
 
-const opacityBody = 1;
+
 const JoinChallengeScreen = ({ navigation }) => {
-  const [challenges, setChallenges] = useState([
-    {
-      id: '1',
-      pseudo: 'pseudo',
-      dateStart: '22/1/2019',
-      dateEnd: '10/10/2019',
-      description:
-        'Radio buttons are an essential element of forms. They are used when there is a list of two or more options that are mutually exclusive and the user must select exactly one choice. In other words, clicking a non-selected radio button will deselect whatever other button was previously selected in the list.'
-    },
-    {
-      id: '2',
-      pseudo: 'pseudo',
-      dateStart: '22/1/2019',
-      dateEnd: '10/10/2019',
-      description:
-        'Radio buttons are an essential element of forms. They are used when there is a list of two or more options that are mutually exclusive and the user must select exactly one choice. In other words, clicking a non-selected radio button will deselect whatever other button was previously selected in the list.'
-    },
-    {
-      id: '3',
-      pseudo: 'pseudo',
-      dateStart: '22/1/2019',
-      dateEnd: '10/10/2019',
-      description:
-        'Radio buttons are an essential element of forms. They are used when there is a list of two or more options that are mutually exclusive and the user must select exactly one choice. In other words, clicking a non-selected radio button will deselect whatever other button was previously selected in the list.'
-    }
-  ]);
+  const [challenges, setChallenges] = useState([])
+    
   let nbOfColoumns = 1;
   const [isPopUpVisible, setIsPopUpVisible] = useState(false);
   const [opacityBody, setOpacityBody] = useState(1);
@@ -58,6 +34,7 @@ const JoinChallengeScreen = ({ navigation }) => {
     getChallenges().then((data) => {
       // @ts-ignore
       setChallenges(data);
+      console.log("DATA",data)
     });
   }, []);
 
@@ -69,7 +46,7 @@ const JoinChallengeScreen = ({ navigation }) => {
         <Header containerStyle={{ backgroundColor: '#F1F3F3' }} />
         <CostumedHeader
           text='Join a challenge or create your own challenge'
-          titlePage='Activities'
+          titlePage='Challenges'
         />
       </View>
 
@@ -83,16 +60,19 @@ const JoinChallengeScreen = ({ navigation }) => {
           renderItem={({ item }) => {
             return (
               <View style={styles.contenairChallenge}>
+                <Text style={{alignSelf:"flex-start", fontStyle:"italic"}}> Title activité</Text>
                 <View>
                   <Text style={styles.textPseudo}> By {item.creator}</Text>
                   <Text>
-                    {item.start} - {item.end}{' '}
+                    {/** @ts-ignore */}
+                    {item.start} - {item.end}
                   </Text>
                   <Separator />
                 </View>
 
                 <View>
-                  <Text numberOfLines={3} style={{ padding: 10 }}>
+                  <Text numberOfLines={3} style={{ padding: 10 , fontSize:15}}>
+                    {/** @ts-ignore */}
                     {item.description}
                   </Text>
                 </View>

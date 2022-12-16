@@ -8,6 +8,7 @@ import { Context as UserSessionContext } from "../contexts/SessionContext";
 import { ActivitiesController } from "../controllers/ActivitiesController";
 import { ChallengesController } from "../controllers/ChallengesController";
 import ComponentEmptyFlatList from "./../components/ComponentEmptyFlatList";
+import { color } from "react-native-reanimated";
 
 // @ts-ignore
 const HomePageScreenUser = ({ navigation }) => {
@@ -34,7 +35,7 @@ const HomePageScreenUser = ({ navigation }) => {
     const data = await challengesController.getMyChallenges(userId);
     //@ts-ignore
     console.log("challenges", data);
-
+     //@ts-ignore
     setChallenges(data);
   };
 
@@ -105,7 +106,7 @@ const HomePageScreenUser = ({ navigation }) => {
               }}
             />
           </View>
-          <Text style={{ alignSelf: "center", fontSize: 17, color:"gray" }}>
+          <Text style={{ alignSelf: "center", fontSize: 17, color: "gray" }}>
             My habits
           </Text>
         </View>
@@ -113,18 +114,21 @@ const HomePageScreenUser = ({ navigation }) => {
         <View style={styles.contenairScrollHorizental}>
           <View>
             <FlatList
-			ListEmptyComponent={<ComponentEmptyFlatList
-				textEmpty="You have 0 challenge until now"
-				textCreate="You can "
-				textAction="create a challenge"
-				action={
-					()=>navigation.navigate('TabNavigator', { screen: "Home" , params: {screen: 'AddActivity',},})
-
-
-				}
-				
-				/>}
+              ListEmptyComponent={
+                <ComponentEmptyFlatList
+                  textEmpty="You have 0 challenge until now"
+                  textCreate="You can "
+                  textAction="create a challenge"
+                  action={() =>
+                    navigation.navigate("TabNavigator", {
+                      screen: "Home",
+                      params: { screen: "AddActivity" },
+                    })
+                  }
+                />
+              }
               horizontal
+              alwaysBounceVertical={false}
               pagingEnabled={true}
               contentContainerStyle={[{ flexDirection: "row" }]}
               data={challenges}
@@ -141,19 +145,45 @@ const HomePageScreenUser = ({ navigation }) => {
                         console.log("navigate");
                       }}
                     >
-                      <Text style={styles.textTitleItem}>
-                        {item.challenges.title}
-                      </Text>
-                      <Text style={styles.textTitleItem}>
-                        {item.challenges.description}
-                      </Text>
+                      <View
+                        style={{
+                          justifyContent: "center",
+                          alignContent: "center",
+                          alignSelf: "center",
+                          margin: 5,
+                        }}
+                      >
+                        <Text
+                          style={[
+                            styles.textTitleItem,
+                            { color: "black", fontWeight: "bold" },
+                          ]}
+                        >
+                          {item.challenges.title}
+                        </Text>
+                      </View>
+                      <View
+                        style={{
+                          justifyContent: "center",
+                          alignContent: "center",
+                          alignSelf: "center",
+                          margin: 5,
+                        }}
+                      >
+                        <Text
+                          style={[styles.textTitleItem, { color: "black" }]}
+                          numberOfLines={2}
+                        >
+                          {item.challenges.description}
+                        </Text>
+                      </View>
                     </Pressable>
                   </View>
                 );
               }}
             />
           </View>
-          <Text style={{ alignSelf: "center", fontSize: 17, color:"gray" }}>
+          <Text style={{ alignSelf: "center", fontSize: 17, color: "gray" }}>
             My challenges
           </Text>
         </View>
@@ -255,7 +285,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   textTitleItem: {
-    fontSize: 15,
+    fontSize: 16,
     color: "white",
   },
   textMoreDetails: {
