@@ -16,9 +16,11 @@ export class ChallengesController {
     return response;
   }
 
-  public async createChallenge(title: string, description: string, start: Date, end: Date,
-                               objectif: number, private_: boolean, id_activity: string, idCreator:string) {
-    const response = await this.service.createChallenge(title, description, start, end, objectif, private_, id_activity, idCreator);
+  public async createChallenge(description: string, start: Date, end: Date,
+                               objectif: string, private_: boolean, id_activity: string, session: {}) {
+    const idCreator = session.user.id
+    const response = await this.service.createChallenge(description, start, end, objectif, private_, id_activity, idCreator);
+    console.log(response);
     return response;
   }
 

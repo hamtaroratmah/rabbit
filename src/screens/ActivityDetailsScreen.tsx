@@ -155,7 +155,7 @@ const ActivityDetailsScreen = ({ navigation,route }) => {
           {/**Goal */}
       
             <Text style={styles.textTitleInput}>
-              Marque your progress of the day:
+              You don't have any activity, you can start an activity
             </Text>
           
           

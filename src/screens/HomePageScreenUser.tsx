@@ -35,7 +35,7 @@ const HomePageScreenUser = ({ navigation }) => {
     const data = await challengesController.getMyChallenges(userId);
     //@ts-ignore
     console.log("challenges", data);
-     //@ts-ignore
+    //@ts-ignore
     setChallenges(data);
   };
 
@@ -94,12 +94,36 @@ const HomePageScreenUser = ({ navigation }) => {
                         console.log("navigate");
                       }}
                     >
-                      <Text style={styles.textTitleItem}>
-                        {item.activities.title}
-                      </Text>
-                      <Text style={styles.textTitleItem}>
-                        {item.activities.description}
-                      </Text>
+                      <View
+                        style={{
+                          justifyContent: "center",
+                          alignContent: "center",
+                          alignSelf: "center",
+                          margin: 5,
+                        }}
+                      >
+                        <Text style={[styles.textTitleItem,{color:"blacl"}]}>
+                          {item.activities.title}
+                        </Text>
+                      </View>
+
+                      {/********* */}
+
+                      <View
+                        style={{
+                          justifyContent: "center",
+                          alignContent: "center",
+                          alignSelf: "center",
+                          margin: 5,
+                        }}
+                      >
+                        <Text
+                          style={[styles.textTitleItem, { color: "black" }]}
+                          numberOfLines={2}
+                        >
+                          {item.activities.description}
+                        </Text>
+                      </View>
                     </Pressable>
                   </View>
                 );
