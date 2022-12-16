@@ -1,40 +1,42 @@
-import {Pressable, ScrollView, StyleSheet, Text, View} from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import CostumedHeader from "../components/CostumedHeader";
-import {Header} from "react-native-elements";
-import {useState,useContext,useEffect} from "react";
-import SimpleProgressChart from "./../components/CircularGraph";
-import {ChallengesController} from "./../controllers/ChallengesController"
-import {Context as UserSessionContext} from '../contexts/SessionContext';
+import { Header } from "react-native-elements";
+import { useState, useContext, useEffect } from "react";
+import CircularGraph from "./../components/CircularGraph";
+import { ChallengesController } from "./../controllers/ChallengesController";
+import { Context as UserSessionContext } from "../contexts/SessionContext";
 
 //@ts-ignore
-const DetailsChallengeScreen = ({route}) => {
+const DetailsChallengeScreen = ({ route }) => {
   const { id_challenge } = route.params;
 
   const [nbOfYes, setNbOfYes] = useState(0);
   const [nbOfNo, setNbOfNo] = useState(0);
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
+  const [mesure,setMesure] = useState("unit/unit");
+  const challengesController = new ChallengesController();
+  // @ts-ignore
+  const value = useContext(UserSessionContext);
 
-	const challengesController = new ChallengesController();
-	// @ts-ignore
-	const value = useContext(UserSessionContext);
-	
-	const [challenge , setChallenge] = useState([]) 
+  const [challenge, setChallenge] = useState([]);
 
-	const getChallenge = async () => {
-		//@ts-ignore
-		const userId = value.session.user.id
-		const data = await challengesController.getMyChallenge(id_challenge , userId)
-		//@ts-ignore
+  const getChallenge = async () => {
+    //@ts-ignore
+    const userId = value.session.user.id;
+    const data = await challengesController.getMyChallenge(id_challenge,userId);
+    //@ts-ignore
     console.log(data[0].challenges);
-    
-		setChallenge(data[0].challenges);
+
+    //@ts-ignore
+    setChallenge(data[0].challenges);
 
     const stats = await challengesController.getStats(id_challenge , userId)
 
-    console.log(stats);
-    
-    setNbOfNo(nbrYes)
-    setNbOfNo(nbrNo)
+    console.log("stats" , stats[0].yes);
+    console.log("mesure" , data[0].challenges.activities.mesure);
+    setMesure(data[0].challenges.activities.mesure)
+    setNbOfYes(stats[0].yes)
+    setNbOfNo(stats[0].no)
     //setNbOfYes()
 	} 
 		
@@ -66,19 +68,27 @@ const DetailsChallengeScreen = ({route}) => {
 
   const actionBtnYes = async () => {
     //@ts-ignore
-    const userId = value.session.user.id
-		const data = await challengesController.updateYES(id_challenge , userId , nbOfYes+1)
-		//@ts-ignore
-		setChallenge(data)
+    const userId = value.session.user.id;
+    const data = await challengesController.updateYES(
+      id_challenge,
+      userId,
+      nbOfYes + 1
+    );
+    //@ts-ignore
+    setChallenge(data);
     setNbOfYes(nbOfYes + 1);
   };
 
   const actionBtnNo = async () => {
     //@ts-ignore
-    const userId = value.session.user.id
-		const data = await challengesController.updateNo(id_challenge , userId , nbOfNo+1)
-		//@ts-ignore
-		setChallenge(data)
+    const userId = value.session.user.id;
+    const data = await challengesController.updateNo(
+      id_challenge,
+      userId,
+      nbOfNo + 1
+    );
+    //@ts-ignore
+    setChallenge(data);
     setNbOfNo(nbOfNo + 1);
   };
 
@@ -88,10 +98,7 @@ const DetailsChallengeScreen = ({route}) => {
 
       {/** Header */}
       <View>
-        <CostumedHeader
-          titlePage="Details challenge "
-          text={challenge.title}
-        />
+        <CostumedHeader titlePage="Details challenge " text={challenge.title} />
       </View>
 
       {/** body**/}
@@ -100,7 +107,7 @@ const DetailsChallengeScreen = ({route}) => {
         <View style={styles.contenairGoal}>
           <Text style={styles.textStyleTitle}>Your goal : </Text>
           <Text style={styles.textStyle}>{challenge.objective}</Text>
-          <Text style={styles.textStyle}> unité/ unité </Text>
+          <Text style={styles.textStyle}> {mesure} </Text>
         </View>
 
         {/** Description */}
@@ -152,14 +159,12 @@ const DetailsChallengeScreen = ({route}) => {
         {/**Successed rate */}
         <View style={styles.contenairSuccessedRate}>
           <Text style={styles.textStyleTitle}>Successed rate :</Text>
-
-          <SimpleProgressChart nbOfYes={nbOfYes} nbOfNo={nbOfNo} />
+          <CircularGraph nbOfYes={nbOfYes} nbOfNo={nbOfNo} />
         </View>
       </ScrollView>
     </View>
   );
 };
-
 
 const styles = StyleSheet.create({
   container: {

@@ -13,12 +13,14 @@ export type Props = {
   isVisible: boolean;
   actionCancel: any;
   actionJoin: any;
+  activityUnit: string;
 };
 
 const PopUpFormJoinChallenge = ({
   isVisible,
   actionCancel,
   actionJoin,
+ activityUnit
 }: Props) => {
   const [goal, setGoal] = useState("");
   const [desciptipn, setDescription] = useState("");
@@ -41,7 +43,7 @@ const PopUpFormJoinChallenge = ({
                 maxLength={4}
                 stylesProps={styles.textInputGaol}
               />
-              <Text> unité/ unité </Text>
+              <Text> {activityUnit} / day </Text>
             </View>
 
             <Text style={styles.textGaolDescription}> Description : </Text>

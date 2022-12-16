@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {ScrollView, StyleSheet, Text, View} from "react-native";
 import CostumedOrangeButton from "../components/CostumedOrangeButton";
 import CostumedHeader from "../components/CostumedHeader";
@@ -6,10 +6,15 @@ import CostumedTextInputActivity from "../components/CostumedTextInputActivity";
 import Calendar from "../components/Calendar";
 import RadioBoxPrivatePublic from "../components/RadioBoxPrivatePublic";
 import {Header} from "react-native-elements";
+import { ChallengesController } from "../controllers/ChallengesController";
+import {Context as SessionContext} from '../contexts/SessionContext';
 
-const FormCreateChallenge = ({ navigation }) => {
+const FormCreateChallenge = ({ navigation, route }) => {
   const [objectif, setObjectif] = useState("");
-  const [desciptipn, setDescription] = useState("");
+  const [description, setDescription] = useState("");
+  const {session} = useContext(SessionContext);
+  const controller = new ChallengesController();
+  const { id_activity } = route.params;
 
   return (
     <View style={styles.container}>
@@ -34,14 +39,14 @@ const FormCreateChallenge = ({ navigation }) => {
             maxLength={4}
             stylesProps={styles.textInputGaol}
           />
-          <Text> unité/ unité </Text>
+          <Text> unit / day </Text>
         </View>
 
         <Text style={styles.textStyle}> Description : </Text>
 
         <CostumedTextInputActivity
           placeHolderText="maximum 100 letters"
-          value={desciptipn}
+          value={description}
           setValue={setDescription}
           type="default"
           isMultiline={true}
@@ -51,7 +56,11 @@ const FormCreateChallenge = ({ navigation }) => {
 
         <Calendar />
         <RadioBoxPrivatePublic />
-        <CostumedOrangeButton text="Create challenge" action={} />
+        <CostumedOrangeButton text="Create challenge" action={async ()=>{
+          console.log(id_activity);
+          await controller.createChallenge(
+          description,global.dateStart, global.dateEnd, objectif, global.private, id_activity, session
+        )}} />
       </ScrollView>
     </View>
   );

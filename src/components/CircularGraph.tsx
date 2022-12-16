@@ -11,7 +11,7 @@ export type Props = {
   nbOfNo: number;
 };
 
-const SimpleProgressChart = ({ nbOfYes, nbOfNo }: Props) => {
+const CircularGraph = ({ nbOfYes, nbOfNo }: Props) => {
   let nbTotalOfYesAndNo = nbOfYes + nbOfNo;
   
   //to prevent division by 0 if nbTotalOfYesAndNo=0
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
 
 
 
-export default SimpleProgressChart;
+export default CircularGraph;
