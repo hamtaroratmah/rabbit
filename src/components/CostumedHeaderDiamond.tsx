@@ -10,7 +10,7 @@ const CostumedHeaderDiamond=()=>{
     return(
         <View style={styles.containerHeader}>
         <View style={styles.containerPseudoLevel}>
-          <Text style={styles.textPseudo}>Welcome Pseudo</Text>
+          <Text style={styles.textPseudo}>Welcome</Text>
           <Text style={styles.textLevel}> Level 0</Text>
         </View>
 

@@ -26,4 +26,9 @@ export class AuthController {
 		return response.error === null;
 	}
 
+	public async getUser(idUser:string) {
+		const response = await this.service.getUser(idUser);
+		return response;
+	}
+
 }

@@ -16,13 +16,14 @@ const FormCreateChallenge = ({ navigation, route }) => {
   const controller = new ChallengesController();
   const { id_activity } = route.params;
 
+
   return (
     <View style={styles.container}>
       {/** Header */}
       <Header containerStyle={{ backgroundColor: "#F1F3F3" }} />
       <CostumedHeader
         text="Set your objectif and describe it"
-        titlePage="Activité choisi (souli)"
+        titlePage="Create Challenge"
       />
 
       {/** body**/}

@@ -3,14 +3,30 @@ import CostumedXpProgressProfile from "../components/CostumedXpProgressProfile";
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Header, Image } from 'react-native-elements';
 import CostumedHeader from '../components/CostumedHeader';
-import { useContext, useEffect, useState } from 'react';
-import { Context as SessionContext } from '../contexts/SessionContext';
+import { useState , useEffect ,useContext,useCallback} from "react";
+import {Context as UserSessionContext} from '../contexts/SessionContext';
+import { AuthController } from "../controllers/AuthController";
 
 // @ts-ignore
 const ProfileScreen = ({ navigation }) => {
   // @ts-ignore
-  const { session, defineSession } = useContext(SessionContext);
+  
+  const value = useContext(UserSessionContext);
+  const [profile , setProfile] = useState([])
 
+  const controller = new AuthController();
+  const getProfil = async () =>{
+    //@ts-ignore
+    const userId = value.session.user.id
+
+    const data = await controller.getUser(userId)
+    console.log(value.session.user.user_metadata.username);
+    setProfile(data)
+  }
+
+  useEffect(() => {
+		getProfil();
+	}, [])
   return (
     <View style={styles.contenair}>
       {/**Header */}
@@ -28,7 +44,7 @@ const ProfileScreen = ({ navigation }) => {
             style={styles.userAvatar}
           />
           <View>
-            <Text style={styles.userInfoText}>username </Text>
+            <Text style={styles.userInfoText}>{value.session.user.user_metadata.username} </Text>
           </View>
         </View>
 
@@ -38,7 +54,7 @@ const ProfileScreen = ({ navigation }) => {
             <Text style={styles.textLevelExperience}>Level 1 </Text>
           </View>
           <View style={styles.backLevelExperience}>
-            <Text style={styles.textLevelExperience}>60 points</Text>
+            <Text style={styles.textLevelExperience}>40 points</Text>
           </View>
         </View>
         <View>
