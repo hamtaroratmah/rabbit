@@ -36,7 +36,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="HomePageScreenUser"
+        initialRouteName="Welcome"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="GraphProgress" component={GraphProgress} />
